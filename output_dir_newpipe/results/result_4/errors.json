@@ -1,0 +1,784 @@
+{
+    "screen_id": "b7b86e76d9c48c0339147aaebec2f8aa",
+    "errors": [
+        {
+            "type": "Overlapping Elements",
+            "elements": [
+                "org.schabi.newpipe:id/drawer_header_action_button",
+                "android.widget.TextView",
+                "org.schabi.newpipe:id/drawer_header_newpipe_title",
+                "android.widget.ImageButton",
+                "org.schabi.newpipe:id/drawer_header_service_view"
+            ],
+            "bounds": [
+                0,
+                45,
+                560,
+                317
+            ],
+            "Success Criterion": "1.4.12 Text Spacing",
+            "Level": "AA"
+        },
+        {
+            "type": "Overlapping Elements",
+            "elements": [
+                "android.widget.TextView",
+                "org.schabi.newpipe:id/drawer_header_newpipe_title"
+            ],
+            "bounds": [
+                144,
+                74,
+                458,
+                229
+            ],
+            "Success Criterion": "1.4.12 Text Spacing",
+            "Level": "AA"
+        },
+        {
+            "type": "Overlapping Elements",
+            "elements": [
+                "org.schabi.newpipe:id/itemUploaderView",
+                "org.schabi.newpipe:id/itemVideoTitleView"
+            ],
+            "bounds": [
+                284,
+                279,
+                696,
+                381
+            ],
+            "Success Criterion": "1.4.12 Text Spacing",
+            "Level": "AA"
+        },
+        {
+            "type": "Overlapping Elements",
+            "elements": [
+                "org.schabi.newpipe:id/drawer_header_action_button",
+                "org.schabi.newpipe:id/itemVideoTitleView"
+            ],
+            "bounds": [
+                0,
+                45,
+                696,
+                350
+            ],
+            "Success Criterion": "1.4.12 Text Spacing",
+            "Level": "AA"
+        },
+        {
+            "type": "Overlapping Elements",
+            "elements": [
+                "org.schabi.newpipe:id/drawer_header_service_view",
+                "org.schabi.newpipe:id/itemVideoTitleView"
+            ],
+            "bounds": [
+                225,
+                266,
+                696,
+                350
+            ],
+            "Success Criterion": "1.4.12 Text Spacing",
+            "Level": "AA"
+        },
+        {
+            "type": "Overlapping Elements",
+            "elements": [
+                "org.schabi.newpipe:id/design_menu_item_text",
+                "org.schabi.newpipe:id/itemVideoTitleView"
+            ],
+            "bounds": [
+                32,
+                279,
+                696,
+                429
+            ],
+            "Success Criterion": "1.4.12 Text Spacing",
+            "Level": "AA"
+        },
+        {
+            "type": "Overlapping Elements",
+            "elements": [
+                "org.schabi.newpipe:id/itemDurationView",
+                "org.schabi.newpipe:id/design_menu_item_text"
+            ],
+            "bounds": [
+                32,
+                333,
+                528,
+                429
+            ],
+            "Success Criterion": "1.4.12 Text Spacing",
+            "Level": "AA"
+        },
+        {
+            "type": "Overlapping Elements",
+            "elements": [
+                "org.schabi.newpipe:id/itemAdditionalDetails",
+                "org.schabi.newpipe:id/itemUploaderView"
+            ],
+            "bounds": [
+                284,
+                351,
+                696,
+                416
+            ],
+            "Success Criterion": "1.4.12 Text Spacing",
+            "Level": "AA"
+        },
+        {
+            "type": "Overlapping Elements",
+            "elements": [
+                "org.schabi.newpipe:id/design_menu_item_text",
+                "org.schabi.newpipe:id/itemUploaderView",
+                "org.schabi.newpipe:id/itemAdditionalDetails"
+            ],
+            "bounds": [
+                32,
+                333,
+                696,
+                429
+            ],
+            "Success Criterion": "1.4.12 Text Spacing",
+            "Level": "AA"
+        },
+        {
+            "type": "Contrast Failure",
+            "phrase": "Em Alta",
+            "bounds": [
+                144,
+                74,
+                284,
+                128
+            ],
+            "Contrast Ratio": "1.23:1",
+            "Level Status": {
+                "AA": "Fail",
+                "AAA": "Fail"
+            },
+            "Success Criterion": "1.4.3 Contrast (Minimum)",
+            "Level": "AA",
+            "Details": "Texto com altura estimada de 27.0dp (equivalente a 54px) requer um contraste mínimo de 3.0:1."
+        },
+        {
+            "type": "Contrast Failure",
+            "phrase": "9:18",
+            "bounds": [
+                207,
+                943,
+                268,
+                977
+            ],
+            "Contrast Ratio": "1.00:1",
+            "Level Status": {
+                "AA": "Fail",
+                "AAA": "Fail"
+            },
+            "Success Criterion": "1.4.3 Contrast (Minimum)",
+            "Level": "AA",
+            "Details": "Texto com altura estimada de 17.0dp (equivalente a 34px) requer um contraste mínimo de 4.5:1."
+        },
+        {
+            "type": "Contrast Failure",
+            "phrase": "9:06",
+            "bounds": [
+                207,
+                1131,
+                268,
+                1165
+            ],
+            "Contrast Ratio": "1.00:1",
+            "Level Status": {
+                "AA": "Fail",
+                "AAA": "Fail"
+            },
+            "Success Criterion": "1.4.3 Contrast (Minimum)",
+            "Level": "AA",
+            "Details": "Texto com altura estimada de 17.0dp (equivalente a 34px) requer um contraste mínimo de 4.5:1."
+        },
+        {
+            "type": "Contrast Failure",
+            "phrase": "3:36",
+            "bounds": [
+                207,
+                1319,
+                268,
+                1353
+            ],
+            "Contrast Ratio": "1.00:1",
+            "Level Status": {
+                "AA": "Fail",
+                "AAA": "Fail"
+            },
+            "Success Criterion": "1.4.3 Contrast (Minimum)",
+            "Level": "AA",
+            "Details": "Texto com altura estimada de 17.0dp (equivalente a 34px) requer um contraste mínimo de 4.5:1."
+        },
+        {
+            "type": "Missing Content Description",
+            "class": "android.widget.ImageView",
+            "bounds": [
+                24,
+                277,
+                272,
+                417
+            ],
+            "Success Criterion": "1.1.1 Non-text Content",
+            "Level": "A",
+            "Recommendation": "Adicione uma descrição para este elemento interativo."
+        },
+        {
+            "type": "Missing Content Description",
+            "class": "android.widget.ImageView",
+            "bounds": [
+                24,
+                465,
+                272,
+                605
+            ],
+            "Success Criterion": "1.1.1 Non-text Content",
+            "Level": "A",
+            "Recommendation": "Adicione uma descrição para este elemento interativo."
+        },
+        {
+            "type": "Missing Content Description",
+            "class": "android.widget.ImageView",
+            "bounds": [
+                24,
+                653,
+                272,
+                793
+            ],
+            "Success Criterion": "1.1.1 Non-text Content",
+            "Level": "A",
+            "Recommendation": "Adicione uma descrição para este elemento interativo."
+        },
+        {
+            "type": "Missing Content Description",
+            "class": "android.widget.ImageView",
+            "bounds": [
+                24,
+                841,
+                272,
+                981
+            ],
+            "Success Criterion": "1.1.1 Non-text Content",
+            "Level": "A",
+            "Recommendation": "Adicione uma descrição para este elemento interativo."
+        },
+        {
+            "type": "Missing Content Description",
+            "class": "android.widget.ImageView",
+            "bounds": [
+                24,
+                1029,
+                272,
+                1169
+            ],
+            "Success Criterion": "1.1.1 Non-text Content",
+            "Level": "A",
+            "Recommendation": "Adicione uma descrição para este elemento interativo."
+        },
+        {
+            "type": "Missing Content Description",
+            "class": "android.widget.ImageView",
+            "bounds": [
+                24,
+                1217,
+                272,
+                1357
+            ],
+            "Success Criterion": "1.1.1 Non-text Content",
+            "Level": "A",
+            "Recommendation": "Adicione uma descrição para este elemento interativo."
+        },
+        {
+            "type": "Missing Content Description",
+            "class": "android.widget.ImageView",
+            "bounds": [
+                24,
+                1405,
+                272,
+                1459
+            ],
+            "Success Criterion": "1.1.1 Non-text Content",
+            "Level": "A",
+            "Recommendation": "Adicione uma descrição para este elemento interativo."
+        },
+        {
+            "type": "Missing Content Description",
+            "class": "android.widget.ImageView",
+            "bounds": [
+                181,
+                261,
+                213,
+                309
+            ],
+            "Success Criterion": "1.1.1 Non-text Content",
+            "Level": "A",
+            "Recommendation": "Adicione uma descrição para este elemento interativo."
+        },
+        {
+            "type": "Missing Content Description",
+            "class": "android.widget.ImageView",
+            "bounds": [
+                500,
+                261,
+                548,
+                309
+            ],
+            "Success Criterion": "1.1.1 Non-text Content",
+            "Level": "A",
+            "Recommendation": "Adicione uma descrição para este elemento interativo."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "android.widget.HorizontalScrollView",
+            "resource_id": "",
+            "bounds": [
+                0,
+                157,
+                720,
+                253
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.viewpager.widget.ViewPager",
+            "resource_id": "",
+            "bounds": [
+                0,
+                253,
+                720,
+                1459
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "resource_id": "",
+            "bounds": [
+                0,
+                253,
+                720,
+                1459
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "android.view.ViewGroup",
+            "resource_id": "",
+            "bounds": [
+                0,
+                253,
+                720,
+                441
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "android.view.ViewGroup",
+            "resource_id": "",
+            "bounds": [
+                0,
+                441,
+                720,
+                629
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "android.view.ViewGroup",
+            "resource_id": "",
+            "bounds": [
+                0,
+                629,
+                720,
+                817
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "android.view.ViewGroup",
+            "resource_id": "",
+            "bounds": [
+                0,
+                817,
+                720,
+                1005
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "android.view.ViewGroup",
+            "resource_id": "",
+            "bounds": [
+                0,
+                1005,
+                720,
+                1193
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "android.view.ViewGroup",
+            "resource_id": "",
+            "bounds": [
+                0,
+                1193,
+                720,
+                1381
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "android.view.ViewGroup",
+            "resource_id": "",
+            "bounds": [
+                0,
+                1381,
+                720,
+                1459
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.recyclerview.widget.RecyclerView",
+            "resource_id": "",
+            "bounds": [
+                0,
+                45,
+                560,
+                1459
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.appcompat.widget.LinearLayoutCompat",
+            "resource_id": "",
+            "bounds": [
+                0,
+                333,
+                560,
+                429
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.appcompat.widget.LinearLayoutCompat",
+            "resource_id": "",
+            "bounds": [
+                0,
+                429,
+                560,
+                525
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.appcompat.widget.LinearLayoutCompat",
+            "resource_id": "",
+            "bounds": [
+                0,
+                525,
+                560,
+                621
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.appcompat.widget.LinearLayoutCompat",
+            "resource_id": "",
+            "bounds": [
+                0,
+                621,
+                560,
+                717
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.appcompat.widget.LinearLayoutCompat",
+            "resource_id": "",
+            "bounds": [
+                0,
+                717,
+                560,
+                813
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.appcompat.widget.LinearLayoutCompat",
+            "resource_id": "",
+            "bounds": [
+                0,
+                813,
+                560,
+                909
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.appcompat.widget.LinearLayoutCompat",
+            "resource_id": "",
+            "bounds": [
+                0,
+                943,
+                560,
+                1039
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Missing Accessible Name",
+            "class": "androidx.appcompat.widget.LinearLayoutCompat",
+            "resource_id": "",
+            "bounds": [
+                0,
+                1039,
+                560,
+                1135
+            ],
+            "Success Criterion": "4.1.2 Name, Role, Value",
+            "Level": "A",
+            "Details": "Elemento interativo sem nome acessível."
+        },
+        {
+            "type": "Duplicate Text",
+            "element": "android.widget.LinearLayout",
+            "content": "Em Alta",
+            "bounds": [
+                0,
+                157,
+                180,
+                253
+            ],
+            "Success Criterion": "3.2.4 Consistent Identification",
+            "Level": "AA"
+        },
+        {
+            "type": "Duplicate Text",
+            "element": "org.schabi.newpipe:id/design_menu_item_text",
+            "content": "Em Alta",
+            "bounds": [
+                32,
+                333,
+                528,
+                429
+            ],
+            "Success Criterion": "3.2.4 Consistent Identification",
+            "Level": "AA"
+        },
+        {
+            "type": "Duplicate Text",
+            "element": "org.schabi.newpipe:id/design_menu_item_text",
+            "content": "Inscrições",
+            "bounds": [
+                32,
+                429,
+                528,
+                525
+            ],
+            "Success Criterion": "3.2.4 Consistent Identification",
+            "Level": "AA"
+        },
+        {
+            "type": "Duplicate Text",
+            "element": "org.schabi.newpipe:id/design_menu_item_text",
+            "content": "Novidades",
+            "bounds": [
+                32,
+                525,
+                528,
+                621
+            ],
+            "Success Criterion": "3.2.4 Consistent Identification",
+            "Level": "AA"
+        },
+        {
+            "type": "Duplicate Text",
+            "element": "org.schabi.newpipe:id/design_menu_item_text",
+            "content": "Playlists favoritas",
+            "bounds": [
+                32,
+                621,
+                528,
+                717
+            ],
+            "Success Criterion": "3.2.4 Consistent Identification",
+            "Level": "AA"
+        },
+        {
+            "type": "Resize Text - no increase",
+            "element": "Em Alta",
+            "bounds": [
+                144,
+                74,
+                284,
+                128
+            ],
+            "original_height": 54,
+            "new_height": 54,
+            "component_class": "android.widget.TextView",
+            "Success Criterion": "1.4.4 Resize Text",
+            "Level": "AA"
+        },
+        {
+            "type": "Resize Text - no reduction",
+            "element": "Em Alta",
+            "bounds": [
+                144,
+                74,
+                284,
+                128
+            ],
+            "original_height": 54,
+            "new_height": 54,
+            "component_class": "android.widget.TextView",
+            "Success Criterion": "1.4.4 Resize Text",
+            "Level": "AA"
+        },
+        {
+            "type": "Resize Text - no reduction",
+            "element": "org.schabi.newpipe:id/itemVideoTitleView",
+            "bounds": [
+                284,
+                1407,
+                696,
+                1459
+            ],
+            "original_height": 52,
+            "new_height": 52,
+            "component_class": "android.widget.TextView",
+            "Success Criterion": "1.4.4 Resize Text",
+            "Level": "AA"
+        },
+        {
+            "type": "Resize Text - no reduction",
+            "element": "org.schabi.newpipe:id/itemDurationView",
+            "bounds": [
+                207,
+                1319,
+                268,
+                1353
+            ],
+            "original_height": 34,
+            "new_height": 34,
+            "component_class": "android.widget.TextView",
+            "Success Criterion": "1.4.4 Resize Text",
+            "Level": "AA"
+        },
+        {
+            "type": "Resize Text - no reduction",
+            "element": "org.schabi.newpipe:id/itemAdditionalDetails",
+            "bounds": [
+                284,
+                1323,
+                696,
+                1356
+            ],
+            "original_height": 33,
+            "new_height": 33,
+            "component_class": "android.widget.TextView",
+            "Success Criterion": "1.4.4 Resize Text",
+            "Level": "AA"
+        },
+        {
+            "type": "Resize Text - no increase",
+            "element": "org.schabi.newpipe:id/drawer_header_newpipe_title",
+            "bounds": [
+                198,
+                85,
+                458,
+                229
+            ],
+            "original_height": 144,
+            "new_height": 144,
+            "component_class": "android.widget.TextView",
+            "Success Criterion": "1.4.4 Resize Text",
+            "Level": "AA"
+        },
+        {
+            "type": "Resize Text - no reduction",
+            "element": "org.schabi.newpipe:id/drawer_header_newpipe_title",
+            "bounds": [
+                198,
+                85,
+                458,
+                229
+            ],
+            "original_height": 144,
+            "new_height": 144,
+            "component_class": "android.widget.TextView",
+            "Success Criterion": "1.4.4 Resize Text",
+            "Level": "AA"
+        },
+        {
+            "type": "Resize Text - no reduction",
+            "element": "org.schabi.newpipe:id/drawer_header_service_view",
+            "bounds": [
+                225,
+                266,
+                334,
+                304
+            ],
+            "original_height": 38,
+            "new_height": 38,
+            "component_class": "android.widget.TextView",
+            "Success Criterion": "1.4.4 Resize Text",
+            "Level": "AA"
+        }
+    ]
+}

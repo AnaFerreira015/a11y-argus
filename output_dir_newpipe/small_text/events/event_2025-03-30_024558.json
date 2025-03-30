@@ -1,0 +1,11 @@
+{
+  "tag": "2025-03-30_024558",
+  "event": {
+    "event_type": "kill_app",
+    "log_lines": null,
+    "stop_intent": "am force-stop org.schabi.newpipe"
+  },
+  "start_state": "529311b2394349c0affe889ad3ddcc54",
+  "stop_state": "fe02a8cd8a7703db8aa85ae23ec54d4c",
+  "event_str": "KillAppEvent()"
+}

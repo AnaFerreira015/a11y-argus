@@ -1,0 +1,11 @@
+{
+  "tag": "2025-03-30_024607",
+  "event": {
+    "event_type": "intent",
+    "log_lines": null,
+    "intent": "am start org.schabi.newpipe/org.schabi.newpipe.MainActivity"
+  },
+  "start_state": "fe02a8cd8a7703db8aa85ae23ec54d4c",
+  "stop_state": "ef28f9961991ba18d7a9808bc701869f",
+  "event_str": "IntentEvent(intent='am start org.schabi.newpipe/org.schabi.newpipe.MainActivity')"
+}

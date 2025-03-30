@@ -1,0 +1,32 @@
+[
+    {
+        "index": 0,
+        "small_text": "fe02a8cd8a7703db8aa85ae23ec54d4c",
+        "default": "df1ecc0b6e795dcdf0d188e91fcb802f",
+        "large_text": "df1ecc0b6e795dcdf0d188e91fcb802f"
+    },
+    {
+        "index": 1,
+        "small_text": "a6a67338b17b0961b468f47960d95297",
+        "default": "a6a67338b17b0961b468f47960d95297",
+        "large_text": "40519a6c5b7ede865835a2dd252ede87"
+    },
+    {
+        "index": 2,
+        "small_text": "454bef888dce4a1ce17ad6a3326d226c",
+        "default": "454bef888dce4a1ce17ad6a3326d226c",
+        "large_text": "c562fac5b8440ad4bec13ea5ef89ce6b"
+    },
+    {
+        "index": 3,
+        "small_text": "16a829304c820ccc2d0fab55b1cb8242",
+        "default": "16a829304c820ccc2d0fab55b1cb8242",
+        "large_text": "8e0e35046aebd2d12b4c26b04d556d0a"
+    },
+    {
+        "index": 4,
+        "small_text": "b7b86e76d9c48c0339147aaebec2f8aa",
+        "default": "b7b86e76d9c48c0339147aaebec2f8aa",
+        "large_text": "b206519f4dea655379aa0e3e42304d4a"
+    }
+]

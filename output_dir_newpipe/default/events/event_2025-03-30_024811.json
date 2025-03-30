@@ -1,0 +1,55 @@
+{
+  "tag": "2025-03-30_024811",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Pesquisar",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          624,
+          53
+        ],
+        [
+          720,
+          149
+        ]
+      ],
+      "resource_id": "org.schabi.newpipe:id/action_search",
+      "checked": false,
+      "text": null,
+      "class": "android.widget.Button",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 11,
+      "temp_id": 12,
+      "size": "96*96",
+      "signature": "[class]android.widget.Button[resource_id]org.schabi.newpipe:id/action_search[text]None[enabled,,]",
+      "view_str": "e176f5ad4f380674f7d567a9496f6e77",
+      "content_free_signature": "[class]android.widget.Button[resource_id]org.schabi.newpipe:id/action_search",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "2",
+      "desc": "<button text='Pesquisar' bound_box=624,53,720,149></button>"
+    }
+  },
+  "start_state": "16a829304c820ccc2d0fab55b1cb8242",
+  "stop_state": "a6a67338b17b0961b468f47960d95297",
+  "event_str": "TouchEvent(state=16a829304c820ccc2d0fab55b1cb8242, view=e176f5ad4f380674f7d567a9496f6e77(MainActivity/Button-))"
+}

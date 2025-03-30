@@ -1,0 +1,12 @@
+add device 1: /dev/input/event5
+  name:     "touchpanel"
+add device 2: /dev/input/event4
+  name:     "ant_div_check-input"
+add device 3: /dev/input/event2
+  name:     "sprdphone Headset Jack"
+add device 4: /dev/input/event1
+  name:     "gpio-keys"
+add device 5: /dev/input/event3
+  name:     "sprdphone Headset Keyboard"
+add device 6: /dev/input/event0
+  name:     "sc27xx:vibrator"

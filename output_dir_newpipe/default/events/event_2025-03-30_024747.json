@@ -1,0 +1,55 @@
+{
+  "tag": "2025-03-30_024747",
+  "event": {
+    "event_type": "touch",
+    "log_lines": null,
+    "x": null,
+    "y": null,
+    "view": {
+      "package": "org.schabi.newpipe",
+      "visible": true,
+      "checkable": false,
+      "child_count": 0,
+      "editable": false,
+      "clickable": true,
+      "is_password": false,
+      "focusable": true,
+      "enabled": true,
+      "content_description": "Fechar gaveta",
+      "children": [],
+      "focused": false,
+      "bounds": [
+        [
+          0,
+          45
+        ],
+        [
+          112,
+          157
+        ]
+      ],
+      "resource_id": null,
+      "checked": false,
+      "text": null,
+      "class": "android.widget.ImageButton",
+      "scrollable": false,
+      "selected": false,
+      "long_clickable": false,
+      "parent": 8,
+      "temp_id": 9,
+      "size": "112*112",
+      "signature": "[class]android.widget.ImageButton[resource_id]None[text]None[enabled,,]",
+      "view_str": "c6961409f71274de135f22bec03d4c31",
+      "content_free_signature": "[class]android.widget.ImageButton[resource_id]None",
+      "allowed_actions": [
+        "touch"
+      ],
+      "special_attrs": [],
+      "local_id": "0",
+      "desc": "<button text='Fechar gaveta' bound_box=0,45,112,157></button>"
+    }
+  },
+  "start_state": "454bef888dce4a1ce17ad6a3326d226c",
+  "stop_state": "16a829304c820ccc2d0fab55b1cb8242",
+  "event_str": "TouchEvent(state=454bef888dce4a1ce17ad6a3326d226c, view=c6961409f71274de135f22bec03d4c31(MainActivity/ImageButton-))"
+}

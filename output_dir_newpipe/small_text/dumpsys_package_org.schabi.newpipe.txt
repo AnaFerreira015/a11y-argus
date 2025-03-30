@@ -1,0 +1,811 @@
+Activity Resolver Table:
+  Full MIME Types:
+      text/plain:
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 69c8572
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/plain"
+
+  Base MIME Types:
+      text:
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 69c8572
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/plain"
+
+  Schemes:
+      vnd.youtube:
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 3b6341
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "vnd.youtube"
+          Scheme: "vnd.youtube.launch"
+      http:
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter f556d1a
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "youtube.com": -1
+          Authority: "m.youtube.com": -1
+          Authority: "www.youtube.com": -1
+          Authority: "music.youtube.com": -1
+          Path: "PatternMatcher{PREFIX: /v/}"
+          Path: "PatternMatcher{PREFIX: /embed/}"
+          Path: "PatternMatcher{PREFIX: /watch}"
+          Path: "PatternMatcher{PREFIX: /attribution_link}"
+          Path: "PatternMatcher{PREFIX: /shorts/}"
+          Path: "PatternMatcher{PREFIX: /live/}"
+          Path: "PatternMatcher{PREFIX: /channel/}"
+          Path: "PatternMatcher{PREFIX: /user/}"
+          Path: "PatternMatcher{PREFIX: /c/}"
+          Path: "PatternMatcher{PREFIX: /@}"
+          Path: "PatternMatcher{PREFIX: /playlist}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter ab9904b
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "youtu.be": -1
+          Path: "PatternMatcher{PREFIX: /}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter ffb7a28
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "www.youtube-nocookie.com": -1
+          Path: "PatternMatcher{PREFIX: /embed/}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 6cd40e6
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "hooktube.com": -1
+          Authority: ".hooktube.com": -1 WILD
+          Path: "PatternMatcher{PREFIX: /v/}"
+          Path: "PatternMatcher{PREFIX: /embed/}"
+          Path: "PatternMatcher{PREFIX: /watch}"
+          Path: "PatternMatcher{PREFIX: /channel/}"
+          Path: "PatternMatcher{PREFIX: /user/}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 70ee627
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "tubus.eduvid.org": -1
+          Authority: "invidio.us": -1
+          Authority: "dev.invidio.us": -1
+          Authority: "www.invidio.us": -1
+          Authority: "redirect.invidious.io": -1
+          Authority: "invidious.snopyta.org": -1
+          Authority: "yewtu.be": -1
+          Authority: "tube.connect.cafe": -1
+          Authority: "invidious.kavin.rocks": -1
+          Authority: "invidious-us.kavin.rocks": -1
+          Authority: "piped.kavin.rocks": -1
+          Authority: "invidious.site": -1
+          Authority: "vid.mint.lgbt": -1
+          Authority: "invidiou.site": -1
+          Authority: "invidious.fdn.fr": -1
+          Authority: "invidious.048596.xyz": -1
+          Authority: "invidious.zee.li": -1
+          Authority: "vid.puffyan.us": -1
+          Authority: "ytprivate.com": -1
+          Authority: "invidious.namazso.eu": -1
+          Authority: "invidious.silkky.cloud": -1
+          Authority: "invidious.exonip.de": -1
+          Authority: "inv.riverside.rocks": -1
+          Authority: "invidious.blamefran.net": -1
+          Authority: "invidious.moomoo.me": -1
+          Authority: "ytb.trom.tf": -1
+          Authority: "yt.cyberhost.uk": -1
+          Authority: "y.com.cm": -1
+          Path: "PatternMatcher{PREFIX: /}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 4a210d4
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "y2u.be": -1
+          Path: "PatternMatcher{PREFIX: /}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 219f27d
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "soundcloud.com": -1
+          Authority: "m.soundcloud.com": -1
+          Authority: "www.soundcloud.com": -1
+          Path: "PatternMatcher{PREFIX: /}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 979bdc3
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "media.ccc.de": -1
+          Path: "PatternMatcher{PREFIX: /v/}"
+          Path: "PatternMatcher{PREFIX: /c/}"
+          Path: "PatternMatcher{PREFIX: /b/}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 8796640
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "eduvid.org": -1
+          Authority: "framatube.org": -1
+          Authority: "media.assassinate-you.net": -1
+          Authority: "media.fsfe.org": -1
+          Authority: "peertube.co.uk": -1
+          Authority: "peertube.cpy.re": -1
+          Authority: "peertube.fr": -1
+          Authority: "peertube.mastodon.host": -1
+          Authority: "peertube.stream": -1
+          Authority: "skeptikon.fr": -1
+          Authority: "tilvids.com": -1
+          Authority: "video.lqdn.fr": -1
+          Authority: "video.ploud.fr": -1
+          Path: "PatternMatcher{PREFIX: /videos/}"
+          Path: "PatternMatcher{PREFIX: /w/}"
+          Path: "PatternMatcher{PREFIX: /w/p/}"
+          Path: "PatternMatcher{PREFIX: /accounts/}"
+          Path: "PatternMatcher{PREFIX: /a/}"
+          Path: "PatternMatcher{PREFIX: /video-channels/}"
+          Path: "PatternMatcher{PREFIX: /c/}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter e583979
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: ".bandcamp.com": -1 WILD
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 9a986be
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Ssp: "PatternMatcher{GLOB: bandcamp.com/?show=*}"
+      https:
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter f556d1a
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "youtube.com": -1
+          Authority: "m.youtube.com": -1
+          Authority: "www.youtube.com": -1
+          Authority: "music.youtube.com": -1
+          Path: "PatternMatcher{PREFIX: /v/}"
+          Path: "PatternMatcher{PREFIX: /embed/}"
+          Path: "PatternMatcher{PREFIX: /watch}"
+          Path: "PatternMatcher{PREFIX: /attribution_link}"
+          Path: "PatternMatcher{PREFIX: /shorts/}"
+          Path: "PatternMatcher{PREFIX: /live/}"
+          Path: "PatternMatcher{PREFIX: /channel/}"
+          Path: "PatternMatcher{PREFIX: /user/}"
+          Path: "PatternMatcher{PREFIX: /c/}"
+          Path: "PatternMatcher{PREFIX: /@}"
+          Path: "PatternMatcher{PREFIX: /playlist}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter ab9904b
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "youtu.be": -1
+          Path: "PatternMatcher{PREFIX: /}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter ffb7a28
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "www.youtube-nocookie.com": -1
+          Path: "PatternMatcher{PREFIX: /embed/}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 6cd40e6
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "hooktube.com": -1
+          Authority: ".hooktube.com": -1 WILD
+          Path: "PatternMatcher{PREFIX: /v/}"
+          Path: "PatternMatcher{PREFIX: /embed/}"
+          Path: "PatternMatcher{PREFIX: /watch}"
+          Path: "PatternMatcher{PREFIX: /channel/}"
+          Path: "PatternMatcher{PREFIX: /user/}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 70ee627
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "tubus.eduvid.org": -1
+          Authority: "invidio.us": -1
+          Authority: "dev.invidio.us": -1
+          Authority: "www.invidio.us": -1
+          Authority: "redirect.invidious.io": -1
+          Authority: "invidious.snopyta.org": -1
+          Authority: "yewtu.be": -1
+          Authority: "tube.connect.cafe": -1
+          Authority: "invidious.kavin.rocks": -1
+          Authority: "invidious-us.kavin.rocks": -1
+          Authority: "piped.kavin.rocks": -1
+          Authority: "invidious.site": -1
+          Authority: "vid.mint.lgbt": -1
+          Authority: "invidiou.site": -1
+          Authority: "invidious.fdn.fr": -1
+          Authority: "invidious.048596.xyz": -1
+          Authority: "invidious.zee.li": -1
+          Authority: "vid.puffyan.us": -1
+          Authority: "ytprivate.com": -1
+          Authority: "invidious.namazso.eu": -1
+          Authority: "invidious.silkky.cloud": -1
+          Authority: "invidious.exonip.de": -1
+          Authority: "inv.riverside.rocks": -1
+          Authority: "invidious.blamefran.net": -1
+          Authority: "invidious.moomoo.me": -1
+          Authority: "ytb.trom.tf": -1
+          Authority: "yt.cyberhost.uk": -1
+          Authority: "y.com.cm": -1
+          Path: "PatternMatcher{PREFIX: /}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 4a210d4
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "y2u.be": -1
+          Path: "PatternMatcher{PREFIX: /}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 219f27d
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "soundcloud.com": -1
+          Authority: "m.soundcloud.com": -1
+          Authority: "www.soundcloud.com": -1
+          Path: "PatternMatcher{PREFIX: /}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 979bdc3
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "media.ccc.de": -1
+          Path: "PatternMatcher{PREFIX: /v/}"
+          Path: "PatternMatcher{PREFIX: /c/}"
+          Path: "PatternMatcher{PREFIX: /b/}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 8796640
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: "eduvid.org": -1
+          Authority: "framatube.org": -1
+          Authority: "media.assassinate-you.net": -1
+          Authority: "media.fsfe.org": -1
+          Authority: "peertube.co.uk": -1
+          Authority: "peertube.cpy.re": -1
+          Authority: "peertube.fr": -1
+          Authority: "peertube.mastodon.host": -1
+          Authority: "peertube.stream": -1
+          Authority: "skeptikon.fr": -1
+          Authority: "tilvids.com": -1
+          Authority: "video.lqdn.fr": -1
+          Authority: "video.ploud.fr": -1
+          Path: "PatternMatcher{PREFIX: /videos/}"
+          Path: "PatternMatcher{PREFIX: /w/}"
+          Path: "PatternMatcher{PREFIX: /w/p/}"
+          Path: "PatternMatcher{PREFIX: /accounts/}"
+          Path: "PatternMatcher{PREFIX: /a/}"
+          Path: "PatternMatcher{PREFIX: /video-channels/}"
+          Path: "PatternMatcher{PREFIX: /c/}"
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter e583979
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Authority: ".bandcamp.com": -1 WILD
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 9a986be
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "http"
+          Scheme: "https"
+          Ssp: "PatternMatcher{GLOB: bandcamp.com/?show=*}"
+      vnd.youtube.launch:
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 3b6341
+          Action: "android.intent.action.VIEW"
+          Action: "android.media.action.MEDIA_PLAY_FROM_SEARCH"
+          Action: "android.nfc.action.NDEF_DISCOVERED"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "vnd.youtube"
+          Scheme: "vnd.youtube.launch"
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        9beb9d3 org.schabi.newpipe/.MainActivity filter f059910
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+          Category: "android.intent.category.LEANBACK_LAUNCHER"
+      android.intent.action.GET_CONTENT:
+        f31202f org.schabi.newpipe/.util.FilePickerActivityHelper filter 313363c
+          Action: "android.intent.action.GET_CONTENT"
+          Category: "android.intent.category.DEFAULT"
+      info.guardianproject.panic.action.TRIGGER:
+        c653c09 org.schabi.newpipe/.PanicResponderActivity filter 75b7e0e
+          Action: "info.guardianproject.panic.action.TRIGGER"
+          Category: "android.intent.category.DEFAULT"
+
+  MIME Typed Actions:
+      android.intent.action.SEND:
+        81c8fc5 org.schabi.newpipe/.RouterActivity filter 69c8572
+          Action: "android.intent.action.SEND"
+          Category: "android.intent.category.DEFAULT"
+          StaticType: "text/plain"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      android.intent.action.BATTERY_OKAY:
+        73223b org.schabi.newpipe/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter a15bd58
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.ACTION_POWER_DISCONNECTED:
+        599f435 org.schabi.newpipe/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter f350ca
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        fe2620f org.schabi.newpipe/androidx.profileinstaller.ProfileInstallReceiver filter 369807a
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      android.intent.action.DEVICE_STORAGE_LOW:
+        5029eb1 org.schabi.newpipe/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter c5daf96
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      android.net.conn.CONNECTIVITY_CHANGE:
+        367a717 org.schabi.newpipe/androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy filter ad55704
+          Action: "android.net.conn.CONNECTIVITY_CHANGE"
+      android.intent.action.DEVICE_STORAGE_OK:
+        5029eb1 org.schabi.newpipe/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter c5daf96
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        fe2620f org.schabi.newpipe/androidx.profileinstaller.ProfileInstallReceiver filter 3de829c
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      android.intent.action.BATTERY_LOW:
+        73223b org.schabi.newpipe/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter a15bd58
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.TIMEZONE_CHANGED:
+        e7174ed org.schabi.newpipe/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 43d2f22
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+      android.intent.action.TIME_SET:
+        e7174ed org.schabi.newpipe/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 43d2f22
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+      androidx.profileinstaller.action.SKIP_FILE:
+        fe2620f org.schabi.newpipe/androidx.profileinstaller.ProfileInstallReceiver filter 23154a5
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        fe2620f org.schabi.newpipe/androidx.profileinstaller.ProfileInstallReceiver filter 16d102b
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+      android.intent.action.BOOT_COMPLETED:
+        e7174ed org.schabi.newpipe/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 43d2f22
+          Action: "android.intent.action.BOOT_COMPLETED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+      android.intent.action.ACTION_POWER_CONNECTED:
+        599f435 org.schabi.newpipe/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter f350ca
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+      androidx.work.diagnostics.REQUEST_DIAGNOSTICS:
+        87d72e9 org.schabi.newpipe/androidx.work.impl.diagnostics.DiagnosticsReceiver filter fa31b6e
+          Action: "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+      androidx.work.impl.background.systemalarm.UpdateProxies:
+        8b59db3 org.schabi.newpipe/androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver filter 6d2df70
+          Action: "androidx.work.impl.background.systemalarm.UpdateProxies"
+      android.intent.action.MEDIA_BUTTON:
+        930731f org.schabi.newpipe/androidx.media.session.MediaButtonReceiver filter 5aea66c
+          Action: "android.intent.action.MEDIA_BUTTON"
+
+Service Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MEDIA_BUTTON:
+        29f2c88 org.schabi.newpipe/.player.PlayerService filter 6879621
+          Action: "android.intent.action.MEDIA_BUTTON"
+
+Permissions:
+  Permission [org.schabi.newpipe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (5ff2a46):
+    sourcePackage=org.schabi.newpipe
+    uid=10774 gids=null type=0 prot=signature
+    perm=Permission{89a13ef org.schabi.newpipe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+
+Registered ContentProviders:
+  org.schabi.newpipe/org.acra.attachment.AcraContentProvider:
+    Provider{5877efc org.schabi.newpipe/org.acra.attachment.AcraContentProvider}
+  org.schabi.newpipe/androidx.core.content.FileProvider:
+    Provider{64a0985 org.schabi.newpipe/androidx.core.content.FileProvider}
+  org.schabi.newpipe/com.squareup.picasso.PicassoProvider:
+    Provider{e4ac3da org.schabi.newpipe/com.squareup.picasso.PicassoProvider}
+  org.schabi.newpipe/androidx.startup.InitializationProvider:
+    Provider{21e000b org.schabi.newpipe/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [org.schabi.newpipe.provider]:
+    Provider{64a0985 org.schabi.newpipe/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{e4b8ee8 org.schabi.newpipe}
+  [org.schabi.newpipe.acra]:
+    Provider{5877efc org.schabi.newpipe/org.acra.attachment.AcraContentProvider}
+      applicationInfo=ApplicationInfo{b26b901 org.schabi.newpipe}
+  [org.schabi.newpipe.com.squareup.picasso]:
+    Provider{e4ac3da org.schabi.newpipe/com.squareup.picasso.PicassoProvider}
+      applicationInfo=ApplicationInfo{3a143a6 org.schabi.newpipe}
+  [org.schabi.newpipe.androidx-startup]:
+    Provider{21e000b org.schabi.newpipe/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{6aa91e7 org.schabi.newpipe}
+
+Key Set Manager:
+  [org.schabi.newpipe]
+      Signing KeySets: 663
+
+Packages:
+  Package [org.schabi.newpipe] (ebeb194):
+    userId=10774
+    pkg=Package{dc4e43d org.schabi.newpipe}
+    codePath=/data/app/~~Do8TVhgocJFBzkcSuF6RFg==/org.schabi.newpipe-UDCBD9hdhRJtV0GZHj9kIg==
+    resourcePath=/data/app/~~Do8TVhgocJFBzkcSuF6RFg==/org.schabi.newpipe-UDCBD9hdhRJtV0GZHj9kIg==
+    legacyNativeLibraryDir=/data/app/~~Do8TVhgocJFBzkcSuF6RFg==/org.schabi.newpipe-UDCBD9hdhRJtV0GZHj9kIg==/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=999 minSdk=21 targetSdk=33
+    versionName=0.27.2
+    splits=[base]
+    apkSigningVersion=3
+    applicationInfo=ApplicationInfo{dc4e43d org.schabi.newpipe}
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE ALLOW_AUDIO_PLAYBACK_CAPTURE HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesPackages=[]
+    queriesIntents=[Intent { act=android.intent.action.VIEW dat=http:///... }]
+    dataDir=/data/user/0/org.schabi.newpipe
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    usesOptionalLibraries:
+      androidx.window.extensions
+      androidx.window.sidecar
+    timeStamp=2025-03-30 02:45:52
+    firstInstallTime=2025-03-30 02:45:54
+    lastUpdateTime=2025-03-30 02:45:54
+    signatures=PackageSignatures{e8df432 version:3, signatures:[ae986e90], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    declared permissions:
+      org.schabi.newpipe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature, INSTALLED
+    requested permissions:
+      android.permission.INTERNET
+      android.permission.WAKE_LOCK
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.WRITE_EXTERNAL_STORAGE: restricted=true
+      android.permission.SYSTEM_ALERT_WINDOW
+      android.permission.FOREGROUND_SERVICE
+      android.permission.POST_NOTIFICATIONS
+      android.permission.RECEIVE_BOOT_COMPLETED
+      org.schabi.newpipe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+      android.permission.READ_EXTERNAL_STORAGE: restricted=true
+    install permissions:
+      android.permission.FOREGROUND_SERVICE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      org.schabi.newpipe.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=35801 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false
+      gids=[3003]
+      runtime permissions:
+        android.permission.READ_EXTERNAL_STORAGE: granted=false, flags=[ REVOKE_WHEN_REQUESTED|RESTRICTION_INSTALLER_EXEMPT]
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=false, flags=[ RESTRICTION_INSTALLER_EXEMPT]
+
+SkippingApks:
+  name : 100Game_MOVISTAR_4x3_KU84_2009_2.0.9.apk
+  name : 204_companion-release.apk
+  name : 4732_SFRJeux-7.1.3-logoff-obson-samsungRelease_2019-10-03_09-58-20.apk
+  name : AlticeMusic_2.3.apk
+  name : AmazonMDIP-Android-1.0.200119.0-release-signed-TIM_112019.apk
+  name : AmazonMDIP-Android-1.0.200119.0-release-signed-UK-112019.apk
+  name : AmazonMDIP-Android-1.0.51.0-release-signed-Sh-DE.apk
+  name : AmazonShopping-32bit.apk
+  name : CLiP.apk
+  name : ClaroContenedor_Full.apk
+  name : ClaroContenedor_Stub.apk
+  name : CnnPanel.apk
+  name : CombinedStarter_T28-9.2.0-build_4276-Release-signed.apk
+  name : CosmoSia.apk
+  name : Ebay_Carrier_ID_AT_TR.apk
+  name : EntelPlay_5.0.apk
+  name : EweMBMSServer_TEL.apk
+  name : HPSClient.apk
+  name : IGNITE.apk
+  name : ITracker.apk
+  name : Ignite-Tigo.apk
+  name : Ignite-attMexico.apk
+  name : Ignite-singtelIgniteAgent_5.6.041-4725_release.apk
+  name : KT114Provider.apk
+  name : KTCustomerService.apk
+  name : KTHiddenMenu.apk
+  name : KTOneStore.apk
+  name : KTPushNotiService.apk
+  name : KTServiceAgent.apk
+  name : KTServiceMenu.apk
+  name : LGUGPSnWPS.apk
+  name : LGUHiddenMenu.apk
+  name : LGUMiniCustomerCenter.apk
+  name : LGUOZStore.apk
+  name : LGUplusTsmProxy.apk
+  name : LogWriter.apk
+  name : MDIP.apk
+  name : MyApps-1.5.4-logoff-obson-prodSamsungRelease.apk
+  name : MySingtel_v7.5.apk
+  name : NaverV_N.apk
+  name : ONEstoreSetupwizard.apk
+  name : OPENMarketHiddenMenu.apk
+  name : Omc.apk
+  name : OneStoreService.apk
+  name : ProductSearch.apk
+  name : QRAgent.apk
+  name : RRO_NBS_stk1.apk
+  name : RRO_NBS_stk2.apk
+  name : SKTHiddenMenu.apk
+  name : SKTMemberShip.apk
+  name : SKTOneStore.apk
+  name : SKTService.apk
+  name : SYSdll.apk
+  name : SafetyCleaner.apk
+  name : Samsung321_v3.0.06-release.apk
+  name : SamsungMembersWeb.apk
+  name : SamsungPayStub.apk
+  name : SktUsimService.apk
+  name : SmartPush.apk
+  name : TPhone.apk
+  name : TPhoneInternal.apk
+  name : TPhoneOnePackage.apk
+  name : TPhoneSetup.apk
+  name : TStoreAgent.apk
+  name : TStoreUtility.apk
+  name : TelcelContenedor_Full.apk
+  name : UQLife.apk
+  name : UQMPortal.apk
+  name : UQM_FamilySmile.apk
+  name : UQM_Gigazo.apk
+  name : UQM_Wowma.apk
+  name : UWT_STK_RRO_v1.1_20160113.apk
+  name : Upday.apk
+  name : Vivo_Apps_Clube-v1.19.112-263-release.apk
+  name : WebManual.apk
+  name : ZVV_STK2_RRO.apk
+  name : ZVV_STK_RRO.apk
+  name : app-a1telekomaustriaSamsung-1.0.70.12(615)-release.apk
+  name : app-center-v5.2.1-release-6735-signedV2-aligned.apk
+  name : appcloud_oobe.apk
+  name : appcloud_oobe_hutchison-release_V3.15.1.0.apk
+  name : appcloud_oobe_samsungOrange-release_V3.13.3.0.apk
+  name : che_notification_6.1.apk
+  name : custo_22133.apk
+  name : downloadsvivo-1-10-10-1.apk
+  name : entel_peru-stub1.0.apk
+  name : idapk-1.0.0.39-2-DE-CS.apk
+  name : idapk-1.0.0.43-92.apk
+  name : instagram-stub-BR.apk
+  name : instagram_stub.apk
+  name : kolbiMusica_v3.0.2_API_29.apk
+  name : messenger_stub.apk
+  name : miTelcel_Stub.apk
+  name : micuenta-app-prod-release-android-4.10.3.100.apk
+  name : mitigo_cgu_4.3.3.apk
+  name : mobileTworld.apk
+  name : personal_play_v3.4.apk
+  name : rro_psn_stk1.apk
+  name : rro_uwt_srk1.apk
+  name : rro_uwt_stk2.apk
+  name : samsung_club_bo_4.3.4.apk
+  name : samsung_club_uy_access_release_v1_3.apk
+  name : samsungclub_py_3-7-1.apk
+  name : signatureClub.apk
+  name : tickantel_1.0_stub.apk
+  name : tienda_psn_stub_v3.0.apk
+  name : tigoenlinea_guatemala_5.0.0.apk
+  name : tigomoney_stub_signed_v1.2.apk
+  name : tigomoney_stub_signed_v4.0.1.apk
+  name : tigoplay_shortcut_v1.6
+  name : tigoshop_cgu_2.2.1.apk
+  name : tuapp_1.0_stub.apk
+  name : veramas_1.0_stub.apk
+  name : veratv_1.0_stub.apk
+  name : vivo-maisapps-2.5.9.apk
+  name : wapp-1_1_1-29-release.apk
+  name : SearchSelector.apk
+
+Queries:
+  updateEntireShouldFilterCacheAsync finished: true
+  update time for EntireShouldFilterCache: 578
+  user count at EntireShouldFilterCache: 1
+  settings size at EntireShouldFilterCache: 260
+  system apps queryable: false
+  queries via package name:
+  queries via intent:
+    com.samsung.max.go:
+      org.schabi.newpipe
+    com.google.android.apps.restore:
+      org.schabi.newpipe
+    com.google.android.apps.searchlite:
+      org.schabi.newpipe
+    com.google.android.apps.wellbeing:
+      org.schabi.newpipe
+    com.google.android.apps.nbu.files:
+      org.schabi.newpipe
+    [com.google.android.calendar,com.google.android.syncadapters.calendar]:
+      org.schabi.newpipe
+    com.google.android.apps.tachyon:
+      org.schabi.newpipe
+    com.google.android.gm:
+      org.schabi.newpipe
+    com.google.android.apps.maps:
+      org.schabi.newpipe
+    com.google.android.apps.youtube.music:
+      org.schabi.newpipe
+    com.google.android.youtube:
+      org.schabi.newpipe
+    com.google.android.apps.docs:
+      org.schabi.newpipe
+    com.google.android.apps.messaging:
+      org.schabi.newpipe
+    host.exp.exponent:
+      org.schabi.newpipe
+    com.recklet.aabconverter:
+      org.schabi.newpipe
+    de.danoeh.antennapod.debug:
+      org.schabi.newpipe
+    br.com.colman.petals:
+      org.schabi.newpipe
+    org.schabi.newpipe:
+      [com.google.android.calendar,com.google.android.syncadapters.calendar]
+      com.android.chrome
+      com.google.android.apps.docs
+      com.google.android.setupwizard
+      host.exp.exponent
+  queryable via interaction:
+    User 0:
+
+Package Changes:
+  Sequence number=202
+  User 0:
+    seq=5, package=com.google.android.gms
+    seq=61, package=com.google.android.trichromelibrary_694313830
+    seq=62, package=com.google.android.trichromelibrary_699809530
+    seq=63, package=com.google.android.apps.nbu.files
+    seq=64, package=com.android.chrome
+    seq=65, package=com.google.android.trichromelibrary_699813530
+    seq=158, package=com.google.android.trichromelibrary_699810830
+    seq=163, package=com.google.android.apps.carrier.carrierwifi
+    seq=166, package=com.google.android.webview
+    seq=167, package=com.google.android.trichromelibrary_699810930
+    seq=169, package=com.google.android.apps.youtube.music
+    seq=170, package=com.google.android.apps.messaging
+    seq=174, package=com.google.android.apps.maps
+    seq=179, package=com.google.android.trichromelibrary_699803930
+    seq=199, package=com.google.android.apps.docs
+    seq=200, package=io.github.ylimit.droidbotapp
+    seq=201, package=org.schabi.newpipe
+
+
+Dexopt state:
+  [org.schabi.newpipe]
+    path: /data/app/~~Do8TVhgocJFBzkcSuF6RFg==/org.schabi.newpipe-UDCBD9hdhRJtV0GZHj9kIg==/base.apk
+      arm: [status=run-from-apk] [reason=unknown]
+
+
+Compiler stats:
+  [org.schabi.newpipe]
+     base.apk - 2629
+
+Active install Logging info:
+  [org.schabi.newpipe]
+    1743313551767: "Ver":"999", "Session":"0", "Write":"5", "Commit":"597", "Stage":"4", "Init":"11", "Verified(Unknown)
+    ":"2114", "Copy":"24", "Sign":"2", "DexOpt":"2", 
+  []
+    1742783077359: "Ver":"", "Session":"0", 
+
+Historical install Logging info(9/10):
+  [com.google.android.apps.messaging]
+    1742956755453: "Ver":"273168900", "Session":"0", "Write":"1994", "Write":"4044", "Write":"36347", "Write":"4164", "W
+    rite":"546", "Commit":"750", "Stage":"17", "Init":"15805", "Verified(Unknown)":"11360", "Copy":"9247", "Sign":"3", "
+    DexOpt":"7", 
+  [com.google.android.trichromelibrary]
+    1742956668370: "Ver":"699810930", "Session":"0", "Write":"11252", "Commit":"4794", "Stage":"24", "Init":"5057", "Ver
+    ified(Unknown)":"180", "Copy":"40100", "Sign":"1", "DexOpt":"42", 
+  [org.schabi.newpipe]
+    1742908878841: "Ver":"999", "Session":"0", "Write":"9", "Commit":"484", "Stage":"4", "Init":"12", "Verified(Unknown)
+    ":"2155", "Copy":"24", "Sign":"2", "DexOpt":"2", 
+  [com.google.android.apps.docs]
+    1742956803356: "Ver":"213946996", "Session":"0", "Write":"2267", "Write":"1355", "Write":"14943", "Write":"20", "Wri
+    te":"267", "Commit":"1977", "Stage":"10", "Init":"6485", "Verified(Unknown)":"41434", "Copy":"221", "Sign":"3", "Dex
+    Opt":"5", 
+  [com.google.android.apps.maps]
+    1742956684387: "Ver":"1067983339", "Session":"0", "Write":"5943", "Write":"35879", "Write":"230", "Write":"14", "Wri
+    te":"3584", "Commit":"1408", "Stage":"14", "Init":"5058", "Verified(Unknown)":"73", "Copy":"23270", "Sign":"3", "Dex
+    Opt":"6", 
+  [com.google.android.webview]
+    1742956668337: "Ver":"699810930", "Session":"0", "Write":"5386", "Write":"2127", "Commit":"8580", "Stage":"10", "Ini
+    t":"5084", "Verified(Unknown)":"155", "Copy":"40035", "Sign":"8", "DexOpt":"6", 
+  [io.github.ylimit.droidbotapp]
+    1743313542206: "Ver":"1", "Session":"0", "Write":"13", "Commit":"141", "Stage":"6", "Init":"18", "Verified(Unknown)"
+    :"1824", "Copy":"22", "Sign":"58", "DexOpt":"2", 
+  [com.google.android.apps.carrier.carrierwifi]
+    1742951854832: "Ver":"97", "Session":"1", "Write":"1913", "Write":"455", "Commit":"206", "Stage":"6", "Init":"16", "
+    Verified(Unknown)":"48", "Copy":"18", "Sign":"7", "DexOpt":"2", 
+  [com.google.android.apps.youtube.music]
+    1742956731474: "Ver":"81253230", "Session":"0", "Write":"2688", "Write":"3822", "Write":"17081", "Commit":"350", "St
+    age":"10", "Init":"43757", "Verified(Unknown)":"395", "Copy":"76", "Sign":"16", "DexOpt":"18", 
