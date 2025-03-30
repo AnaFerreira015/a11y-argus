@@ -1,89 +1,111 @@
-# main.py
-import cv2
-import json
+import os
 import re
-from lxml import etree
+import json
+import cv2
+import xml.etree.ElementTree as ET
 
-from accessibility_checker.ui_element import UIElement, check_overlapping_elements, check_duplicate_text
-from accessibility_checker.extractor import XmlNodeBoundsExtractor
-from accessibility_checker.ocr import OcrInfo
-from accessibility_checker.contrast import ContrastChecker
-from accessibility_checker.accessibility import AccessibilityChecker
-from accessibility_checker.error_highlighter import ErrorHighlighter
 
-def union_bounds(bounds1, bounds2):
-    x1 = min(bounds1[0], bounds2[0])
-    y1 = min(bounds1[1], bounds2[1])
-    x2 = max(bounds1[2], bounds2[2])
-    y2 = max(bounds1[3], bounds2[3])
-    return (x1, y1, x2, y2)
+ACCEPTED_CLASSES = {
+    "android.widget.TextView",
+    "android.widget.Button",
+    "android.widget.EditText",
+    "android.widget.CheckBox",
+    "android.widget.RadioButton",
+    "android.widget.Switch",
+    "android.widget.ToggleButton"
+}
 
-def main():
-    image_paths = {
-        "default": r"C:\Users\dasil\OneDrive\Documentos\droidbot-results-test\xmls\Suntimes Widget\screen_default.png",
-        "large_text": r"C:\Users\dasil\OneDrive\Documentos\droidbot-results-test\xmls\Suntimes Widget\screen_large_text.png",
-        "small_text": r"C:\Users\dasil\OneDrive\Documentos\droidbot-results-test\xmls\Suntimes Widget\screen_small_text.png"
-    }
-    xml_paths = {
-        "default": r"C:\Users\dasil\OneDrive\Documentos\droidbot-results-test\xmls\Suntimes Widget\ui_dump_default.xml",
-        "large_text": r"C:\Users\dasil\OneDrive\Documentos\droidbot-results-test\xmls\Suntimes Widget\ui_dump_large_text.xml",
-        "small_text": r"C:\Users\dasil\OneDrive\Documentos\droidbot-results-test\xmls\Suntimes Widget\ui_dump_small_text.xml"
-    }
-    # Obter densidade do dispositivo
-    device_density = AccessibilityChecker.get_device_density()
-    print(f"Device density: {device_density}")
+def mark_resize_issues_on_image(image_path, errors, output_path):
+    """
+    Marca na imagem os elementos que não redimensionaram corretamente.
+    """
+    if not errors:
+        return
 
-    extractor_default = XmlNodeBoundsExtractor(xml_paths["default"], cv2.imread(image_paths["default"]))
-    ocr_info_instances_default = extractor_default.get_ocr_info_instances()
+    image = cv2.imread(image_path)
+    if image is None:
+        print(f"[WARNING] Imagem não encontrada: {image_path}")
+        return
 
-    contrast_checker = ContrastChecker(image_paths["default"])
-    bounds_texts = contrast_checker.load_bounds_from_xml(xml_paths["default"])
-    contrast_failures = contrast_checker.check_text_contrast_with_tolerance(bounds_texts, device_density)
+    for err in errors:
+        x1, y1, x2, y2 = err["bounds"]
+        label = f"{err['element']}: {err['original_height']}px → {err['new_height']}px"
+        cv2.rectangle(image, (x1, y1), (x2, y2), (0, 0, 255), 2)
+        cv2.putText(image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX,
+                    0.5, (0, 0, 255), 1)
 
-    accessibility_checker = AccessibilityChecker(extractor_default, device_density=device_density)
-    accessibility_checker.run_all_checks()
-    accessibility_failures = accessibility_checker.get_failures()
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    cv2.imwrite(output_path, image)
+    print(f"[INFO] Imagem com marcações salva em: {output_path}")
 
-    ui_elements = extractor_default.extract_ui_components_as_elements()
-    print("[DEBUG] UI Elements extraídos:", ui_elements)
-    xml_root = etree.parse(xml_paths["default"]).getroot()
-    overlapping_elements = check_overlapping_elements(ui_elements, xml_root)
+def extract_elements(xml_path):
+    elements = {}
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+    for node in root.iter('node'):
+        class_name = node.get('class', '').strip()
+        if class_name not in ACCEPTED_CLASSES:
+            continue
+        resource_id = node.get('resource-id', '').strip()
+        content_desc = node.get('content-desc', '').strip()
+        text = node.get('text', '').strip()
+        bounds = node.get('bounds', '')
+        key = resource_id or content_desc or text
+        if key and bounds:
+            match = re.findall(r'\d+', bounds)
+            if len(match) == 4:
+                x1, y1, x2, y2 = map(int, match)
+                height = y2 - y1
+                elements[key] = {
+                    'bounds': [x1, y1, x2, y2],
+                    'height': height,
+                    'class': class_name
+                }
+    return elements
 
-    all_errors = []
 
-    for elem1, elem2 in overlapping_elements:
-        combined_bounds = union_bounds(elem1.bounds, elem2.bounds)
-        overlap_error = {
-            'type': 'Overlapping Elements',
-            'elements': [elem1.id, elem2.id],
-            'bounds': combined_bounds,
-            'Success Criterion': '1.4.12 Text Spacing',
-            'Level': 'AA'
-        }
-        if overlap_error not in all_errors:
-            all_errors.append(overlap_error)
+def check_resize(default, variant, type_check, tolerance=0.07):
+    errors = []
+    for key in default:
+        if key in variant:
+            h1 = default[key]['height']
+            h2 = variant[key]['height']
+            ratio = h2 / h1 if h1 else 0
+            if abs(ratio - 1) < tolerance:
+                errors.append({
+                    "type": f"Resize Text - no {type_check}",
+                    "element": key,
+                    "bounds": default[key]['bounds'],
+                    "original_height": h1,
+                    "new_height": h2,
+                    "component_class": default[key]['class'],
+                    "Success Criterion": "1.4.4 Resize Text",
+                    "Level": "AA"
+                })
+    return errors
 
-    duplicate_texts = check_duplicate_text(ui_elements, xml_root)
-    for elem in duplicate_texts:
-        duplicate_error = {
-            'type': 'Duplicate Text',
-            'element': elem.id,
-            'content': elem.content,
-            'bounds': elem.bounds,
-            'Success Criterion': '3.2.4 Consistent Identification',
-            'Level': 'AA'
-        }
-        if duplicate_error not in all_errors:
-            all_errors.append(duplicate_error)
 
-    all_errors.extend(contrast_failures)
-    all_errors.extend(accessibility_failures)
+def run_resize_analysis(xml_paths, output_path, image_path=None, marked_image_path=None):
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-    highlighter = ErrorHighlighter(image_paths["default"])
-    for error in all_errors:
-        highlighter.highlight_error(error)
-    highlighter.save_images("output_images")
-    ContrastChecker.save_errors_to_json(all_errors, "errors.json")
+    default_elements = extract_elements(xml_paths["default"])
+    large_elements = extract_elements(xml_paths["large_text"])
+    small_elements = extract_elements(xml_paths["small_text"])
+
+    resize_errors = []
+    resize_errors += check_resize(default_elements, large_elements, "increase")
+    resize_errors += check_resize(default_elements, small_elements, "reduction")
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(resize_errors, f, indent=4, ensure_ascii=False)
+
+    print(f"[INFO] Análise de Resize Text finalizada. Resultado salvo em: {output_path}")
+
+    # 🔴 Marca na imagem base os problemas encontrados
+    if image_path and marked_image_path:
+        mark_resize_issues_on_image(image_path, resize_errors, marked_image_path)
+
+
 
 if __name__ == "__main__":
-    main()
+    print("Este script deve ser chamado pelo automate_accessibility.py com os caminhos dos XMLs.")

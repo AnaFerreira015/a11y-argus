@@ -155,7 +155,7 @@ class XmlNodeBoundsExtractor:
 
         return interactive_elements
 
-    def get_ocr_info_instances(self):
+    def get_ocr_info_instances(self, precision=0.3):
         ocr_info_list = []
         for node in self.nodes_with_bounds:
             try:
@@ -166,7 +166,7 @@ class XmlNodeBoundsExtractor:
             if x1 == x2 or y1 == y2:
                 print(f"Ignorando bounds inválidos: {node['bounds']}")
                 continue
-            ocr_info = OcrInfo(self.image[y1:y2, x1:x2], bounds=(x1, y1, x2, y2))
+            ocr_info = OcrInfo(self.image[y1:y2, x1:x2], precision=precision, bounds=(x1, y1, x2, y2))
             ocr_info_list.append(ocr_info)
         return ocr_info_list
 

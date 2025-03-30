@@ -78,11 +78,11 @@ class ContrastChecker:
             x1, y1, x2, y2 = bounds
             height_pixels = y2 - y1
             height_dp = height_pixels / device_density
-            print(f"[DEBUG] Altura: {height_dp} dp")
+            # print(f"[DEBUG] Altura: {height_dp} dp")
             required_contrast = 3.0 if height_dp >= 18 else default_min_contrast
-            print(f"[DEBUG] Contraste necessário: {required_contrast}")
+            # print(f"[DEBUG] Contraste necessário: {required_contrast}")
             contrast_ratio = self.calculate_contrast_ratio(text_color, bg_color)
-            print(f"[DEBUG] Proporção de contraste: {contrast_ratio}")
+            # print(f"[DEBUG] Proporção de contraste: {contrast_ratio}")
             if contrast_ratio < required_contrast:
                 failure = {
                     "type": "Contrast Failure",

@@ -27,20 +27,29 @@ CONTAINER_CLASSES = [
     "android.view.ViewGroup"
 ]
 
-def check_overlapping_elements(elements: List[UIElement], xml_root, tolerance: int = 0) -> List[Tuple[UIElement, UIElement]]:
-    """
-    Verifica se há elementos de texto que se sobrepõem (ignorando relações pai-filho),
-    aplicando um tolerance.
-    """
+def check_overlapping_elements(elements: List[UIElement], xml_root, tolerance: int = 5) -> List[Tuple[UIElement, UIElement]]:
     overlapping_pairs = []
+    seen_pairs = set()
+
     for i, elem1 in enumerate(elements):
+        if not elem1.content.strip():  # Apenas elementos que possuem texto
+            continue
+
         for j, elem2 in enumerate(elements):
             if i >= j:
                 continue
-            if is_overlapping(elem1.bounds, elem2.bounds, tolerance):
-                if not is_parent_or_child(elem1, elem2):
+            if not elem2.content.strip():  # Apenas elementos que possuem texto
+                continue
+
+            if is_overlapping(elem1.bounds, elem2.bounds, tolerance) and not is_parent_or_child(elem1, elem2):
+                pair_key = tuple(sorted([elem1.id, elem2.id]))
+                if pair_key not in seen_pairs:
+                    # print(f"[DEBUG] Sobreposição de texto detectada: {elem1.id} {elem1.bounds} <--> {elem2.id} {elem2.bounds}")
                     overlapping_pairs.append((elem1, elem2))
+                    seen_pairs.add(pair_key)
+
     return overlapping_pairs
+
 
 def is_overlapping(bounds1: Tuple[int, int, int, int], bounds2: Tuple[int, int, int, int], tolerance: int = 0) -> bool:
     x1_min, y1_min, x1_max, y1_max = bounds1
@@ -58,10 +67,19 @@ def is_overlapping(bounds1: Tuple[int, int, int, int], bounds2: Tuple[int, int, 
     )
 
 def is_parent_or_child(elem1: UIElement, elem2: UIElement) -> bool:
+    """
+    Melhorado para evitar sobreposição detectada dentro de containers comuns.
+    """
     if elem1.node is None or elem2.node is None:
         return False
-    return (elem1.node in list(elem2.node.iterancestors()) or
-            elem2.node in list(elem1.node.iterancestors()))
+
+    # Se ambos os elementos estão no mesmo container, não devem ser marcados
+    if elem1.node.getparent() == elem2.node.getparent():
+        return True
+
+    # Verifica se um elemento é pai/filho do outro
+    return elem1.node in list(elem2.node.iterancestors()) or elem2.node in list(elem1.node.iterancestors())
+
 
 def check_duplicate_text(elements: List[UIElement], xml_root) -> List[UIElement]:
     """Verifica se há textos duplicados, considerando o contexto (por exemplo, o pai)."""

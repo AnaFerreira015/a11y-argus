@@ -1586,6 +1586,23 @@ class AccessibilityChecker:
                     })
         self.failures.extend(failures)
 
+    def check_unresponsive_views_xml(self, xml_bounds_default, xml_bounds_large):
+        failures = []
+        for elem_id, bounds_default in xml_bounds_default.items():
+            bounds_large = xml_bounds_large.get(elem_id)
+            if bounds_large:
+                if bounds_default == bounds_large:
+                    # Se os bounds não mudam, possível erro de responsividade
+                    failures.append({
+                        "type": "Unresponsive View - no increase (XML-based)",
+                        "resource_id": elem_id,
+                        "bounds": list(bounds_default),
+                        "Success Criterion": "1.4.4 Resize Text",
+                        "Level": "AA",
+                        "Details": "O elemento mantém o mesmo tamanho (bounds) ao mudar para fonte maior, indicando possível falta de responsividade."
+                    })
+        return failures
+
     def run_all_checks(self):
         self.check_non_text_content()
         self.check_link_purpose()
