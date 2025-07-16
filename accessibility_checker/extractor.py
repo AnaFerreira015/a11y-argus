@@ -215,7 +215,8 @@ class XmlNodeBoundsExtractor:
             ui_element = UIElement(
                 id=resource_id or node_class,
                 content=text or content_desc,
-                bounds=bounds_tuple
+                bounds=bounds_tuple,
+                node=node
             )
             ui_elements.append(ui_element)
         return ui_elements

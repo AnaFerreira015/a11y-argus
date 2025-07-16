@@ -3,6 +3,15 @@ import cv2
 import os
 import re
 
+
+def union_bounds(bounds1, bounds2):
+    """Combina dois retângulos (tuplas de 4 inteiros) em um único retângulo que os engloba."""
+    x1 = min(bounds1[0], bounds2[0])
+    y1 = min(bounds1[1], bounds2[1])
+    x2 = max(bounds1[2], bounds2[2])
+    y2 = max(bounds1[3], bounds2[3])
+    return x1, y1, x2, y2
+
 class ErrorHighlighter:
     def __init__(self, image_path: str):
         self.original_image = cv2.imread(image_path)
@@ -30,7 +39,7 @@ class ErrorHighlighter:
         bounds = error_info['bounds']
         # Se "bounds" for uma lista com dois bounds (ex.: sobreposição), combine-os:
         if isinstance(bounds, list) and len(bounds) == 2:
-            bounds = self.union_bounds(bounds[0], bounds[1])
+            bounds = union_bounds(bounds[0], bounds[1])
         # Agora, espere um 4-tuple:
         x1, y1, x2, y2 = bounds
         if error_type not in self.image_copies:
@@ -46,14 +55,6 @@ class ErrorHighlighter:
         cv2.rectangle(image_copy, (x1, y1), (x2, y2), color, thickness)
         cv2.putText(image_copy, error_type.replace('_', ' '), (x1, y1 - 10),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 1)
-
-    def union_bounds(self, bounds1, bounds2):
-        """Combina dois retângulos (tuplas de 4 inteiros) em um único retângulo que os engloba."""
-        x1 = min(bounds1[0], bounds2[0])
-        y1 = min(bounds1[1], bounds2[1])
-        x2 = max(bounds1[2], bounds2[2])
-        y2 = max(bounds1[3], bounds2[3])
-        return (x1, y1, x2, y2)
 
     def save_images(self, output_folder: str = "output_images"):
         if not os.path.exists(output_folder):

@@ -1,3 +1,4 @@
+# ocr-test\plugins\screen_capture_plugin.py
 import os
 import time
 from droidbot.plugin import Plugin
@@ -35,7 +36,7 @@ class ScreenCapturePlugin(Plugin):
         self.device.adb.shell(f"cp /sdcard/screen.png /sdcard/screen_{self.counter:03d}.png")
         self.device.adb.pull(f"/sdcard/screen_{self.counter:03d}.png", screen_filename)
 
-        print(f"[PLUGIN] Tela {self.counter} capturada com sucesso.")
+        print(f"[PLUGIN - plugins] Tela {self.counter} capturada com sucesso.")
 
     def on_finish(self):
         print("[PLUGIN] Plugin de captura finalizado.")

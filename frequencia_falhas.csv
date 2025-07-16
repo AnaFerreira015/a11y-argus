@@ -1,0 +1,1163 @@
+Aplicativo,Tipo de Falha,Critério WCAG,Nível,Número de Ocorrências,Percentual (%)
+2048 Original_3.5_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,15.0
+2048 Original_3.5_APKPure,Missing Content Description,1.1.1 Non-text Content,A,1,5.0
+2048 Original_3.5_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,30.0
+2048 Original_3.5_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,10.0
+2048 Original_3.5_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,4,20.0
+2048 Original_3.5_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,4,20.0
+addy.io,Resize Text - insufficient increase,1.4.4 Resize Text,AA,13,36.11
+addy.io,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,13,36.11
+addy.io,Overlapping Elements,1.4.12 Text Spacing,AA,3,8.33
+addy.io,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,19.44
+Algebraix_3.3.1_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,5,5.38
+Algebraix_3.3.1_APKPure,Error Message Detected,3.3.1 Error Identification,A,6,6.45
+Algebraix_3.3.1_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,3,3.23
+Algebraix_3.3.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,8.6
+Algebraix_3.3.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,35,37.63
+Algebraix_3.3.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,35,37.63
+Algebraix_3.3.1_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,1.08
+Aneko,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,3.57
+Aneko,Missing Accessible Name,"4.1.2 Name, Role, Value",A,16,19.05
+Aneko,Resize Text - insufficient increase,1.4.4 Resize Text,AA,31,36.9
+Aneko,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,31,36.9
+Aneko,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,1,1.19
+Aneko,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,1.19
+Aneko,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,1.19
+AnkiDroid,Resize Text - insufficient increase,1.4.4 Resize Text,AA,12,37.5
+AnkiDroid,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,12,37.5
+AnkiDroid,Missing Content Description,1.1.1 Non-text Content,A,3,9.38
+AnkiDroid,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,9.38
+AnkiDroid,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,3.12
+AnkiDroid,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,3.12
+ATK - Maintenance & HSE_56.3_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,4.0
+ATK - Maintenance & HSE_56.3_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,4.0
+ATK - Maintenance & HSE_56.3_APKPure,Error Message Detected,3.3.1 Error Identification,A,1,4.0
+ATK - Maintenance & HSE_56.3_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,8.0
+ATK - Maintenance & HSE_56.3_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,10,40.0
+ATK - Maintenance & HSE_56.3_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,10,40.0
+audile,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,17.65
+audile,Resize Text - insufficient increase,1.4.4 Resize Text,AA,6,35.29
+audile,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,6,35.29
+audile,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,5.88
+audile,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,5.88
+AudioShare,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,5.08
+AudioShare,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,5.08
+AudioShare,Error Message Detected,3.3.1 Error Identification,A,6,10.17
+AudioShare,Missing Label or Instruction,3.3.2 Labels or Instructions,A,3,5.08
+AudioShare,Resize Text - insufficient increase,1.4.4 Resize Text,AA,21,35.59
+AudioShare,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,21,35.59
+AudioShare,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,3.39
+Aurora Store_4.7.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,2,4.65
+Aurora Store_4.7.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,18.6
+Aurora Store_4.7.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,15,34.88
+Aurora Store_4.7.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,15,34.88
+Aurora Store_4.7.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,3,6.98
+Avee Music Player (Pro)_1.2.248_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,5,38.46
+Avee Music Player (Pro)_1.2.248_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,7.69
+Avee Music Player (Pro)_1.2.248_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,23.08
+Avee Music Player (Pro)_1.2.248_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,7.69
+Avee Music Player (Pro)_1.2.248_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,15.38
+Avee Music Player (Pro)_1.2.248_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,7.69
+Background Apps & Process List_APKPure,Missing Content Description,1.1.1 Non-text Content,A,2,6.25
+Background Apps & Process List_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,6.25
+Background Apps & Process List_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,12.5
+Background Apps & Process List_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,12,37.5
+Background Apps & Process List_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,12,37.5
+Bangumi,Resize Text - insufficient increase,1.4.4 Resize Text,AA,2,7.41
+Bangumi,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,10,37.04
+Bangumi,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,3.7
+Bangumi,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,10,37.04
+Bangumi,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,7.41
+Bangumi,Duplicate Text,3.2.4 Consistent Identification,AA,2,7.41
+Based_Cooking,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,100.0
+Bike Computer - Your Personal _1.8.4.2_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,6,9.09
+Bike Computer - Your Personal _1.8.4.2_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,2,3.03
+Bike Computer - Your Personal _1.8.4.2_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,21,31.82
+Bike Computer - Your Personal _1.8.4.2_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,21,31.82
+Bike Computer - Your Personal _1.8.4.2_APKPure,Missing Content Description,1.1.1 Non-text Content,A,7,10.61
+Bike Computer - Your Personal _1.8.4.2_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,9.09
+Bike Computer - Your Personal _1.8.4.2_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,4.55
+Bilheteria Digital_3.0.51_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,2.91
+Bilheteria Digital_3.0.51_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,2.91
+Bilheteria Digital_3.0.51_APKPure,Error Message Detected,3.3.1 Error Identification,A,1,0.97
+Bilheteria Digital_3.0.51_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,0.97
+Bilheteria Digital_3.0.51_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,17,16.5
+Bilheteria Digital_3.0.51_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,12,11.65
+Bilheteria Digital_3.0.51_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,10,9.71
+Bilheteria Digital_3.0.51_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,2,1.94
+Bilheteria Digital_3.0.51_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,27,26.21
+Bilheteria Digital_3.0.51_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,27,26.21
+Binary_Eye,Resize Text - insufficient increase,1.4.4 Resize Text,AA,20,37.74
+Binary_Eye,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,20,37.74
+Binary_Eye,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,7.55
+Binary_Eye,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,11.32
+Binary_Eye,Missing Content Description,1.1.1 Non-text Content,A,3,5.66
+BingX_Trade_BTC_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,7.0
+BingX_Trade_BTC_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,41,41.0
+BingX_Trade_BTC_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,29,29.0
+BingX_Trade_BTC_APKPure,Missing Content Description,1.1.1 Non-text Content,A,7,7.0
+BingX_Trade_BTC_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,7,7.0
+BingX_Trade_BTC_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,3,3.0
+BingX_Trade_BTC_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,4.0
+BingX_Trade_BTC_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,2.0
+Book's_Story,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,11,7.64
+Book's_Story,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,6,4.17
+Book's_Story,Resize Text - insufficient increase,1.4.4 Resize Text,AA,55,38.19
+Book's_Story,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,72,50.0
+Boosted Ad Maker by Lightricks_1.8.6.1_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,6,10.91
+Boosted Ad Maker by Lightricks_1.8.6.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,10,18.18
+Boosted Ad Maker by Lightricks_1.8.6.1_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,3.64
+Boosted Ad Maker by Lightricks_1.8.6.1_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,7,12.73
+Boosted Ad Maker by Lightricks_1.8.6.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,14,25.45
+Boosted Ad Maker by Lightricks_1.8.6.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,14,25.45
+Boosted Ad Maker by Lightricks_1.8.6.1_APKPure,Missing Content Description,1.1.1 Non-text Content,A,1,1.82
+Boosted Ad Maker by Lightricks_1.8.6.1_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,1.82
+Boosted Time Tracker_1.6.8_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,7.27
+Boosted Time Tracker_1.6.8_APKPure,Missing Content Description,1.1.1 Non-text Content,A,7,6.36
+Boosted Time Tracker_1.6.8_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,7,6.36
+Boosted Time Tracker_1.6.8_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,10,9.09
+Boosted Time Tracker_1.6.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,38,34.55
+Boosted Time Tracker_1.6.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,38,34.55
+Boosted Time Tracker_1.6.8_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,1.82
+Briar_1.5.14_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,10.71
+Briar_1.5.14_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,25.0
+Briar_1.5.14_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,32.14
+Briar_1.5.14_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,32.14
+Calculator-inator,Missing Accessible Name,"4.1.2 Name, Role, Value",A,8,14.04
+Calculator-inator,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,7.02
+Calculator-inator,Resize Text - insufficient increase,1.4.4 Resize Text,AA,20,35.09
+Calculator-inator,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,19,33.33
+Calculator-inator,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,4,7.02
+Calculator-inator,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,1.75
+Calculator-inator,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,1.75
+Cano_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,4,15.38
+Cano_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,11.54
+Cano_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,7.69
+Cano_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,3.85
+Cano_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,8,30.77
+Cano_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,8,30.77
+Caterer Job Search_272.0.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,6.25
+Caterer Job Search_272.0.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,38,39.58
+Caterer Job Search_272.0.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,38,39.58
+Caterer Job Search_272.0.1_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,8.33
+Caterer Job Search_272.0.1_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,3.12
+Caterer Job Search_272.0.1_APKPure,Error Message Detected,3.3.1 Error Identification,A,3,3.12
+CCC ONE Repair Facility_25.8_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,2,28.57
+CCC ONE Repair Facility_25.8_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,14.29
+CCC ONE Repair Facility_25.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,2,28.57
+CCC ONE Repair Facility_25.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,2,28.57
+Cemig Atende_23042025-1800_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,6.0
+Cemig Atende_23042025-1800_APKPure,Missing Content Description,1.1.1 Non-text Content,A,1,2.0
+Cemig Atende_23042025-1800_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,2.0
+Cemig Atende_23042025-1800_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,12.0
+Cemig Atende_23042025-1800_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,4,8.0
+Cemig Atende_23042025-1800_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,16,32.0
+Cemig Atende_23042025-1800_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,16,32.0
+Cemig Atende_23042025-1800_APKPure,Error Message Detected,3.3.1 Error Identification,A,1,2.0
+Cemig Atende_23042025-1800_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,2.0
+Cemig Atende_23042025-1800_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,2.0
+Cibus Atendente_3.0.5_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,8.33
+Cibus Atendente_3.0.5_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,8.33
+Cibus Atendente_3.0.5_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,5,41.67
+Cibus Atendente_3.0.5_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,5,41.67
+Citrine,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,14,100.0
+Coast - Work Orders Schedule_17.4.5_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,18.18
+Coast - Work Orders Schedule_17.4.5_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,5,15.15
+Coast - Work Orders Schedule_17.4.5_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,12,36.36
+Coast - Work Orders Schedule_17.4.5_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,3.03
+Coast - Work Orders Schedule_17.4.5_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,27.27
+Confide - secure messenger_8.0.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,6,9.68
+Confide - secure messenger_8.0.0_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,13,20.97
+Confide - secure messenger_8.0.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,23,37.1
+Confide - secure messenger_8.0.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,20,32.26
+converterNow,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,1,33.33
+converterNow,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,33.33
+converterNow,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,33.33
+Correio de Sergipe_11_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,14,11.67
+Correio de Sergipe_11_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,18,15.0
+Correio de Sergipe_11_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,37,30.83
+Correio de Sergipe_11_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,37,30.83
+Correio de Sergipe_11_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,13,10.83
+Correio de Sergipe_11_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,0.83
+Countdown Timer_3.2_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,2,20.0
+Countdown Timer_3.2_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,10.0
+Countdown Timer_3.2_APKPure,Error Message Detected,3.3.1 Error Identification,A,1,10.0
+Countdown Timer_3.2_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,3,30.0
+Countdown Timer_3.2_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,3,30.0
+Crypto News_ Prices and Alerts_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,2,0.48
+Crypto News_ Prices and Alerts_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,194,46.86
+Crypto News_ Prices and Alerts_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,194,46.86
+Crypto News_ Prices and Alerts_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,0.72
+Crypto News_ Prices and Alerts_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,0.24
+Crypto News_ Prices and Alerts_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,10,2.42
+Crypto News_ Prices and Alerts_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,9,2.17
+Crypto News_ Prices and Alerts_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,0.24
+Curb Hero Open House App_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,37.5
+Curb Hero Open House App_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,37.5
+Curb Hero Open House App_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,2,25.0
+Custom_Uploader,Overlapping Elements,1.4.12 Text Spacing,AA,3,10.71
+Custom_Uploader,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,25.0
+Custom_Uploader,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,32.14
+Custom_Uploader,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,32.14
+DailyAL,Overlapping Elements,1.4.12 Text Spacing,AA,3,10.0
+DailyAL,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,23.33
+DailyAL,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,30.0
+DailyAL,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,30.0
+DailyAL,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,6.67
+DailyTube - media player_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,13,17.11
+DailyTube - media player_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,25,32.89
+DailyTube - media player_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,25,32.89
+DailyTube - media player_APKPure,Missing Content Description,1.1.1 Non-text Content,A,2,2.63
+DailyTube - media player_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,2.63
+DailyTube - media player_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,9,11.84
+Daily_Diary,Missing Accessible Name,"4.1.2 Name, Role, Value",A,8,44.44
+Daily_Diary,Missing Label or Instruction,3.3.2 Labels or Instructions,A,3,16.67
+Daily_Diary,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,27.78
+Daily_Diary,Resize Text - insufficient increase,1.4.4 Resize Text,AA,1,5.56
+Daily_Diary,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,1,5.56
+DanXi,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,22.22
+DanXi,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,22.22
+DanXi,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,44.44
+DanXi,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,11.11
+Dash_Wallet,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,34.78
+Dash_Wallet,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,3,13.04
+Dash_Wallet,Resize Text - insufficient increase,1.4.4 Resize Text,AA,5,21.74
+Dash_Wallet,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,5,21.74
+Dash_Wallet,Missing Content Description,1.1.1 Non-text Content,A,1,4.35
+Dash_Wallet,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,4.35
+Degoo_ 20 GB Cloud Storage_1.57.182.241025_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,14,22.22
+Degoo_ 20 GB Cloud Storage_1.57.182.241025_APKPure,Missing Content Description,1.1.1 Non-text Content,A,11,17.46
+Degoo_ 20 GB Cloud Storage_1.57.182.241025_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,11,17.46
+Degoo_ 20 GB Cloud Storage_1.57.182.241025_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,18,28.57
+Degoo_ 20 GB Cloud Storage_1.57.182.241025_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,4,6.35
+Degoo_ 20 GB Cloud Storage_1.57.182.241025_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,5,7.94
+Delo_4.1.0_APKPure,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,1,1.23
+Delo_4.1.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,29,35.8
+Delo_4.1.0_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,3.7
+Delo_4.1.0_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,3,3.7
+Delo_4.1.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,6,7.41
+Delo_4.1.0_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,2.47
+Delo_4.1.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,2,2.47
+Delo_4.1.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,14,17.28
+Delo_4.1.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,14,17.28
+Delo_4.1.0_APKPure,Missing Content Description,1.1.1 Non-text Content,A,2,2.47
+Delo_4.1.0_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,5,6.17
+DesignEvo - Logo Maker_1.0.5_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,5.88
+DesignEvo - Logo Maker_1.0.5_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,12,35.29
+DesignEvo - Logo Maker_1.0.5_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,10,29.41
+DesignEvo - Logo Maker_1.0.5_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,10,29.41
+Device Info HW_5.21.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,12,9.52
+Device Info HW_5.21.0_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,35,27.78
+Device Info HW_5.21.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,4.76
+Device Info HW_5.21.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,33,26.19
+Device Info HW_5.21.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,33,26.19
+Device Info HW_5.21.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,1.59
+Device Info HW_5.21.0_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,4,3.17
+Device Info HW_5.21.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,0.79
+Device Info HW_5.21.0_APKPure (1),Resize Text - insufficient increase,1.4.4 Resize Text,AA,34,25.37
+Device Info HW_5.21.0_APKPure (1),Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,35,26.12
+Device Info HW_5.21.0_APKPure (1),Contrast Failure,1.4.3 Contrast (Minimum),AA,16,11.94
+Device Info HW_5.21.0_APKPure (1),Missing Accessible Name,"4.1.2 Name, Role, Value",A,36,26.87
+Device Info HW_5.21.0_APKPure (1),Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,4.48
+Device Info HW_5.21.0_APKPure (1),Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,1.49
+Device Info HW_5.21.0_APKPure (1),Gesture-Only Navigation,2.5.1 Pointer Gestures,A,4,2.99
+Device Info HW_5.21.0_APKPure (1),Duplicate Text,3.2.4 Consistent Identification,AA,1,0.75
+Digital Board_1.0.8_APKPure,Missing Content Description,1.1.1 Non-text Content,A,4,7.69
+Digital Board_1.0.8_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,12,23.08
+Digital Board_1.0.8_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,11.54
+Digital Board_1.0.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,12,23.08
+Digital Board_1.0.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,12,23.08
+Digital Board_1.0.8_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,1.92
+Digital Board_1.0.8_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,5,9.62
+DiskInfo_4.9.9 (build 10)_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,40,22.47
+DiskInfo_4.9.9 (build 10)_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,16,8.99
+DiskInfo_4.9.9 (build 10)_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,32,17.98
+DiskInfo_4.9.9 (build 10)_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,48,26.97
+DiskInfo_4.9.9 (build 10)_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,42,23.6
+Drive Weather With Live Radar_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,33,23.24
+Drive Weather With Live Radar_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,33,23.24
+Drive Weather With Live Radar_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,5,3.52
+Drive Weather With Live Radar_APKPure,Missing Content Description,1.1.1 Non-text Content,A,22,15.49
+Drive Weather With Live Radar_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,16,11.27
+Drive Weather With Live Radar_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,26,18.31
+Drive Weather With Live Radar_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,7,4.93
+Drivetune_4.8.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,83,20.05
+Drivetune_4.8.1_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,55,13.29
+Drivetune_4.8.1_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,217,52.42
+Drivetune_4.8.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,17,4.11
+Drivetune_4.8.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,42,10.14
+ecoapp_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,13,11.71
+ecoapp_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,3.6
+ecoapp_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,13,11.71
+ecoapp_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,1.8
+ecoapp_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,37,33.33
+ecoapp_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,38,34.23
+ecoapp_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,3,2.7
+ecoapp_APKPure,Missing Content Description,1.1.1 Non-text Content,A,1,0.9
+eduVPN,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,21.05
+eduVPN,Resize Text - insufficient increase,1.4.4 Resize Text,AA,7,18.42
+eduVPN,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,12,31.58
+eduVPN,Overlapping Elements,1.4.12 Text Spacing,AA,3,7.89
+eduVPN,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,5.26
+eduVPN,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,5.26
+eduVPN,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,2.63
+eduVPN,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,2.63
+eduVPN,Duplicate Text,3.2.4 Consistent Identification,AA,2,5.26
+ELAUNCH_4.1.0_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,6.25
+ELAUNCH_4.1.0_APKPure,Error Message Detected,3.3.1 Error Identification,A,6,6.25
+ELAUNCH_4.1.0_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,6,6.25
+ELAUNCH_4.1.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,24,25.0
+ELAUNCH_4.1.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,15,15.62
+ELAUNCH_4.1.0_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,6,6.25
+ELAUNCH_4.1.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,3,3.12
+ELAUNCH_4.1.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,15,15.62
+ELAUNCH_4.1.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,15,15.62
+Electroneum_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,4.55
+Electroneum_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,18.18
+Electroneum_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,9.09
+Electroneum_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,18.18
+Electroneum_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,9.09
+Electroneum_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,4.55
+Electroneum_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,4,18.18
+Electroneum_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,4,18.18
+energize,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,50.0
+energize,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,50.0
+epraise_3000.61.00_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,17.65
+epraise_3000.61.00_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,47.06
+epraise_3000.61.00_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,3,17.65
+epraise_3000.61.00_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,3,17.65
+EsilApp - Noticias_2.02.09_APKPure,Missing Content Description,1.1.1 Non-text Content,A,1,20.0
+EsilApp - Noticias_2.02.09_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,40.0
+EsilApp - Noticias_2.02.09_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,40.0
+Eternity,Missing Content Description,1.1.1 Non-text Content,A,6,5.13
+Eternity,Missing Accessible Name,"4.1.2 Name, Role, Value",A,13,11.11
+Eternity,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,7,5.98
+Eternity,Resize Text - insufficient increase,1.4.4 Resize Text,AA,41,35.04
+Eternity,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,43,36.75
+Eternity,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,0.85
+Eternity,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,5,4.27
+Eternity,Duplicate Text,3.2.4 Consistent Identification,AA,1,0.85
+Everest,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,11.11
+Everest,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,27.78
+Everest,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,3,16.67
+Everest,Resize Text - insufficient increase,1.4.4 Resize Text,AA,4,22.22
+Everest,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,4,22.22
+eWarehouse by KCS_2025.05.021620_APKPure,Error Message Detected,3.3.1 Error Identification,A,2,7.14
+eWarehouse by KCS_2025.05.021620_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,14.29
+eWarehouse by KCS_2025.05.021620_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,7.14
+eWarehouse by KCS_2025.05.021620_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,10,35.71
+eWarehouse by KCS_2025.05.021620_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,10,35.71
+Field Warrior ELD_5.0.120_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,33.33
+Field Warrior ELD_5.0.120_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,3,33.33
+Field Warrior ELD_5.0.120_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,3,33.33
+findmyip,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,6.67
+findmyip,Resize Text - insufficient increase,1.4.4 Resize Text,AA,7,46.67
+findmyip,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,7,46.67
+FlightAware Flight Tracker_5.13.8_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,12.5
+FlightAware Flight Tracker_5.13.8_APKPure,Missing Content Description,1.1.1 Non-text Content,A,1,4.17
+FlightAware Flight Tracker_5.13.8_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,12.5
+FlightAware Flight Tracker_5.13.8_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,20.83
+FlightAware Flight Tracker_5.13.8_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,8.33
+FlightAware Flight Tracker_5.13.8_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,4.17
+FlightAware Flight Tracker_5.13.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,37.5
+Food_You,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,37.5
+Food_You,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,25.0
+Food_You,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,25.0
+Food_You,Duplicate Text,3.2.4 Consistent Identification,AA,1,12.5
+Freshdesk_9.3.2_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,30,38.96
+Freshdesk_9.3.2_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,30,38.96
+Freshdesk_9.3.2_APKPure,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,3,3.9
+Freshdesk_9.3.2_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,5,6.49
+Freshdesk_9.3.2_APKPure,Error Message Detected,3.3.1 Error Identification,A,4,5.19
+Freshdesk_9.3.2_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,3.9
+Freshdesk_9.3.2_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,2,2.6
+FunDo Pro_1.8.15_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,11,7.1
+FunDo Pro_1.8.15_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,55,35.48
+FunDo Pro_1.8.15_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,55,35.48
+FunDo Pro_1.8.15_APKPure,Missing Content Description,1.1.1 Non-text Content,A,6,3.87
+FunDo Pro_1.8.15_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,11,7.1
+FunDo Pro_1.8.15_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,15,9.68
+FunDo Pro_1.8.15_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,1.29
+Gateway_4.36.8_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,3.8
+Gateway_4.36.8_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,12,15.19
+Gateway_4.36.8_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,1.27
+Gateway_4.36.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,31,39.24
+Gateway_4.36.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,31,39.24
+Gateway_4.36.8_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.27
+GeoNotes,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,1.56
+GeoNotes,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,4.69
+GeoNotes,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,9.38
+GeoNotes,Resize Text - insufficient increase,1.4.4 Resize Text,AA,21,32.81
+GeoNotes,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,21,32.81
+GeoNotes,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,7,10.94
+GeoNotes,Missing Content Description,1.1.1 Non-text Content,A,5,7.81
+GigSmart Get Gigs_3.92.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,6.67
+GigSmart Get Gigs_3.92.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,4,6.67
+GigSmart Get Gigs_3.92.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,26,43.33
+GigSmart Get Gigs_3.92.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,26,43.33
+Go Daily-Read to earn_APKPure,Missing Content Description,1.1.1 Non-text Content,A,2,0.83
+Go Daily-Read to earn_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,1.25
+Go Daily-Read to earn_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,3.33
+Go Daily-Read to earn_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,0.42
+Go Daily-Read to earn_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,14,5.83
+Go Daily-Read to earn_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,24,10.0
+Go Daily-Read to earn_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,0.42
+Go Daily-Read to earn_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,93,38.75
+Go Daily-Read to earn_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,94,39.17
+Google Authenticator_7.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,22.73
+Google Authenticator_7.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,8,36.36
+Google Authenticator_7.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,8,36.36
+Google Authenticator_7.0_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,4.55
+gptmobile,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,1,14.29
+gptmobile,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,14.29
+gptmobile,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,14.29
+gptmobile,Resize Text - insufficient increase,1.4.4 Resize Text,AA,1,14.29
+gptmobile,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,3,42.86
+Guide for Canva_ Graphic Design & Video_1.0_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,14,43.75
+Guide for Canva_ Graphic Design & Video_1.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,9.38
+Guide for Canva_ Graphic Design & Video_1.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,3.12
+Guide for Canva_ Graphic Design & Video_1.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,7,21.88
+Guide for Canva_ Graphic Design & Video_1.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,7,21.88
+GymRoutines,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,11.11
+GymRoutines,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,3.7
+GymRoutines,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,3.7
+GymRoutines,Duplicate Text,3.2.4 Consistent Identification,AA,2,7.41
+GymRoutines,Resize Text - insufficient increase,1.4.4 Resize Text,AA,10,37.04
+GymRoutines,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,10,37.04
+Habit-Maker,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,50.0
+Habit-Maker,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,50.0
+Hacoo - Discovering &Inspiring_3.9.4_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,122,20.75
+Hacoo - Discovering &Inspiring_3.9.4_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,115,19.56
+Hacoo - Discovering &Inspiring_3.9.4_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,103,17.52
+Hacoo - Discovering &Inspiring_3.9.4_APKPure,Missing Content Description,1.1.1 Non-text Content,A,46,7.82
+Hacoo - Discovering &Inspiring_3.9.4_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,20,3.4
+Hacoo - Discovering &Inspiring_3.9.4_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,122,20.75
+Hacoo - Discovering &Inspiring_3.9.4_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,48,8.16
+Hacoo - Discovering &Inspiring_3.9.4_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,7,1.19
+Hacoo - Discovering &Inspiring_3.9.4_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,5,0.85
+Hamburger,Overlapping Elements,1.4.12 Text Spacing,AA,3,7.89
+Hamburger,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,18.42
+Hamburger,Duplicate Text,3.2.4 Consistent Identification,AA,1,2.63
+Hamburger,Resize Text - insufficient increase,1.4.4 Resize Text,AA,10,26.32
+Hamburger,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,11,28.95
+Hamburger,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,2.63
+Hamburger,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,5,13.16
+HPE Parts Validation_4.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,11,17.74
+HPE Parts Validation_4.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,9,14.52
+HPE Parts Validation_4.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,19,30.65
+HPE Parts Validation_4.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,19,30.65
+HPE Parts Validation_4.0_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,4.84
+HPE Parts Validation_4.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,1.61
+Huckleberry_ Baby & Child_0.9.264_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,17,7.83
+Huckleberry_ Baby & Child_0.9.264_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,10,4.61
+Huckleberry_ Baby & Child_0.9.264_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,10,4.61
+Huckleberry_ Baby & Child_0.9.264_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,1.84
+Huckleberry_ Baby & Child_0.9.264_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,4,1.84
+Huckleberry_ Baby & Child_0.9.264_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,42,19.35
+Huckleberry_ Baby & Child_0.9.264_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,8,3.69
+Huckleberry_ Baby & Child_0.9.264_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,69,31.8
+Huckleberry_ Baby & Child_0.9.264_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,50,23.04
+Huckleberry_ Baby & Child_0.9.264_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,1.38
+HUG Global_1.0_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,12,21.82
+HUG Global_1.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,3,5.45
+HUG Global_1.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,13,23.64
+HUG Global_1.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,5.45
+HUG Global_1.0_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,9,16.36
+HUG Global_1.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,7.27
+HUG Global_1.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,4,7.27
+HUG Global_1.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,7,12.73
+Humanforce (legacy)_10.5.22_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,2,2.38
+Humanforce (legacy)_10.5.22_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,2.38
+Humanforce (legacy)_10.5.22_APKPure,Error Message Detected,3.3.1 Error Identification,A,4,4.76
+Humanforce (legacy)_10.5.22_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,4.76
+Humanforce (legacy)_10.5.22_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,36,42.86
+Humanforce (legacy)_10.5.22_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,36,42.86
+hydra,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,7.06
+hydra,Resize Text - insufficient increase,1.4.4 Resize Text,AA,30,35.29
+hydra,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,30,35.29
+hydra,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,9.41
+hydra,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,2.35
+hydra,Duplicate Text,3.2.4 Consistent Identification,AA,9,10.59
+iExeter_11.26.0_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,2.84
+iExeter_11.26.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,56,26.54
+iExeter_11.26.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,36,17.06
+iExeter_11.26.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,34,16.11
+iExeter_11.26.0_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,15,7.11
+iExeter_11.26.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,22,10.43
+iExeter_11.26.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,20,9.48
+iExeter_11.26.0_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,0.95
+iExeter_11.26.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,18,8.53
+iExeter_11.26.0_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,0.95
+imToken_ BTC & ETH Wallet_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,4,1.61
+imToken_ BTC & ETH Wallet_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,3.21
+imToken_ BTC & ETH Wallet_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,0.4
+imToken_ BTC & ETH Wallet_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,226,90.76
+imToken_ BTC & ETH Wallet_APKPure,Error Message Detected,3.3.1 Error Identification,A,1,0.4
+imToken_ BTC & ETH Wallet_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,0.4
+imToken_ BTC & ETH Wallet_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,2.41
+imToken_ BTC & ETH Wallet_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,0.8
+inflationCalculator,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,12.12
+inflationCalculator,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,3.03
+inflationCalculator,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,27.27
+inflationCalculator,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,27.27
+inflationCalculator,Missing Accessible Name,"4.1.2 Name, Role, Value",A,5,15.15
+inflationCalculator,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,5,15.15
+Insperity Mobile_3.7.8_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,8.86
+Insperity Mobile_3.7.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,29,36.71
+Insperity Mobile_3.7.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,29,36.71
+Insperity Mobile_3.7.8_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,7.59
+Insperity Mobile_3.7.8_APKPure,Error Message Detected,3.3.1 Error Identification,A,3,3.8
+Insperity Mobile_3.7.8_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,5,6.33
+IP Tools_ Network Intelligence_1.4.8_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,30,21.74
+IP Tools_ Network Intelligence_1.4.8_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,15,10.87
+IP Tools_ Network Intelligence_1.4.8_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,22,15.94
+IP Tools_ Network Intelligence_1.4.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,30,21.74
+IP Tools_ Network Intelligence_1.4.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,30,21.74
+IP Tools_ Network Intelligence_1.4.8_APKPure,Missing Content Description,1.1.1 Non-text Content,A,2,1.45
+IP Tools_ Network Intelligence_1.4.8_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,4.35
+IP Tools_ Network Intelligence_1.4.8_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,3,2.17
+iSeller Kitchen Display_2.368_APKPure,Missing Content Description,1.1.1 Non-text Content,A,4,7.41
+iSeller Kitchen Display_2.368_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,7.41
+iSeller Kitchen Display_2.368_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,7.41
+iSeller Kitchen Display_2.368_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,14.81
+iSeller Kitchen Display_2.368_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,17,31.48
+iSeller Kitchen Display_2.368_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,17,31.48
+Joplin_3.3.8_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,28.57
+Joplin_3.3.8_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,5,23.81
+Joplin_3.3.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,5,23.81
+Joplin_3.3.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,5,23.81
+journal,Resize Text - insufficient increase,1.4.4 Resize Text,AA,26,46.43
+journal,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,26,46.43
+journal,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,1.79
+journal,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,1.79
+journal,Duplicate Text,3.2.4 Consistent Identification,AA,2,3.57
+kitchenowl,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,16.67
+kitchenowl,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,16.67
+kitchenowl,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,50.0
+kitchenowl,Resize Text - insufficient increase,1.4.4 Resize Text,AA,1,8.33
+kitchenowl,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,1,8.33
+Local_NLP_Backend,Missing Content Description,1.1.1 Non-text Content,A,9,10.71
+Local_NLP_Backend,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,4.76
+Local_NLP_Backend,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,32,38.1
+Local_NLP_Backend,Duplicate Text,3.2.4 Consistent Identification,AA,4,4.76
+Local_NLP_Backend,Resize Text - insufficient increase,1.4.4 Resize Text,AA,10,11.9
+Local_NLP_Backend,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,10,11.9
+Local_NLP_Backend,Contrast Failure,1.4.3 Contrast (Minimum),AA,15,17.86
+logline,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,1,4.35
+logline,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,4.35
+logline,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,4.35
+logline,Resize Text - insufficient increase,1.4.4 Resize Text,AA,16,69.57
+logline,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,1,4.35
+logline,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,13.04
+LumApps_64_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,4,5.71
+LumApps_64_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,2.86
+LumApps_64_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,2.86
+LumApps_64_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,19,27.14
+LumApps_64_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,10,14.29
+LumApps_64_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,2,2.86
+LumApps_64_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,16,22.86
+LumApps_64_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,15,21.43
+MAPinr - KML_KMZ_OFFLINE_GIS_4.2.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,18.18
+MAPinr - KML_KMZ_OFFLINE_GIS_4.2.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,11.36
+MAPinr - KML_KMZ_OFFLINE_GIS_4.2.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,3,6.82
+MAPinr - KML_KMZ_OFFLINE_GIS_4.2.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,12,27.27
+MAPinr - KML_KMZ_OFFLINE_GIS_4.2.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,12,27.27
+MAPinr - KML_KMZ_OFFLINE_GIS_4.2.0_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,6.82
+MAPinr - KML_KMZ_OFFLINE_GIS_4.2.0_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,2.27
+Materialious,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,72,34.62
+Materialious,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,8,3.85
+Materialious,Duplicate Text,3.2.4 Consistent Identification,AA,5,2.4
+Materialious,Resize Text - insufficient increase,1.4.4 Resize Text,AA,46,22.12
+Materialious,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,10,4.81
+Materialious,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,0.48
+Materialious,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,66,31.73
+menza,Resize Text - insufficient increase,1.4.4 Resize Text,AA,40,40.4
+menza,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,40,40.4
+menza,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,7.07
+menza,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,3.03
+menza,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.01
+menza,Duplicate Text,3.2.4 Consistent Identification,AA,1,1.01
+menza,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,3.03
+menza,Error Message Detected,3.3.1 Error Identification,A,2,2.02
+menza,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,2.02
+Meshenger,Missing Accessible Name,"4.1.2 Name, Role, Value",A,9,12.16
+Meshenger,Resize Text - insufficient increase,1.4.4 Resize Text,AA,22,29.73
+Meshenger,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,22,29.73
+Meshenger,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,9,12.16
+Meshenger,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,7,9.46
+Meshenger,Missing Content Description,1.1.1 Non-text Content,A,3,4.05
+Meshenger,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,2.7
+meshtastic,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,14.29
+meshtastic,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,4.76
+meshtastic,Resize Text - insufficient increase,1.4.4 Resize Text,AA,10,23.81
+meshtastic,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,10,23.81
+meshtastic,Contrast Failure,1.4.3 Contrast (Minimum),AA,2,4.76
+meshtastic,Missing Content Description,1.1.1 Non-text Content,A,1,2.38
+meshtastic,Error Message Detected,3.3.1 Error Identification,A,1,2.38
+meshtastic,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,2.38
+meshtastic,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,2.38
+meshtastic,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,8,19.05
+MeteoWeather,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,100.0
+MIA_1.30.64_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,6.45
+MIA_1.30.64_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,54,43.55
+MIA_1.30.64_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,54,43.55
+MIA_1.30.64_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,3.23
+MIA_1.30.64_APKPure,Error Message Detected,3.3.1 Error Identification,A,3,2.42
+MIA_1.30.64_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,0.81
+MicroStore_2.42.3_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,6,13.64
+MicroStore_2.42.3_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,11,25.0
+MicroStore_2.42.3_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,5,11.36
+MicroStore_2.42.3_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,11,25.0
+MicroStore_2.42.3_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,11,25.0
+Mocha_ Unlimited Entertainment_APKPure,Missing Content Description,1.1.1 Non-text Content,A,17,8.67
+Mocha_ Unlimited Entertainment_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,17,8.67
+Mocha_ Unlimited Entertainment_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,18,9.18
+Mocha_ Unlimited Entertainment_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,60,30.61
+Mocha_ Unlimited Entertainment_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,60,30.61
+Mocha_ Unlimited Entertainment_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,3.57
+Mocha_ Unlimited Entertainment_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,0.51
+Mocha_ Unlimited Entertainment_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,8,4.08
+Mocha_ Unlimited Entertainment_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,7,3.57
+Mocha_ Unlimited Entertainment_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,0.51
+monly,Contrast Failure,1.4.3 Contrast (Minimum),AA,17,17.89
+monly,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,12,12.63
+monly,Duplicate Text,3.2.4 Consistent Identification,AA,13,13.68
+monly,Resize Text - insufficient increase,1.4.4 Resize Text,AA,26,27.37
+monly,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,26,27.37
+monly,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.05
+My Device ID by Airbridge_APKPure,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,1,9.09
+My Device ID by Airbridge_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,10,90.91
+My Diary - Daily Diary Journal_1.03.92.0606_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,22,9.05
+My Diary - Daily Diary Journal_1.03.92.0606_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,106,43.62
+My Diary - Daily Diary Journal_1.03.92.0606_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,106,43.62
+My Diary - Daily Diary Journal_1.03.92.0606_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,7,2.88
+My Diary - Daily Diary Journal_1.03.92.0606_APKPure,Missing Content Description,1.1.1 Non-text Content,A,1,0.41
+My Diary - Daily Diary Journal_1.03.92.0606_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,0.41
+My Farm_3.3.1_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,8,53.33
+My Farm_3.3.1_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,26.67
+My Farm_3.3.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,13.33
+My Farm_3.3.1_APKPure,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,1,6.67
+Myne_Download_&_Read_eBooks,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,50.0
+Myne_Download_&_Read_eBooks,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,50.0
+MyToken-Crypto OnChain Tracker_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,23,16.67
+MyToken-Crypto OnChain Tracker_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,53,38.41
+MyToken-Crypto OnChain Tracker_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,53,38.41
+MyToken-Crypto OnChain Tracker_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,4.35
+MyToken-Crypto OnChain Tracker_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,2.17
+Neptune 360 Mobile_1.8.2_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,5.0
+Neptune 360 Mobile_1.8.2_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,2.5
+Neptune 360 Mobile_1.8.2_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,13,32.5
+Neptune 360 Mobile_1.8.2_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,13,32.5
+Neptune 360 Mobile_1.8.2_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,7.5
+Neptune 360 Mobile_1.8.2_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,20.0
+NETGEAR Nighthawk WiFi Router_2.45.0.4597_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,1,100.0
+newpipe,Contrast Failure,1.4.3 Contrast (Minimum),AA,12,44.44
+newpipe,Resize Text - insufficient increase,1.4.4 Resize Text,AA,6,22.22
+newpipe,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,6,22.22
+newpipe,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,3.7
+newpipe,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,3.7
+newpipe,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,3.7
+News - Your Trending Stories_17.14.2_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,6,3.12
+News - Your Trending Stories_17.14.2_APKPure,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,5,2.6
+News - Your Trending Stories_17.14.2_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,20,10.42
+News - Your Trending Stories_17.14.2_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,5,2.6
+News - Your Trending Stories_17.14.2_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,54,28.12
+News - Your Trending Stories_17.14.2_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,51,26.56
+News - Your Trending Stories_17.14.2_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,51,26.56
+Nexo_ Crypto Wealth Platform_APKPure,Missing Content Description,1.1.1 Non-text Content,A,4,4.49
+Nexo_ Crypto Wealth Platform_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,27,30.34
+Nexo_ Crypto Wealth Platform_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,20,22.47
+Nexo_ Crypto Wealth Platform_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,14,15.73
+Nexo_ Crypto Wealth Platform_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,14,15.73
+Nexo_ Crypto Wealth Platform_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,6,6.74
+Nexo_ Crypto Wealth Platform_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,4,4.49
+NFC Tools_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,6,1.1
+NFC Tools_APKPure,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,2,0.37
+NFC Tools_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,12,2.19
+NFC Tools_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,111,20.29
+NFC Tools_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,92,16.82
+NFC Tools_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,104,19.01
+NFC Tools_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,104,19.01
+NFC Tools_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,0.37
+NFC Tools_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,7,1.28
+NFC Tools_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,107,19.56
+OMS_1.0.5.39_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,6,7.89
+OMS_1.0.5.39_APKPure,Missing Content Description,1.1.1 Non-text Content,A,2,2.63
+OMS_1.0.5.39_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,5.26
+OMS_1.0.5.39_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,5.26
+OMS_1.0.5.39_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,10.53
+OMS_1.0.5.39_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,8,10.53
+OMS_1.0.5.39_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,6,7.89
+OMS_1.0.5.39_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,6,7.89
+OMS_1.0.5.39_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,16,21.05
+OMS_1.0.5.39_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,16,21.05
+Opera_News_Lite_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,1.14
+Opera_News_Lite_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,30,11.41
+Opera_News_Lite_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,80,30.42
+Opera_News_Lite_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,79,30.04
+Opera_News_Lite_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,32,12.17
+Opera_News_Lite_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,15,5.7
+Opera_News_Lite_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,10,3.8
+Opera_News_Lite_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,14,5.32
+Orgro,Overlapping Elements,1.4.12 Text Spacing,AA,3,10.0
+Orgro,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,23.33
+Orgro,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,30.0
+Orgro,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,30.0
+Orgro,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,3.33
+Orgro,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,3.33
+Passporter_ Planner and Travel_4.0.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,29,38.16
+Passporter_ Planner and Travel_4.0.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,29,38.16
+Passporter_ Planner and Travel_4.0.8_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,11,14.47
+Passporter_ Planner and Travel_4.0.8_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,3.95
+Passporter_ Planner and Travel_4.0.8_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,3.95
+Passporter_ Planner and Travel_4.0.8_APKPure,Error Message Detected,3.3.1 Error Identification,A,1,1.32
+passy,Missing Accessible Name,"4.1.2 Name, Role, Value",A,10,27.78
+passy,Missing Label or Instruction,3.3.2 Labels or Instructions,A,9,25.0
+passy,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,22.22
+passy,Resize Text - insufficient increase,1.4.4 Resize Text,AA,4,11.11
+passy,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,4,11.11
+passy,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,2.78
+petals,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,8.33
+petals,Resize Text - insufficient increase,1.4.4 Resize Text,AA,18,37.5
+petals,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,18,37.5
+petals,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,6.25
+petals,Error Message Detected,3.3.1 Error Identification,A,5,10.42
+Phocid,Missing Accessible Name,"4.1.2 Name, Role, Value",A,5,4.42
+Phocid,Missing Label or Instruction,3.3.2 Labels or Instructions,A,5,4.42
+Phocid,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,4.42
+Phocid,Duplicate Text,3.2.4 Consistent Identification,AA,5,4.42
+Phocid,Resize Text - insufficient increase,1.4.4 Resize Text,AA,37,32.74
+Phocid,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,45,39.82
+Phocid,Overlapping Elements,1.4.12 Text Spacing,AA,3,2.65
+Phocid,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,6.19
+Phocid,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,0.88
+Phonograph_Plus,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,15.79
+Phonograph_Plus,Resize Text - insufficient increase,1.4.4 Resize Text,AA,5,26.32
+Phonograph_Plus,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,5,26.32
+Phonograph_Plus,Contrast Failure,1.4.3 Contrast (Minimum),AA,6,31.58
+PLAYit - A New All-in-One Video Player_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,9,8.18
+PLAYit - A New All-in-One Video Player_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,24,21.82
+PLAYit - A New All-in-One Video Player_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,17,15.45
+PLAYit - A New All-in-One Video Player_APKPure,Missing Content Description,1.1.1 Non-text Content,A,10,9.09
+PLAYit - A New All-in-One Video Player_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,10,9.09
+PLAYit - A New All-in-One Video Player_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,25,22.73
+PLAYit - A New All-in-One Video Player_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,6,5.45
+PLAYit - A New All-in-One Video Player_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,9,8.18
+Plus Messenger_11.9.1.0_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,11.11
+Plus Messenger_11.9.1.0_APKPure,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,4,44.44
+Plus Messenger_11.9.1.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,4,44.44
+Polaris,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,2,28.57
+Polaris,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,14.29
+Polaris,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,28.57
+Polaris,Resize Text - insufficient increase,1.4.4 Resize Text,AA,1,14.29
+Polaris,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,1,14.29
+Positive Parenting Solutions_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,37.5
+Positive Parenting Solutions_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,25.0
+Positive Parenting Solutions_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,37.5
+Power Menu _ Software Button_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,20.0
+Power Menu _ Software Button_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,2,40.0
+Power Menu _ Software Button_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,2,40.0
+PressReader_ News & Magazines_7.1.250610_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,52,13.51
+PressReader_ News & Magazines_7.1.250610_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,8,2.08
+PressReader_ News & Magazines_7.1.250610_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,68,17.66
+PressReader_ News & Magazines_7.1.250610_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,8,2.08
+PressReader_ News & Magazines_7.1.250610_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,59,15.32
+PressReader_ News & Magazines_7.1.250610_APKPure,Missing Content Description,1.1.1 Non-text Content,A,54,14.03
+PressReader_ News & Magazines_7.1.250610_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,52,13.51
+PressReader_ News & Magazines_7.1.250610_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,10,2.6
+PressReader_ News & Magazines_7.1.250610_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,23,5.97
+PressReader_ News & Magazines_7.1.250610_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,51,13.25
+Proscai Consultas_6.8.29_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,6,16.22
+Proscai Consultas_6.8.29_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,5.41
+Proscai Consultas_6.8.29_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,14,37.84
+Proscai Consultas_6.8.29_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,14,37.84
+Proscai Consultas_6.8.29_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,2.7
+Pushbullet_ SMS on PC and more_18.11.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,2,50.0
+Pushbullet_ SMS on PC and more_18.11.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,2,50.0
+QDict,Missing Content Description,1.1.1 Non-text Content,A,1,1.27
+QDict,Missing Accessible Name,"4.1.2 Name, Role, Value",A,8,10.13
+QDict,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,6.33
+QDict,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.27
+QDict,Duplicate Text,3.2.4 Consistent Identification,AA,11,13.92
+QDict,Resize Text - insufficient increase,1.4.4 Resize Text,AA,11,13.92
+QDict,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,12,15.19
+QDict,Overlapping Elements,1.4.12 Text Spacing,AA,6,7.59
+QDict,Contrast Failure,1.4.3 Contrast (Minimum),AA,12,15.19
+QDict,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,12,15.19
+Qpon_ Daily Deals & Coupons_2.9.2_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,197,23.94
+Qpon_ Daily Deals & Coupons_2.9.2_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,196,23.82
+Qpon_ Daily Deals & Coupons_2.9.2_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,39,4.74
+Qpon_ Daily Deals & Coupons_2.9.2_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,28,3.4
+Qpon_ Daily Deals & Coupons_2.9.2_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,100,12.15
+Qpon_ Daily Deals & Coupons_2.9.2_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,58,7.05
+Qpon_ Daily Deals & Coupons_2.9.2_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,179,21.75
+Qpon_ Daily Deals & Coupons_2.9.2_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,26,3.16
+Quote_Unquote,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,3.03
+Quote_Unquote,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,1,3.03
+Quote_Unquote,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,3.03
+Quote_Unquote,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,3.03
+Quote_Unquote,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,3.03
+Quote_Unquote,Resize Text - insufficient increase,1.4.4 Resize Text,AA,14,42.42
+Quote_Unquote,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,14,42.42
+Qustodio Parental Control App_182.28.1_APKPure,Missing Content Description,1.1.1 Non-text Content,A,2,1.18
+Qustodio Parental Control App_182.28.1_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,8,4.73
+Qustodio Parental Control App_182.28.1_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,8,4.73
+Qustodio Parental Control App_182.28.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,19,11.24
+Qustodio Parental Control App_182.28.1_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,9,5.33
+Qustodio Parental Control App_182.28.1_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,6,3.55
+Qustodio Parental Control App_182.28.1_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,11,6.51
+Qustodio Parental Control App_182.28.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,52,30.77
+Qustodio Parental Control App_182.28.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,52,30.77
+Qustodio Parental Control App_182.28.1_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,2,1.18
+RadioWave,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,5.66
+RadioWave,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,3,5.66
+RadioWave,Duplicate Text,3.2.4 Consistent Identification,AA,5,9.43
+RadioWave,Resize Text - insufficient increase,1.4.4 Resize Text,AA,21,39.62
+RadioWave,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,21,39.62
+Radio_Romania,Missing Accessible Name,"4.1.2 Name, Role, Value",A,20,66.67
+Radio_Romania,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,26.67
+Radio_Romania,Duplicate Text,3.2.4 Consistent Identification,AA,2,6.67
+Rapid Service Request_0.59_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,13.04
+Rapid Service Request_0.59_APKPure,Error Message Detected,3.3.1 Error Identification,A,2,8.7
+Rapid Service Request_0.59_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,8.7
+Rapid Service Request_0.59_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,8,34.78
+Rapid Service Request_0.59_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,8,34.78
+Rede Vistorias_6.21.12_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,0.79
+Rede Vistorias_6.21.12_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,24,19.05
+Rede Vistorias_6.21.12_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,12,9.52
+Rede Vistorias_6.21.12_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,4,3.17
+Rede Vistorias_6.21.12_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,3,2.38
+Rede Vistorias_6.21.12_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,41,32.54
+Rede Vistorias_6.21.12_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,41,32.54
+Relay - Get a Truck Driver on _1.1.74_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,7.77
+Relay - Get a Truck Driver on _1.1.74_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,35,33.98
+Relay - Get a Truck Driver on _1.1.74_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,35,33.98
+Relay - Get a Truck Driver on _1.1.74_APKPure,Missing Content Description,1.1.1 Non-text Content,A,5,4.85
+Relay - Get a Truck Driver on _1.1.74_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,5,4.85
+Relay - Get a Truck Driver on _1.1.74_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,14,13.59
+Relay - Get a Truck Driver on _1.1.74_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,0.97
+Rosarium,Overlapping Elements,1.4.12 Text Spacing,AA,6,8.45
+Rosarium,Missing Accessible Name,"4.1.2 Name, Role, Value",A,17,23.94
+Rosarium,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,2.82
+Rosarium,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,1.41
+Rosarium,Resize Text - insufficient increase,1.4.4 Resize Text,AA,18,25.35
+Rosarium,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,18,25.35
+Rosarium,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,11.27
+Rosarium,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.41
+Salud-ENT_1.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,2,50.0
+Salud-ENT_1.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,2,50.0
+Satunes,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,3,2.13
+Satunes,Resize Text - insufficient increase,1.4.4 Resize Text,AA,59,41.84
+Satunes,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,61,43.26
+Satunes,Contrast Failure,1.4.3 Contrast (Minimum),AA,5,3.55
+Satunes,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,2.84
+Satunes,Duplicate Text,3.2.4 Consistent Identification,AA,2,1.42
+Satunes,Missing Accessible Name,"4.1.2 Name, Role, Value",A,7,4.96
+Scale_Practice,Contrast Failure,1.4.3 Contrast (Minimum),AA,5,0.92
+Scale_Practice,Missing Content Description,1.1.1 Non-text Content,A,52,9.52
+Scale_Practice,Missing Accessible Name,"4.1.2 Name, Role, Value",A,52,9.52
+Scale_Practice,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,134,24.54
+Scale_Practice,Duplicate Text,3.2.4 Consistent Identification,AA,15,2.75
+Scale_Practice,Resize Text - insufficient increase,1.4.4 Resize Text,AA,144,26.37
+Scale_Practice,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,144,26.37
+Send files to TV_1.3.8_APKPure,Missing Content Description,1.1.1 Non-text Content,A,1,4.35
+Send files to TV_1.3.8_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,8.7
+Send files to TV_1.3.8_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,26.09
+Send files to TV_1.3.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,7,30.43
+Send files to TV_1.3.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,7,30.43
+ServiceMax Zinc_12.0.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,7.69
+ServiceMax Zinc_12.0.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,15,38.46
+ServiceMax Zinc_12.0.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,15,38.46
+ServiceMax Zinc_12.0.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,4,10.26
+ServiceMax Zinc_12.0.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,5.13
+ShockAlarm,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,33.33
+ShockAlarm,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,66.67
+Sirius_3.0.2_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,6,7.79
+Sirius_3.0.2_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,10.39
+Sirius_3.0.2_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,5.19
+Sirius_3.0.2_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,5.19
+Sirius_3.0.2_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,7.79
+Sirius_3.0.2_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,4,5.19
+Sirius_3.0.2_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,2.6
+Sirius_3.0.2_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,4,5.19
+Sirius_3.0.2_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,20,25.97
+Sirius_3.0.2_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,19,24.68
+skustack_4.38_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,22,29.33
+skustack_4.38_APKPure,Missing Content Description,1.1.1 Non-text Content,A,3,4.0
+skustack_4.38_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,4.0
+skustack_4.38_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,5,6.67
+skustack_4.38_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,3,4.0
+skustack_4.38_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,18,24.0
+skustack_4.38_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,18,24.0
+skustack_4.38_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,3,4.0
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,0.85
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,21,5.92
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Missing Content Description,1.1.1 Non-text Content,A,15,4.23
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,27,7.61
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,92,25.92
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,45,12.68
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,20,5.63
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,10,2.82
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,69,19.44
+Sleepzy_ Sleep Cycle Tracker_3.22.6_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,53,14.93
+SMASH,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,100.0
+SMS Backup & Restore_10.21.004_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,16,6.04
+SMS Backup & Restore_10.21.004_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,101,38.11
+SMS Backup & Restore_10.21.004_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,112,42.26
+SMS Backup & Restore_10.21.004_APKPure,Missing Content Description,1.1.1 Non-text Content,A,17,6.42
+SMS Backup & Restore_10.21.004_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,1.51
+SMS Backup & Restore_10.21.004_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,9,3.4
+SMS Backup & Restore_10.21.004_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,0.38
+SMS Backup & Restore_10.21.004_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,3,1.13
+SMS Backup & Restore_10.21.004_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,2,0.75
+Snapseed_2.22.0.633363672_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,23,25.0
+Snapseed_2.22.0.633363672_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,6.52
+Snapseed_2.22.0.633363672_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,24,26.09
+Snapseed_2.22.0.633363672_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,24,26.09
+Snapseed_2.22.0.633363672_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,4,4.35
+Snapseed_2.22.0.633363672_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,6,6.52
+Snapseed_2.22.0.633363672_APKPure,Missing Content Description,1.1.1 Non-text Content,A,1,1.09
+Snapseed_2.22.0.633363672_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.09
+Snapseed_2.22.0.633363672_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,3.26
+Soho+Noho_6.3.3_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,7,50.0
+Soho+Noho_6.3.3_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,7,50.0
+solar,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,3.85
+solar,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,3.85
+solar,Duplicate Text,3.2.4 Consistent Identification,AA,14,26.92
+solar,Resize Text - insufficient increase,1.4.4 Resize Text,AA,18,34.62
+solar,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,16,30.77
+Sony _ Music Center_7.5.0_APKPure,Missing Content Description,1.1.1 Non-text Content,A,6,2.52
+Sony _ Music Center_7.5.0_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,2.52
+Sony _ Music Center_7.5.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,11,4.62
+Sony _ Music Center_7.5.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,106,44.54
+Sony _ Music Center_7.5.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,105,44.12
+Sony _ Music Center_7.5.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,4,1.68
+SoundSeeder - Synced Music_2.7.1_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,12,4.96
+SoundSeeder - Synced Music_2.7.1_APKPure,Missing Content Description,1.1.1 Non-text Content,A,25,10.33
+SoundSeeder - Synced Music_2.7.1_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,37,15.29
+SoundSeeder - Synced Music_2.7.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,67,27.69
+SoundSeeder - Synced Music_2.7.1_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,17,7.02
+SoundSeeder - Synced Music_2.7.1_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,8,3.31
+SoundSeeder - Synced Music_2.7.1_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,32,13.22
+SoundSeeder - Synced Music_2.7.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,32,13.22
+SoundSeeder - Synced Music_2.7.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,12,4.96
+Speed test 4G 5G WiFi & maps_2.15.8_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,6,2.08
+Speed test 4G 5G WiFi & maps_2.15.8_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,2.77
+Speed test 4G 5G WiFi & maps_2.15.8_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,133,46.02
+Speed test 4G 5G WiFi & maps_2.15.8_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,133,46.02
+Speed test 4G 5G WiFi & maps_2.15.8_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,1.73
+Speed test 4G 5G WiFi & maps_2.15.8_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,4,1.38
+SpotHero - Find Parking_7.10.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,7,25.0
+SpotHero - Find Parking_7.10.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,10,35.71
+SpotHero - Find Parking_7.10.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,8,28.57
+SpotHero - Find Parking_7.10.1_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,3.57
+SpotHero - Find Parking_7.10.1_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,7.14
+Star+_2.23.0-rc3_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,6,50.0
+Star+_2.23.0-rc3_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,6,50.0
+Status_Carteira_social_cripto,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,7,21.21
+Status_Carteira_social_cripto,Overlapping Elements,1.4.12 Text Spacing,AA,3,9.09
+Status_Carteira_social_cripto,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,3.03
+Status_Carteira_social_cripto,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,5,15.15
+Status_Carteira_social_cripto,Duplicate Text,3.2.4 Consistent Identification,AA,2,6.06
+Status_Carteira_social_cripto,Resize Text - insufficient increase,1.4.4 Resize Text,AA,8,24.24
+Status_Carteira_social_cripto,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,7,21.21
+suntimeswidget,Missing Accessible Name,"4.1.2 Name, Role, Value",A,71,92.21
+suntimeswidget,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,2.6
+suntimeswidget,Resize Text - insufficient increase,1.4.4 Resize Text,AA,2,2.6
+suntimeswidget,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,2,2.6
+Tank Spotter_4.2.0_APKPure,Missing Content Description,1.1.1 Non-text Content,A,2,4.0
+Tank Spotter_4.2.0_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,8.0
+Tank Spotter_4.2.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,16.0
+Tank Spotter_4.2.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,18,36.0
+Tank Spotter_4.2.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,18,36.0
+TaxiMe for Drivers_7.1.1_APKPure,Missing Content Description,1.1.1 Non-text Content,A,15,9.09
+TaxiMe for Drivers_7.1.1_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,15,9.09
+TaxiMe for Drivers_7.1.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,15,9.09
+TaxiMe for Drivers_7.1.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,60,36.36
+TaxiMe for Drivers_7.1.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,60,36.36
+TeamGram_4.10.0_APKPure,Error Message Detected,3.3.1 Error Identification,A,2,1.61
+TeamGram_4.10.0_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,10,8.06
+TeamGram_4.10.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,16,12.9
+TeamGram_4.10.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,8,6.45
+TeamGram_4.10.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,38,30.65
+TeamGram_4.10.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,38,30.65
+TeamGram_4.10.0_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,9,7.26
+TeamGram_4.10.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,3,2.42
+Test DPC_9.0.13_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,34.78
+Test DPC_9.0.13_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,3,13.04
+Test DPC_9.0.13_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,8.7
+Test DPC_9.0.13_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,4.35
+Test DPC_9.0.13_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,4.35
+Test DPC_9.0.13_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,4,17.39
+Test DPC_9.0.13_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,4,17.39
+thelife,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,22.22
+thelife,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,15,55.56
+thelife,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,6,22.22
+ThinkDiag_APKPure,Missing Content Description,1.1.1 Non-text Content,A,16,7.88
+ThinkDiag_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,17,8.37
+ThinkDiag_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,26,12.81
+ThinkDiag_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,60,29.56
+ThinkDiag_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,60,29.56
+ThinkDiag_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,11,5.42
+ThinkDiag_APKPure,Error Message Detected,3.3.1 Error Identification,A,6,2.96
+ThinkDiag_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,1.97
+ThinkDiag_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,3,1.48
+ToS;DR,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,0.17
+ToS;DR,Missing Accessible Name,"4.1.2 Name, Role, Value",A,5,0.83
+ToS;DR,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,0.17
+ToS;DR,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,145,24.05
+ToS;DR,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,128,21.23
+ToS;DR,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,28,4.64
+ToS;DR,Duplicate Text,3.2.4 Consistent Identification,AA,7,1.16
+ToS;DR,Resize Text - insufficient increase,1.4.4 Resize Text,AA,144,23.88
+ToS;DR,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,144,23.88
+Track&Graph,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,11.11
+Track&Graph,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,11.11
+Track&Graph,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,11.11
+Track&Graph,Resize Text - insufficient increase,1.4.4 Resize Text,AA,3,33.33
+Track&Graph,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,3,33.33
+Transito,Missing Accessible Name,"4.1.2 Name, Role, Value",A,12,70.59
+Transito,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,11.76
+Transito,Duplicate Text,3.2.4 Consistent Identification,AA,3,17.65
+Transportr - Public Transit_2.2.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,18,47.37
+Transportr - Public Transit_2.2.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,18,47.37
+Transportr - Public Transit_2.2.1_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,2,5.26
+Tridenta,Resize Text - insufficient increase,1.4.4 Resize Text,AA,21,38.18
+Tridenta,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,24,43.64
+Tridenta,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,1.82
+Tridenta,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,14.55
+Tridenta,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.82
+Umax - Become Hot_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,10,31.25
+Umax - Become Hot_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,17,53.12
+Umax - Become Hot_APKPure,Error Message Detected,3.3.1 Error Identification,A,1,3.12
+Umax - Become Hot_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,12.5
+Unibuddy_1.64.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,7.58
+Unibuddy_1.64.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,4,6.06
+Unibuddy_1.64.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,26,39.39
+Unibuddy_1.64.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,26,39.39
+Unibuddy_1.64.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,1.52
+Unibuddy_1.64.0_APKPure,Error Message Detected,3.3.1 Error Identification,A,3,4.55
+Unibuddy_1.64.0_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.52
+UnitsTools,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,31,38.27
+UnitsTools,Duplicate Text,3.2.4 Consistent Identification,AA,4,4.94
+UnitsTools,Resize Text - insufficient increase,1.4.4 Resize Text,AA,17,20.99
+UnitsTools,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,21,25.93
+UnitsTools,Overlapping Elements,1.4.12 Text Spacing,AA,6,7.41
+UnitsTools,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,2,2.47
+Unpopular_Music_Player,Duplicate Text,3.2.4 Consistent Identification,AA,1,0.68
+Unpopular_Music_Player,Resize Text - insufficient increase,1.4.4 Resize Text,AA,73,49.66
+Unpopular_Music_Player,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,73,49.66
+URLCheck,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,26,19.7
+URLCheck,Resize Text - insufficient increase,1.4.4 Resize Text,AA,31,23.48
+URLCheck,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,32,24.24
+URLCheck,Missing Content Description,1.1.1 Non-text Content,A,6,4.55
+URLCheck,Missing Accessible Name,"4.1.2 Name, Role, Value",A,10,7.58
+URLCheck,Duplicate Text,3.2.4 Consistent Identification,AA,4,3.03
+URLCheck,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,13,9.85
+URLCheck,Overlapping Elements,1.4.12 Text Spacing,AA,3,2.27
+URLCheck,Contrast Failure,1.4.3 Contrast (Minimum),AA,7,5.3
+urn,Contrast Failure,1.4.3 Contrast (Minimum),AA,8,11.43
+urn,Resize Text - insufficient increase,1.4.4 Resize Text,AA,29,41.43
+urn,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,29,41.43
+urn,Overlapping Elements,1.4.12 Text Spacing,AA,3,4.29
+urn,Duplicate Text,3.2.4 Consistent Identification,AA,1,1.43
+Vagaro Check-In_1.3.6_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,2,50.0
+Vagaro Check-In_1.3.6_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,2,50.0
+Venix - Pedidos de Venda_2.4.9_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,13.51
+Venix - Pedidos de Venda_2.4.9_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,15,40.54
+Venix - Pedidos de Venda_2.4.9_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,15,40.54
+Venix - Pedidos de Venda_2.4.9_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,5.41
+Victory City Churches_6.14.1_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,17,65.38
+Victory City Churches_6.14.1_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,11.54
+Victory City Churches_6.14.1_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,7.69
+Victory City Churches_6.14.1_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,4,15.38
+Vigi_5.0.0_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,25.81
+Vigi_5.0.0_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,29.03
+Vigi_5.0.0_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,29.03
+Vigi_5.0.0_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,3,9.68
+Vigi_5.0.0_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,3.23
+Vigi_5.0.0_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,1,3.23
+Weather & Widget - Weawow_6.4.6_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,6,7.14
+Weather & Widget - Weawow_6.4.6_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,33,39.29
+Weather & Widget - Weawow_6.4.6_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,33,39.29
+Weather & Widget - Weawow_6.4.6_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,6,7.14
+Weather & Widget - Weawow_6.4.6_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,4,4.76
+Weather & Widget - Weawow_6.4.6_APKPure,Error Message Detected,3.3.1 Error Identification,A,1,1.19
+Weather & Widget - Weawow_6.4.6_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,1.19
+whoBIRD,Missing Content Description,1.1.1 Non-text Content,A,15,23.08
+whoBIRD,Missing Accessible Name,"4.1.2 Name, Role, Value",A,10,15.38
+whoBIRD,Resize Text - insufficient increase,1.4.4 Resize Text,AA,20,30.77
+whoBIRD,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,20,30.77
+WiFi Analyzer (open-source)_3.1.4_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,3,3.03
+WiFi Analyzer (open-source)_3.1.4_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,20,20.2
+WiFi Analyzer (open-source)_3.1.4_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,1.01
+WiFi Analyzer (open-source)_3.1.4_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,5.05
+WiFi Analyzer (open-source)_3.1.4_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.01
+WiFi Analyzer (open-source)_3.1.4_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,7,7.07
+WiFi Analyzer (open-source)_3.1.4_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,31,31.31
+WiFi Analyzer (open-source)_3.1.4_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,16,16.16
+WiFi Analyzer (open-source)_3.1.4_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,15,15.15
+Wifi Connection Anywhere Map_APKPure,Missing Content Description,1.1.1 Non-text Content,A,3,11.11
+Wifi Connection Anywhere Map_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,22.22
+Wifi Connection Anywhere Map_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,9,33.33
+Wifi Connection Anywhere Map_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,9,33.33
+WiFi Manager_4.3.0-230-nicolas_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,12,22.64
+WiFi Manager_4.3.0-230-nicolas_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,7,13.21
+WiFi Manager_4.3.0-230-nicolas_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,7,13.21
+WiFi Manager_4.3.0-230-nicolas_APKPure,Overlapping Elements,1.4.12 Text Spacing,AA,9,16.98
+WiFi Manager_4.3.0-230-nicolas_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,1.89
+WiFi Manager_4.3.0-230-nicolas_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,7,13.21
+WiFi Manager_4.3.0-230-nicolas_APKPure,Duplicate Text,3.2.4 Consistent Identification,AA,4,7.55
+WiFi Manager_4.3.0-230-nicolas_APKPure,Missing Content Description,1.1.1 Non-text Content,A,6,11.32
+WiFi Password - Auto Connect_APKPure,Missing Content Description,1.1.1 Non-text Content,A,9,16.36
+WiFi Password - Auto Connect_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,10,18.18
+WiFi Password - Auto Connect_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,5,9.09
+WiFi Password - Auto Connect_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,12,21.82
+WiFi Password - Auto Connect_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,12,21.82
+WiFi Password - Auto Connect_APKPure,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,1.82
+WiFi Password - Auto Connect_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,6,10.91
+wifiwidget,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,6.61
+wifiwidget,Resize Text - insufficient increase,1.4.4 Resize Text,AA,58,47.93
+wifiwidget,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,0.83
+wifiwidget,Missing Accessible Name,"4.1.2 Name, Role, Value",A,2,1.65
+wifiwidget,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,5,4.13
+wifiwidget,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,47,38.84
+WikiReader,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,3.45
+WikiReader,Resize Text - insufficient increase,1.4.4 Resize Text,AA,11,37.93
+WikiReader,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,10,34.48
+WikiReader,Missing Accessible Name,"4.1.2 Name, Role, Value",A,1,3.45
+WikiReader,Missing Label or Instruction,3.3.2 Labels or Instructions,A,1,3.45
+WikiReader,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,3.45
+WikiReader,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,1,3.45
+WikiReader,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,1,3.45
+WikiReader,Duplicate Text,3.2.4 Consistent Identification,AA,1,3.45
+WikiReader,Non-essential Content Description Should Be Empty,1.1.1 Non-text Content,A,1,3.45
+Wisdo_ Mental Health & Support_1.9.69-Production_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,8,17.02
+Wisdo_ Mental Health & Support_1.9.69-Production_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,17,36.17
+Wisdo_ Mental Health & Support_1.9.69-Production_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,17,36.17
+Wisdo_ Mental Health & Support_1.9.69-Production_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,5,10.64
+wispaar,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,25,33.33
+wispaar,Missing Content Description,1.1.1 Non-text Content,A,2,2.67
+wispaar,Missing Accessible Name,"4.1.2 Name, Role, Value",A,7,9.33
+wispaar,Target Size Failure (Minimum),2.5.8 Target Size (Minimum),AA,15,20.0
+wispaar,Resize Text - insufficient increase,1.4.4 Resize Text,AA,12,16.0
+wispaar,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,12,16.0
+wispaar,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,2.67
+Workout_Manager,Missing Accessible Name,"4.1.2 Name, Role, Value",A,6,42.86
+Workout_Manager,Missing Label or Instruction,3.3.2 Labels or Instructions,A,4,28.57
+Workout_Manager,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,4,28.57
+Xender_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,1,6.67
+Xender_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,7,46.67
+Xender_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,7,46.67
+Zangi Private Messenger_6.2.4_APKPure,Missing Content Description,1.1.1 Non-text Content,A,4,4.94
+Zangi Private Messenger_6.2.4_APKPure,Missing Accessible Name,"4.1.2 Name, Role, Value",A,5,6.17
+Zangi Private Messenger_6.2.4_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,2,2.47
+Zangi Private Messenger_6.2.4_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,30,37.04
+Zangi Private Messenger_6.2.4_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,30,37.04
+Zangi Private Messenger_6.2.4_APKPure,Contrast Failure,1.4.3 Contrast (Minimum),AA,4,4.94
+Zangi Private Messenger_6.2.4_APKPure,Error Message Detected,3.3.1 Error Identification,A,2,2.47
+Zangi Private Messenger_6.2.4_APKPure,Missing Label or Instruction,3.3.2 Labels or Instructions,A,2,2.47
+Zangi Private Messenger_6.2.4_APKPure,Gesture-Only Navigation,2.5.1 Pointer Gestures,A,2,2.47
+Zoho FSM_2.3.10_APKPure,Target Size Failure,2.5.5 Target Size (Enhanced),AAA,1,20.0
+Zoho FSM_2.3.10_APKPure,Resize Text - insufficient increase,1.4.4 Resize Text,AA,2,40.0
+Zoho FSM_2.3.10_APKPure,Resize Text - insufficient reduction,Optional Check - Text Reduction,Advisory,2,40.0

@@ -1,4 +1,5 @@
 import os
+import sys
 import threading
 import time
 import json
@@ -6,16 +7,68 @@ import shutil
 import subprocess
 import csv
 from colorama import Fore, Style
-from droidbot import DroidBot
+
+# adiciona o droidbot (submódulo) ao PYTHONPATH
+sys.path.append(os.path.join(os.path.dirname(__file__), 'droidbot'))
+
+from droidbot.droidbot import DroidBot
 from droidbot.plugins.screen_capture_plugin import ScreenCapturePlugin
+
 import old_main as argus_main
 
-timeout_value = 75
 font_scales = {
     "small_text": "0.85",
     "default": "1.0",
     "large_text": "1.3"
 }
+
+# ANA: Lembrar que você criou as funções get_number_of_permissions,
+# count_activities_in_apk e estimate_timeout_by_apk_and_activities em junho
+def get_number_of_permissions(apk_path):
+    try:
+        result = subprocess.run([
+            "aapt", "dump", "permissions", apk_path
+        ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        return len([line for line in result.stdout.splitlines() if "uses-permission" in line])
+    except Exception as e:
+        print(f"[WARNING] Falha ao contar permissões: {e}")
+        return 0
+
+def count_activities_in_apk(apk_path):
+    try:
+        result = subprocess.run([
+            "aapt", "dump", "xmltree", apk_path, "AndroidManifest.xml"
+        ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+        return len([line for line in result.stdout.splitlines() if 'E: activity' in line])
+    except Exception as e:
+        print(f"[WARNING] Falha ao contar activities: {e}")
+        return 1
+
+# def estimate_timeout_by_apk(apk_path):
+#     try:
+#         result = subprocess.run([
+#             "aapt", "dump", "permissions", apk_path
+#         ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+#         num_perms = len([line for line in result.stdout.splitlines() if "uses-permission" in line])
+#         base_timeout = 120
+#         timeout = base_timeout + (num_perms * 5)
+#         timeout = min(max(timeout, 120), 300)
+#         print(f"[INFO] Timeout estimado para {os.path.basename(apk_path)}: {timeout}s ({num_perms} permissões)")
+#         return timeout
+#     except Exception as e:
+#         print(f"[WARNING] Não foi possível estimar timeout via aapt: {e}")
+#         return 180
+
+def estimate_timeout_by_apk_and_activities(apk_path):
+    perms = get_number_of_permissions(apk_path)
+    acts = count_activities_in_apk(apk_path)
+
+    base_timeout = 60
+    timeout = base_timeout + (perms * 5) + (acts * 10)
+    timeout = min(timeout, 600)  # máximo de 10 minutos
+    print(f"[INFO] Timeout estimado: {timeout}s ({perms} permissões, {acts} activities)")
+    return timeout
 
 def get_screen_files(screen_id, output_root):
     """
@@ -88,17 +141,19 @@ def save_errors_with_screen_id(errors, result_dir, screen_id):
 
 def run_argus_analysis(image_paths, xml_paths, state_json_path, result_dir):
     print(f"[INFO] Executando análise Argus-a11y para {image_paths['default']} (com múltiplos tamanhos de fonte)")
+    screen_id = get_screen_id_from_state_json(state_json_path)
     errors = argus_main.main(
         image_paths=image_paths,
         xml_paths=xml_paths,
         result_dir=result_dir,
+        screen_id=screen_id,
         return_errors=True
     )
-    screen_id = get_screen_id_from_state_json(state_json_path)
-    save_errors_with_screen_id(errors, result_dir, screen_id)
+    if errors:  # Só salva se houver erros
+        save_errors_with_screen_id(errors, result_dir, screen_id)
     print(f"[INFO] Argus-a11y finalizado para {result_dir}")
 
-def run_droidbot(apk_path, device_serial, output_dir, font_type):
+def run_droidbot(apk_path, device_serial, output_dir, font_type, timeout_value, package_name):
     droidbot = DroidBot(
         app_path=apk_path,
         device_serial=device_serial,
@@ -109,7 +164,7 @@ def run_droidbot(apk_path, device_serial, output_dir, font_type):
         grant_perm=True,
         event_interval=1,
         event_count=100,
-        plugins=[ScreenCapturePlugin(output_dir, font_type)]
+        plugins=[ScreenCapturePlugin(output_dir, font_type, target_package=package_name)]
     )
     timer_thread = threading.Thread(target=countdown_and_stop, args=(droidbot, timeout_value))
     timer_thread.daemon = True
@@ -185,49 +240,6 @@ def build_state_map_by_index(output_root):
     print(f"[INFO] state_map final gerado com {len(state_map)} telas únicas.")
     return state_map
 
-# def build_state_map(output_root):
-#     """
-#     Cria um mapa de telas (screens) cruzando foreground_activity entre small_text, default e large_text.
-#     Retorna uma lista de dicionários com index e os respectivos screen_ids de cada configuração.
-#     """
-#     state_dirs = {k: os.path.join(output_root, k, "states") for k in font_scales}
-#
-#     # Mapeia foreground_activity -> [screen_id, ...] por tipo de fonte
-#     activity_to_screen = {k: {} for k in font_scales}
-#     for font_type in font_scales:
-#         if not os.path.exists(state_dirs[font_type]):
-#             continue
-#         for fname in os.listdir(state_dirs[font_type]):
-#             if not fname.endswith(".json"):
-#                 continue
-#             path = os.path.join(state_dirs[font_type], fname)
-#             activity = extract_foreground_activity(path)
-#             screen_id = get_screen_id_from_state_json(path)
-#             if activity and screen_id:
-#                 activity_to_screen[font_type].setdefault(activity, []).append(screen_id)
-#
-#     # Encontra activities comuns a todos os tamanhos de fonte
-#     common_activities = set.intersection(
-#         *[set(activity_to_screen[k].keys()) for k in font_scales]
-#     )
-#
-#     screen_map = []
-#     for i, activity in enumerate(sorted(common_activities)):
-#         entry = {"index": i}
-#         for font_type in font_scales:
-#             # Pega o primeiro screen_id registrado para aquela activity e fonte
-#             entry[font_type] = activity_to_screen[font_type][activity][0]
-#         screen_map.append(entry)
-#
-#     # Salva o mapa
-#     map_path = os.path.join(output_root, "state_map.json")  # mantendo nome para retrocompatibilidade
-#     with open(map_path, "w", encoding="utf-8") as f:
-#         json.dump(screen_map, f, indent=4, ensure_ascii=False)
-#
-#     print(f"[INFO] state_map (screen_map) gerado com {len(screen_map)} entradas usando foreground_activity.")
-#     return screen_map
-
-
 def find_state_file_by_id(state_dir, state_id):
     for fname in os.listdir(state_dir):
         if fname.endswith(".json"):
@@ -253,18 +265,29 @@ def get_package_name(apk_path):
         print(f"[ERRO] Não foi possível extrair o package name: {e}")
     return None
 
+def has_valid_droidbot_output(output_root):
+    for font_type in font_scales:
+        font_dir = os.path.join(output_root, font_type)
+        states_dir = os.path.join(font_dir, "states")
+        prints_dir = os.path.join(font_dir, "prints")
+        xmls_dir = os.path.join(font_dir, "xmls")
+
+        if not all(os.path.exists(d) for d in [states_dir, prints_dir, xmls_dir]):
+            return False
+
+        has_json = any(f.endswith(".json") for f in os.listdir(states_dir)) if os.path.exists(states_dir) else False
+        has_png = any(f.endswith(".png") for f in os.listdir(prints_dir)) if os.path.exists(prints_dir) else False
+        has_xml = any(f.endswith(".xml") for f in os.listdir(xmls_dir)) if os.path.exists(xmls_dir) else False
+
+        if not (has_json and has_png and has_xml):
+            return False
+
+    return True
+
 def run_pipeline():
     print("==== Pipeline DroidBot + Argus-a11y ====")
 
-    # Caminho para o CSV
-    apks_csv_path = "apks.csv"  # ou input("Informe o caminho do CSV com as APKs: ")
-
-    device_serial = get_connected_device_serial()
-    if not device_serial:
-        print("[FATAL] Nenhum dispositivo válido encontrado. Conecte um dispositivo e tente novamente.")
-        return
-    else:
-        print(f"[INFO] Dispositivo detectado: {device_serial}")
+    apks_csv_path = "apks.csv"
 
     with open(apks_csv_path, "r", encoding="utf-8") as csv_file:
         reader = csv.reader(csv_file)
@@ -278,22 +301,39 @@ def run_pipeline():
         apk_name = os.path.splitext(os.path.basename(apk_path))[0]
         output_root = f"output_dir_{apk_name}"
         results_dir = os.path.join(output_root, "results")
-        create_folders(results_dir)
 
         package_name = get_package_name(apk_path)
         if not package_name:
             print(f"[WARNING] Não foi possível extrair o package name do APK: {apk_path}, pulando.")
             continue
 
-        # Rodar DroidBot para cada fonte
-        for font_type, scale in font_scales.items():
-            print(f"\n===== Executando DroidBot com fonte '{font_type}' (escala {scale}) para {apk_name} =====")
-            set_font_scale(device_serial, scale)
+        if not has_valid_droidbot_output(output_root):
+            # Só verifica o dispositivo se precisar executar o DroidBot
+            device_serial = get_connected_device_serial()
+            if not device_serial:
+                print("[FATAL] Nenhum dispositivo válido encontrado. Conecte um dispositivo e tente novamente.")
+                continue
 
-            output_dir = os.path.join(output_root, font_type)
-            clean_output_dir(output_dir)
-            run_droidbot(apk_path, device_serial, output_dir, font_type)
+            print(f"[INFO] Dispositivo detectado: {device_serial}")
+            timeout_value = estimate_timeout_by_apk_and_activities(apk_path)
 
+            for font_type, scale in font_scales.items():
+                print(f"\n===== Executando DroidBot com fonte '{font_type}' (escala {scale}) para {apk_name} =====")
+                set_font_scale(device_serial, scale)
+
+                output_dir = os.path.join(output_root, font_type)
+                clean_output_dir(output_dir)
+                run_droidbot(apk_path, device_serial, output_dir, font_type, timeout_value, package_name)
+        else:
+            print(f"[INFO] Pasta {output_root} já existe. Pulando execução do DroidBot.")
+
+        # Garante que a pasta de resultados seja sempre nova
+        if os.path.exists(results_dir):
+            print(f"[INFO] Removendo pasta de resultados antiga: {results_dir}")
+            shutil.rmtree(results_dir)
+        os.makedirs(results_dir, exist_ok=True)
+
+        # Continua com a análise normalmente
         print(f"\n[INFO] Captura finalizada para {apk_name}. Iniciando análise...")
 
         prints_dirs = {k: os.path.join(output_root, k, "prints") for k in font_scales}
@@ -308,6 +348,8 @@ def run_pipeline():
         captured_files = sorted(os.listdir(prints_dirs["default"]))
 
         state_map = build_state_map_by_index(output_root)
+
+        has_results = False
 
         for entry in state_map:
             index = entry["index"]
@@ -341,6 +383,12 @@ def run_pipeline():
             result_path = os.path.join(results_dir, f"result_{index}")
             run_argus_analysis(image_paths, xml_paths, state_json_path, result_path)
             print(f"[OK] Resultado salvo para index {index} na pasta {result_path}")
+            has_results = True
+
+        # Se nenhum resultado foi salvo, remove a pasta inteira do app
+        if not has_results:
+            print(f"[INFO] Nenhum resultado válido para {apk_name}. Removendo pasta {output_root}")
+            shutil.rmtree(output_root, ignore_errors=True)
 
 if __name__ == "__main__":
     run_pipeline()

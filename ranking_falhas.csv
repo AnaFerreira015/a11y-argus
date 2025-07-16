@@ -1,0 +1,14 @@
+Rank,Tipo de Falha,Total Ocorrências,Aplicativos Afetados
+1,Resize Text - insufficient increase,5072,176
+2,Resize Text - insufficient reduction,4806,177
+3,Target Size Failure,2190,161
+4,Missing Accessible Name,1003,120
+5,Contrast Failure,964,116
+6,Duplicate Text,836,77
+7,Target Size Failure (Minimum),826,82
+8,Gesture-Only Navigation,586,60
+9,Missing Content Description,455,55
+10,Missing Label or Instruction,220,64
+11,Overlapping Elements,166,33
+12,Error Message Detected,68,25
+13,Non-essential Content Description Should Be Empty,33,16

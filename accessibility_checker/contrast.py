@@ -5,6 +5,15 @@ import re
 import subprocess
 from sklearn.cluster import KMeans
 from lxml import etree
+import numpy as np
+import os
+from typing import cast, Tuple
+from accessibility_checker.ui_element import is_inside_navigation_view
+from accessibility_checker.accessibility import is_relevant_error_scope
+
+os.environ["LOKY_MAX_CPU_COUNT"] = "4"
+
+ICON_GLYPH_PATTERN = re.compile(r'^[^\w\s]+$')
 
 class ContrastChecker:
     def __init__(self, image_path: str):
@@ -39,6 +48,10 @@ class ContrastChecker:
             bounds = node.attrib.get('bounds')
             text = node.attrib.get('text') or node.attrib.get('content-desc')
             class_name = node.attrib.get('class')
+
+            if text and ICON_GLYPH_PATTERN.match(text) and not node.attrib.get('content-desc', '').strip():
+                continue  # Ignora glifos sem descrição acessível
+
             if bounds and class_name == "android.widget.TextView" and text:
                 bounds_tuple = tuple(map(int, re.findall(r'\d+', bounds)))
                 x1, y1, x2, y2 = bounds_tuple
@@ -55,7 +68,13 @@ class ContrastChecker:
                     print(f"No pixels found in area for bounds {bounds_tuple}. Skipping this node.")
                     continue
                 try:
-                    kmeans = KMeans(n_clusters=2, random_state=0, n_init=10, algorithm='lloyd').fit(pixels)
+                    unique_colors = np.unique(pixels, axis=0)
+                    if len(unique_colors) < 2:
+                        print(f"Menos de 2 cores distintas encontradas em {bounds_tuple}. Pulando cluster.")
+                        continue
+
+                    kmeans = KMeans(n_clusters=2, random_state=0, n_init=10, algorithm='lloyd')
+                    kmeans.fit(pixels)
                     colors = kmeans.cluster_centers_
                     color1, color2 = map(lambda c: tuple(map(int, c)), colors)
                     luminance1 = 0.2126 * color1[0] + 0.7152 * color1[1] + 0.0722 * color1[2]
@@ -67,7 +86,7 @@ class ContrastChecker:
                     continue
         return bounds_texts
 
-    def check_text_contrast_with_tolerance(self, bounds_texts, device_density, default_min_contrast=4.5):
+    def check_text_contrast_with_tolerance(self, bounds_texts, device_density, navigation_view_bounds=None, default_min_contrast=4.5):
         """
         Verifica o contraste dos textos considerando a altura estimada (em dp)
         para determinar se o texto é grande ou normal.
@@ -79,6 +98,10 @@ class ContrastChecker:
             height_pixels = y2 - y1
             height_dp = height_pixels / device_density
             # print(f"[DEBUG] Altura: {height_dp} dp")
+
+            if ICON_GLYPH_PATTERN.match(text):
+                continue  # Ignora glifos (ícones visuais)
+
             required_contrast = 3.0 if height_dp >= 18 else default_min_contrast
             # print(f"[DEBUG] Contraste necessário: {required_contrast}")
             contrast_ratio = self.calculate_contrast_ratio(text_color, bg_color)
@@ -95,6 +118,17 @@ class ContrastChecker:
                     "Details": f"Texto com altura estimada de {height_dp:.1f}dp (equivalente a {height_pixels}px) requer um contraste mínimo de {required_contrast}:1."
                 }
                 contrast_failures.append(failure)
+        # return contrast_failures
+        contrast_failures = [
+            f for f in contrast_failures
+            if isinstance(f.get("bounds", []), (list, tuple)) and
+               len(f["bounds"]) == 4 and all(isinstance(x, int) for x in f["bounds"]) and
+               is_relevant_error_scope(
+                   cast(Tuple[int, int, int, int], tuple(f["bounds"])),
+                   navigation_view_bounds
+               )
+        ]
+
         return contrast_failures
 
     @staticmethod
