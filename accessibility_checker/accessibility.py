@@ -120,38 +120,130 @@ class AccessibilityChecker:
         ])
 
     def check_link_purpose(self):
+        """
+        Detecta rótulos ambíguos (ex.: 'clique aqui', 'saiba mais', 'learn more') em:
+          (A) elementos interativos com esse rótulo
+          (B) elementos de texto cujo rótulo é ambíguo e está contido por um contêiner interativo (wrapper)
+        Não aplica filtro de navigation_view_bounds aqui.
+        """
+        import unicodedata
+
         failures = []
-        interactive_elements = self.extractor.extract_interactive_elements()
-        for element in interactive_elements:
-            text = element['text']
-            content_desc = element['content-desc']
-            bounds = element['bounds']
-            node_class = element['class']
-            bounds_tuple = tuple(map(int, re.findall(r'\d+', bounds)))
-            link_text = text or content_desc
+        seen = set()
 
-            if not link_text.strip() or ICON_GLYPH_PATTERN.match(link_text.strip()):
-                continue  # ignora glifos (ícones visuais)
+        components = self.extractor.extract_ui_components()
 
-            if link_text.lower() in ["clique aqui", "saiba mais", "mais informações"]:
+        def parse_bounds(bstr):
+            m = re.findall(r'\d+', bstr or '')
+            return tuple(map(int, m)) if len(m) == 4 else None
+
+        def contains(outer, inner, pad=2):
+            (x1, y1, x2, y2) = outer
+            (a1, b1, a2, b2) = inner
+            return (x1 - pad) <= a1 and (y1 - pad) <= b1 and (x2 + pad) >= a2 and (y2 + pad) >= b2
+
+        def fold_text(s: str) -> str:
+            # NFKC -> minúsculas -> remove acentos -> colapsa não-alfanumérico/esp.
+            s = unicodedata.normalize("NFKC", (s or "")).lower().strip()
+            s = ''.join(ch for ch in unicodedata.normalize('NFD', s) if unicodedata.category(ch) != 'Mn')
+            s = re.sub(r'[\s\W]+', ' ', s).strip()
+            return s
+
+        AMBIG_EXACT = {
+            "clique aqui", "saiba mais", "leia mais", "ver mais", "veja mais",
+            "mais informacoes", "mais detalhes", "detalhes",
+            "more", "learn more", "read more", "details", "here", "tap here", "click here",
+        }
+        AMBIG_RE = re.compile(
+            r"\b(clique aqui|tap here|click here|saiba mais|leia mais|ver mais|veja mais|"
+            r"read more|learn more|mais informacoes|mais detalhes|details)\b"
+        )
+        SINGLE_WEAK = {"detalhes", "more", "details", "here"}
+
+        def is_ambiguous(label: str) -> bool:
+            if not label:
+                return False
+            if ICON_GLYPH_PATTERN.match(label.strip()):
+                return False
+            f = fold_text(label)
+            if not f:
+                return False
+            if f in AMBIG_EXACT:
+                return True
+            if AMBIG_RE.search(f):
+                # heurística anti-falso-positivo: se frase é longa e só contém token fraco
+                toks = f.split()
+                if len(toks) > 3 and any(t in SINGLE_WEAK for t in toks):
+                    return False
+                return True
+            return False
+
+        nodes = []
+        for c in components:
+            b = parse_bounds(c.get('bounds'))
+            if not b or b == (0, 0, 0, 0):
+                continue
+            node = {
+                'class': c.get('class', ''),
+                'resource_id': c.get('resource-id', '') or c.get('resource_id', ''),
+                'text': (c.get('text') or '').strip(),
+                'desc': (c.get('content-desc') or '').strip(),
+                'clickable': bool(c.get('clickable', False)),
+                'focusable': bool(c.get('focusable', False)),
+                'checkable': bool(c.get('checkable', False)),
+                'bounds': b,
+            }
+            node['label'] = node['text'] if node['text'] else node['desc']
+            nodes.append(node)
+
+        interactive = [n for n in nodes if n['clickable'] or n['focusable'] or n['checkable']]
+        textual = [n for n in nodes if n['label']]
+
+        for n in interactive:
+            if is_ambiguous(n['label']):
+                key = (n['bounds'], fold_text(n['label']))
+                if key in seen:
+                    continue
+                seen.add(key)
                 failures.append({
                     "type": "Link Purpose Failure",
-                    "class": node_class,
-                    "bounds": list(bounds_tuple),
-                    "text": text,
-                    "content-desc": content_desc,
+                    "class": n['class'],
+                    "resource_id": n['resource_id'],
+                    "bounds": list(n['bounds']),
+                    "text": n['text'],
+                    "content-desc": n['desc'],
                     "Success Criterion": "2.4.4 Link Purpose (In Context)",
-                    "Level": "A"
+                    "Level": "A",
+                    "Recommendation": "Use um rótulo descritivo (ex.: “Detalhes do pedido”, “Ajuda de pagamento”) em vez de frases genéricas."
                 })
-        # self.failures.extend([
-        #     f for f in failures
-        #     if self._is_outside_navigation_view(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))))
-        # ])
-        self.failures.extend([
-            f for f in failures
-            if is_relevant_error_scope(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))),
-                                       self.navigation_view_bounds)
-        ])
+
+        for t in textual:
+            if not is_ambiguous(t['label']):
+                continue
+            for w in interactive:
+                if w is t:
+                    continue
+                if contains(w['bounds'], t['bounds']):
+                    key = (w['bounds'], fold_text(t['label']))
+                    if key in seen:
+                        continue
+                    seen.add(key)
+                    failures.append({
+                        "type": "Link Purpose Failure",
+                        "class": w['class'],
+                        "resource_id": w['resource_id'],
+                        "bounds": list(w['bounds']),
+                        "text": t['text'] or w['text'],
+                        "content-desc": t['desc'] or w['desc'],
+                        "Success Criterion": "2.4.4 Link Purpose (In Context)",
+                        "Level": "A",
+                        "Recommendation": "Forneça um rótulo específico (ex.: “Detalhes do pedido”) no contêiner clicável."
+                    })
+                    break
+
+        print(f"[LINK] interativos={len(interactive)} textuais={len(textual)} falhas={len(failures)}")
+
+        self.failures.extend(failures)
 
     def check_name_role_value(self):
         failures = []
@@ -336,58 +428,70 @@ class AccessibilityChecker:
 
     def check_focus_order(self):
         failures = []
-        focusable_elements = self.extractor.extract_focusable_elements()
-        focus_order = focusable_elements
-        visual_order = self.get_visual_order_by_rows_and_columns(focusable_elements)
-        for idx, focus_elem in enumerate(focus_order):
-            if idx < len(visual_order):
-                visual_elem = visual_order[idx]
-                if focus_elem != visual_elem:
-                    if self.is_significant_focus_order_issue(focus_elem, visual_elem):
-                        failure = {
-                            "type": "Focus Order Failure",
-                            "bounds": list(focus_elem['bounds_tuple']),
-                            "index": idx,
-                            "focus_element": {
-                                "class": focus_elem['class'],
-                                "resource_id": focus_elem['resource_id'],
-                                "bounds": list(focus_elem['bounds_tuple']),
-                            },
-                            "expected_element": {
-                                "class": visual_elem['class'],
-                                "resource_id": visual_elem['resource_id'],
-                                "bounds": list(visual_elem['bounds_tuple']),
-                            },
-                            "Success Criterion": "2.4.3 Focus Order",
-                            "Level": "A",
-                            "Recommendation": "Ajuste a ordem de foco para corresponder à ordem visual lógica dos elementos."
-                        }
-                        failures.append(failure)
-            else:
-                failure = {
-                    "type": "Focus Order Exceeds Visual Elements",
-                    "bounds": list(focus_elem['bounds_tuple']),
-                    "index": idx,
-                    "focus_element": {
-                        "class": focus_elem['class'],
-                        "resource_id": focus_elem['resource_id'],
-                        "bounds": list(focus_elem['bounds_tuple']),
-                    },
-                    "Success Criterion": "2.4.3 Focus Order",
-                    "Level": "A",
-                    "Recommendation": "Verifique se todos os elementos focáveis são visíveis e organizados de forma lógica."
-                }
-                failures.append(failure)
 
-        # self.failures.extend([
-        #     f for f in failures
-        #     if self._is_outside_navigation_view(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))))
-        # ])
-        self.failures.extend([
-            f for f in failures
-            if is_relevant_error_scope(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))),
-                                       self.navigation_view_bounds)
-        ])
+        components = self.extractor.extract_ui_components()
+
+        focus_candidates = []
+        for c in components:
+            clickable = c.get('clickable', False)
+            focusable = c.get('focusable', False)
+            checkable = c.get('checkable', False)
+
+            if not (focusable or clickable or checkable):
+                continue
+
+            bounds = c.get('bounds', '')
+            m = re.findall(r'\d+', bounds)
+            if len(m) != 4:
+                continue
+            x1, y1, x2, y2 = map(int, m)
+            if (x1, y1, x2, y2) == (0, 0, 0, 0):
+                continue
+
+            focus_candidates.append({
+                'class': c.get('class', ''),
+                'resource_id': c.get('resource-id', ''),
+                'bounds_tuple': (x1, y1, x2, y2),
+            })
+
+        focus_order = focus_candidates[:]
+        visual_order = self.get_visual_order_by_rows_and_columns(focus_candidates)
+
+        idx_in_visual = {id(elem): i for i, elem in enumerate(visual_order)}
+
+        for idx, focus_elem in enumerate(focus_order):
+            expected_visual_elem = visual_order[idx]
+
+            same_obj = (focus_elem is expected_visual_elem)
+            same_value = (focus_elem == expected_visual_elem)
+
+            if not (same_obj or same_value):
+                focus_idx_in_visual = idx_in_visual.get(id(focus_elem), -1)
+                if focus_idx_in_visual == -1:
+                    continue  # não achou no mapa por algum motivo
+
+                if abs(focus_idx_in_visual - idx) >= 1:
+                    failure = {
+                        "type": "Focus Order Failure",
+                        "bounds": list(focus_elem['bounds_tuple']),
+                        "index": idx,
+                        "focus_element": {
+                            "class": focus_elem['class'],
+                            "resource_id": focus_elem['resource_id'],
+                            "bounds": list(focus_elem['bounds_tuple']),
+                        },
+                        "expected_element": {
+                            "class": expected_visual_elem['class'],
+                            "resource_id": expected_visual_elem['resource_id'],
+                            "bounds": list(expected_visual_elem['bounds_tuple']),
+                        },
+                        "Success Criterion": "2.4.3 Focus Order",
+                        "Level": "A",
+                        "Recommendation": "Ajuste a ordem de foco para corresponder à ordem visual lógica dos elementos."
+                    }
+                    failures.append(failure)
+
+        self.failures.extend(failures)
 
     def get_visual_order_by_rows_and_columns(self, elements):
         rows = self.group_elements_into_rows(elements)
@@ -397,7 +501,8 @@ class AccessibilityChecker:
             visual_order.extend(sorted_row)
         return visual_order
 
-    def group_elements_into_rows(self, elements, row_threshold=30):
+    def group_elements_into_rows(self, elements, row_threshold_dp=24):
+        row_threshold = row_threshold_dp * self.device_density
         sorted_elements = sorted(elements, key=lambda e: e['bounds_tuple'][1])
         rows = []
         current_row = []
