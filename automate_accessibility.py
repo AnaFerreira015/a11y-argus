@@ -48,6 +48,7 @@ def estimate_timeout_by_apk_and_activities(apk_path):
     acts = count_activities_in_apk(apk_path)
 
     base_timeout = 60
+    # base_timeout = 300
     timeout = base_timeout + (perms * 5) + (acts * 10)
     timeout = min(timeout, 600)
     print(f"[INFO] Timeout estimado: {timeout}s ({perms} permissões, {acts} activities)")

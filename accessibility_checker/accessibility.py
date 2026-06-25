@@ -552,6 +552,10 @@ class AccessibilityChecker:
             resource_id = element['resource_id']
             text = element.get('text', '')
             content_desc = element.get('content-desc', '')
+            if width_px <= 0 or height_px <= 0:
+                # Elemento com bounds colapsado (largura ou altura nula): nao tem
+                # alvo visivel para avaliar, ignora para nao gerar falso positivo.
+                continue
             if self.is_inline_element(element):
                 continue
             if self.has_equivalent_target(element, interactive_elements):
@@ -620,6 +624,10 @@ class AccessibilityChecker:
             bounds_tuple = element['bounds_tuple']
             node_class = element['class']
             resource_id = element['resource_id']
+            if width_px <= 0 or height_px <= 0:
+                # Elemento com bounds colapsado (largura ou altura nula): nao tem
+                # alvo visivel para avaliar, ignora para nao gerar falso positivo.
+                continue
             if self.is_inline_element(element):
                 continue
             if self.has_equivalent_target(element, interactive_elements):

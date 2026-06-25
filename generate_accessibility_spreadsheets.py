@@ -7,7 +7,7 @@ BASE_DIR = "."
 
 failures_per_screen = []
 app_failure_frequency = defaultdict(lambda: defaultdict(int))
-ranking_failures = defaultdict(lambda: {"apps": set(), "total": 0})
+ranking_failures = defaultdict(lambda: {"application": set(), "total": 0})
 wcag_distribution = defaultdict(int)
 
 def process_errors(app_name, screen_id, error_list):
@@ -17,7 +17,7 @@ def process_errors(app_name, screen_id, error_list):
         level = error.get("Level", "")
 
         failures_per_screen.append({
-            "App": app_name,
+            "Application": app_name,
             "Screen (screen_id)": screen_id,
             "Failure Type": type,
             "WCAG criteria": criterion,
@@ -27,7 +27,7 @@ def process_errors(app_name, screen_id, error_list):
 
         key = (type, criterion, level)
         app_failure_frequency[app_name][key] += 1
-        ranking_failures[type]["apps"].add(app_name)
+        ranking_failures[type]["application"].add(app_name)
         ranking_failures[type]["total"] += 1
         wcag_distribution[level] += 1
 
@@ -60,11 +60,11 @@ df_failures_per_screen = pd.DataFrame(failures_per_screen)
 df_failures_per_screen.to_csv("failures_per_screen.csv", index=False)
 
 rq1_rows = []
-for app, errors in app_failure_frequency.items():
+for applications, errors in app_failure_frequency.items():
     total = sum(errors.values())
     for (type, criterion, level), qty in errors.items():
         rq1_rows.append({
-            "Application": app,
+            "Application": applications,
             "Failure Type": type,
             "WCAG criteria": criterion,
             "Level": level,
@@ -78,12 +78,12 @@ df_rq2 = pd.DataFrame([
     {
         "Failure Type": type,
         "Total Occurrences": data["total"],
-        "Affected Applications": len(data["apps"])
+        "Affected Applications": len(data["application"])
     }
     for type, data in ranking_failures.items()
-]).sort_values(by="Total Ocorrências", ascending=False)
+]).sort_values(by="Total Occurrences", ascending=False)
 df_rq2.insert(0, "Rank", range(1, len(df_rq2) + 1))
-df_rq2.to_csv("ranking_falhas.csv", index=False)
+df_rq2.to_csv("ranking_failures.csv", index=False)
 
 wcag_adjusted = defaultdict(int, wcag_distribution)
 
@@ -107,19 +107,19 @@ df_rq3.to_csv("wcag_distribution.csv", index=False)
 pivot_dict = defaultdict(dict)
 total_per_app = {app: sum(errors.values()) for app, errors in app_failure_frequency.items()}
 
-for app, errors in app_failure_frequency.items():
+for applications, errors in app_failure_frequency.items():
     for (type, criterion, level), qty in errors.items():
         key = (type, criterion, level)
-        pivot_dict[key][f"{app} - Number of Occurrences"] = int(qty)
-        percentage = (qty / total_per_app[app]) * 100 if total_per_app[app] > 0 else 0.0
-        pivot_dict[key][f"{app} - %"] = round(percentage, 2)
+        pivot_dict[key][f"{applications} - Number of Occurrences"] = int(qty)
+        percentage = (qty / total_per_app[applications]) * 100 if total_per_app[applications] > 0 else 0.0
+        pivot_dict[key][f"{applications} - %"] = round(percentage, 2)
 
 pivot_rows = []
 for (type, criterion, level), values in pivot_dict.items():
     base = {
-        "Tipo de Falha": type,
-        "Critério WCAG": criterion,
-        "Nível": level
+        "Failure Type": type,
+        "WCAG criteria": criterion,
+        "Level": level
     }
     base.update(values)
     pivot_rows.append(base)
