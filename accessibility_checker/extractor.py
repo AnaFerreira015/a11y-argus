@@ -163,10 +163,19 @@ class XmlNodeBoundsExtractor:
             except Exception as e:
                 print(f"Erro nos bounds: {node['bounds']} - {e}")
                 continue
-            if x1 == x2 or y1 == y2:
-                print(f"Ignorando bounds inválidos: {node['bounds']}")
+            h, w = self.image.shape[:2]
+            xa, xb = max(0, min(x1, x2)), min(w, max(x1, x2))
+            ya, yb = max(0, min(y1, y2)), min(h, max(y1, y2))
+            if xb <= xa or yb <= ya:
+                print(f"Ignorando bounds fora da imagem: {node['bounds']}")
                 continue
-            ocr_info = OcrInfo(self.image[y1:y2, x1:x2], precision=precision, bounds=(x1, y1, x2, y2))
+
+            crop = self.image[ya:yb, xa:xb]
+            if crop.size == 0:
+                print(f"Ignorando recorte vazio: {node['bounds']}")
+                continue
+
+            ocr_info = OcrInfo(crop, precision=precision, bounds=(x1, y1, x2, y2))
             ocr_info_list.append(ocr_info)
         return ocr_info_list
 
