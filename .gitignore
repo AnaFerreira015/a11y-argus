@@ -47,3 +47,11 @@ apks.csv
 ranking_falhas.csv
 tabela_cobertura.csv
 execution_times.csv
+
+apps
+
+frida-server
+frida-server-*.xz
+*.pyc
+output_dir_*/
+test_output/
