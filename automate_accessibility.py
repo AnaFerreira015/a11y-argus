@@ -22,6 +22,28 @@ font_scales = {
     "large_text": "1.3"
 }
 
+DROIDBOT_IME = "io.github.ylimit.droidbotapp/.DroidBotIME"
+
+def wait_device_settled(device_serial, timeout=60):
+    """Espera o sistema reindexar o IME do companion apos a configuration
+    change do font_scale. Se o companion nao esta instalado (primeira run),
+    nao ha o que esperar: o proprio droidbot o instala no connect."""
+    pkgs = subprocess.run(
+        ["adb", "-s", device_serial, "shell", "pm", "list", "packages",
+         "io.github.ylimit.droidbotapp"],
+        capture_output=True, text=True).stdout
+    if "io.github.ylimit.droidbotapp" not in pkgs:
+        return True
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        out = subprocess.run(
+            ["adb", "-s", device_serial, "shell", "ime", "list", "-a", "-s"],
+            capture_output=True, text=True).stdout
+        if DROIDBOT_IME in out:
+            return True
+        time.sleep(2)
+    return False
+
 def get_number_of_permissions(apk_path):
     try:
         result = subprocess.run([
@@ -302,6 +324,11 @@ def run_pipeline():
             for font_type, scale in font_scales.items():
                 print(f"\n===== Executando DroidBot com fonte '{font_type}' (escala {scale}) para {apk_name} =====")
                 set_font_scale(device_serial, scale)
+                time.sleep(3)
+
+                if not wait_device_settled(device_serial):
+                    print(f"[WARNING] DroidBotIME nao registrou apos mudanca de escala; "
+                          f"tentando mesmo assim para '{font_type}'")
 
                 output_dir = os.path.join(output_root, font_type)
                 clean_output_dir(output_dir)
