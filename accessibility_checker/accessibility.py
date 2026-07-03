@@ -1,8 +1,8 @@
-# accessibility_checker/accessibility.py
 import re
 from typing import cast, Tuple, Optional
 from accessibility_checker.extractor import XmlNodeBoundsExtractor
 from accessibility_checker.ui_element import is_inside_navigation_view
+import math
 
 ICON_GLYPH_PATTERN = re.compile(r'^[^\w\s]+$')
 
@@ -36,15 +36,55 @@ class AccessibilityChecker:
             return True
         return not is_inside_navigation_view(bounds, self.navigation_view_bounds)
 
-    # def is_relevant_error_scope(self, bounds):
-    #     if self.navigation_view_bounds is None:
-    #         return True
-    #     return is_inside_navigation_view(bounds, self.navigation_view_bounds)
+    def passes_spacing_exception(self, element, interactive_elements):
+        """Excecao de espacamento do SC 2.5.8: um alvo menor que 24x24dp passa
+        se um circulo de 24dp de diametro centrado no seu bounding box nao
+        intersecta o bounding box de nenhum outro alvo nem o circulo de outro
+        alvo subdimensionado.
+        https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
+        """
+        radius_px = 12 * self.device_density
+        min_size_px = 24 * self.device_density
+        cx, cy = self._element_center(element)
 
-    # def is_relevant_error_scope(self, bounds: Tuple[int, int, int, int]) -> bool:
-    #     if self.navigation_view_bounds is None:
-    #         return True
-    #     return is_inside_navigation_view(bounds, self.navigation_view_bounds)
+        for other in interactive_elements:
+            if other == element:
+                continue
+            if not other.get('clickable', False):
+                continue
+            if other['width'] <= 0 or other['height'] <= 0:
+                continue
+            if self._contains(other, element):
+                # Container clicavel que envolve o alvo (linha/celula pai):
+                # tratado como alvo aninhado, nao como alvo adjacente.
+                # Decisao pragmatica; documentar na dissertacao.
+                continue
+
+            # Circulo do alvo vs bounding box do outro alvo
+            if self._circle_intersects_rect(cx, cy, radius_px, other['bounds_tuple']):
+                return False
+
+            # Circulo vs circulo, quando o outro tambem e subdimensionado
+            if other['width'] < min_size_px or other['height'] < min_size_px:
+                ox, oy = self._element_center(other)
+                if math.hypot(cx - ox, cy - oy) < 2 * radius_px:
+                    return False
+        return True
+
+    def _element_center(self, element):
+        left, top, right, bottom = element['bounds_tuple']
+        return (left + right) / 2.0, (top + bottom) / 2.0
+
+    def _contains(self, outer, inner):
+        ol, ot, orr, ob = outer['bounds_tuple']
+        il, it, ir, ib = inner['bounds_tuple']
+        return ol <= il and ot <= it and orr >= ir and ob >= ib
+
+    def _circle_intersects_rect(self, cx, cy, radius, rect):
+        left, top, right, bottom = rect
+        nearest_x = max(left, min(cx, right))
+        nearest_y = max(top, min(cy, bottom))
+        return math.hypot(cx - nearest_x, cy - nearest_y) < radius
 
     def check_gesture_navigation(self):
         failures = []
@@ -635,6 +675,9 @@ class AccessibilityChecker:
             if self.is_controlled_by_user_agent(element):
                 continue
             if width_px < min_size_px or height_px < min_size_px:
+                if self.passes_spacing_exception(element, interactive_elements):
+                    continue
+
                 failures.append({
                     "type": "Target Size Failure (Minimum)",
                     "class": node_class,
