@@ -4,6 +4,30 @@ from lxml import etree
 from accessibility_checker.ocr import OcrInfo
 from accessibility_checker.ui_element import UIElement  # Para criar objetos UIElement
 
+# Subclasses de AdapterView do framework: os itens desses containers sao
+# alcancaveis por d-pad via mecanismo de selecao do proprio container,
+# entao clickable sem focusable neles nao implica inacessibilidade por
+# teclado. RecyclerView fica deliberadamente fora: seus itens participam
+# da busca de foco normal e precisam ser focaveis individualmente.
+ADAPTER_VIEW_CLASSES = {
+    "android.widget.ListView",
+    "android.widget.GridView",
+    "android.widget.Spinner",
+    "android.widget.ExpandableListView",
+    "android.widget.Gallery",
+    "android.widget.StackView",
+    "android.widget.AdapterViewFlipper",
+    "android.widget.AdapterViewAnimator",
+}
+
+def has_adapter_view_ancestor(node):
+    parent = node.getparent()
+    while parent is not None:
+        if parent.get("class") in ADAPTER_VIEW_CLASSES:
+            return True
+        parent = parent.getparent()
+    return False
+
 class XmlNodeBoundsExtractor:
     def __init__(self, xml_file_path, image):
         self.xml_file_path = xml_file_path
@@ -77,7 +101,8 @@ class XmlNodeBoundsExtractor:
                     "content-desc": content_desc,
                     "resource_id": resource_id,
                     "clickable": clickable,
-                    "focusable": focusable
+                    "focusable": focusable,
+                    "in_adapter_view": has_adapter_view_ancestor(node)
                 })
         return interactive_elements
 
@@ -109,7 +134,7 @@ class XmlNodeBoundsExtractor:
                         "content-desc": content_desc,
                         "bounds": bounds,
                         "bounds_tuple": bounds_tuple,
-                        "node": child  # Manter referência para atributos adicionais
+                        "node": child
                     })
 
                 # Chamada recursiva para percorrer os filhos

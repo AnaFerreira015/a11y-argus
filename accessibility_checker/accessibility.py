@@ -99,6 +99,10 @@ class AccessibilityChecker:
             content_desc = element.get('content-desc', '')
             text = element.get('text', '')
             if clickable and not focusable:
+                if element.get("in_adapter_view"):
+                    # Itens de AdapterView sao alcancaveis via selecao
+                    # do container pelo d-pad; nao e falha de teclado.
+                    continue
                 failure = {
                     "type": "Gesture-Only Navigation",
                     "class": node_class,
@@ -106,9 +110,12 @@ class AccessibilityChecker:
                     "bounds": list(bounds_tuple),
                     "content-desc": content_desc,
                     "text": text,
-                    "Success Criterion": "2.5.1 Pointer Gestures",
+                    "Success Criterion": "2.1.1 Keyboard",
                     "Level": "A",
-                    "Recommendation": "Defina 'focusable=true' ou forneça uma alternativa sem gestos."
+                    "Recommendation": "Defina 'focusable=true' (ou "
+                                      "android:focusable no layout) para que o "
+                                      "elemento seja alcançável por teclado, "
+                                      "switch access e d-pad."
                 }
                 failures.append(failure)
         # self.failures.extend(failures)
