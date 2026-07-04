@@ -24,6 +24,55 @@ font_scales = {
 
 DROIDBOT_IME = "io.github.ylimit.droidbotapp/.DroidBotIME"
 
+def get_device_locale(device_serial):
+    for cmd in (["getprop", "persist.sys.locale"],
+                ["settings", "get", "system", "system_locales"]):
+        out = subprocess.run(["adb", "-s", device_serial, "shell"] + cmd,
+                             capture_output=True, text=True).stdout.strip()
+        if out and out != "null":
+            return out
+    return ""
+
+
+def ensure_device_language(device_serial, locale="en-US"):
+    """Garante que o device esta no locale do protocolo experimental.
+    O state_str do DroidBot depende dos textos da UI, entao capturas e
+    replays precisam compartilhar o mesmo idioma. Tenta ajustar via root
+    (imagens AOSP/Google APIs); em imagens com Play Store, orienta o
+    ajuste manual."""
+    current = get_device_locale(device_serial)
+    if current.replace("_", "-").lower().startswith(locale.lower()):
+        return True
+
+    print(f"[INFO] Locale atual '{current}', ajustando para {locale}...")
+    subprocess.run(["adb", "-s", device_serial, "root"],
+                   capture_output=True, text=True)
+    r = subprocess.run(
+        ["adb", "-s", device_serial, "shell",
+         f"setprop persist.sys.locale {locale}"],
+        capture_output=True, text=True)
+    if r.returncode != 0 or "not allowed" in (r.stderr or "").lower():
+        print(f"[ERRO] Sem acesso root para ajustar o locale (imagem com "
+              f"Play Store?). Ajuste manualmente: Settings > System > "
+              f"Languages > English (United States), e rode novamente.")
+        return False
+
+    subprocess.run(["adb", "-s", device_serial, "reboot"])
+    subprocess.run(["adb", "-s", device_serial, "wait-for-device"],
+                   timeout=180)
+    deadline = time.time() + 180
+    while time.time() < deadline:
+        boot = subprocess.run(
+            ["adb", "-s", device_serial, "shell", "getprop",
+             "sys.boot_completed"],
+            capture_output=True, text=True).stdout.strip()
+        if boot == "1":
+            break
+        time.sleep(3)
+
+    current = get_device_locale(device_serial)
+    return current.replace("_", "-").lower().startswith(locale.lower())
+
 def wait_device_settled(device_serial, timeout=60):
     """Espera o sistema reindexar o IME do companion apos a configuration
     change do font_scale. Se o companion nao esta instalado (primeira run),
@@ -319,6 +368,9 @@ def run_pipeline():
                 continue
 
             print(f"[INFO] Dispositivo detectado: {device_serial}")
+            if not ensure_device_language(device_serial, "en-US"):
+                print("[FATAL] Nao foi possivel garantir o locale en-US. Abortando este APK.")
+                continue
             timeout_value = estimate_timeout_by_apk_and_activities(apk_path)
 
             for font_type, scale in font_scales.items():
