@@ -223,9 +223,13 @@ def check_resize_text_by_bounds(
     small = extract_elements(xml_paths["small_text"])
     large = extract_elements(xml_paths["large_text"])
 
-    expected_increase_ratio = 2.0   # Espera-se que o texto dobre (200%) no modo grande
-    expected_reduction_ratio = 0.5  # Espera-se que o texto reduza pela metade (50%) no modo pequeno
-    tolerance = 0.2                 # ±20% de margem
+    expected_increase_ratio = 1.3  # = font_scales["large_text"]
+    expected_reduction_ratio = 0.85  # = font_scales["small_text"]
+    tolerance = 0.15  # margem no aumento (correto=1.3 vs incorreto=1.0)
+    reduction_tolerance = 0.10  # margem menor na redução: a distancia entre
+                                 # correto (0.85) e incorreto (1.0) é só 0.15,
+                                 # então tolerance=0.15 poria o corte em 1.0
+                                 # e o caso-alvo (razão 1.0) escaparia
 
     resize_errors = []
 
@@ -237,7 +241,11 @@ def check_resize_text_by_bounds(
             h_large = large[key]['height']
             ratio = h_large / h_def if h_def else 0
 
-            if not (expected_increase_ratio - tolerance <= ratio <= expected_increase_ratio + tolerance):
+            # Unidirecional: falha apenas se cresceu MENOS que o esperado
+            # (razao ~1.0 = texto ignora a preferencia do usuario). Crescer
+            # mais que o esperado e reflow multi-linha, evidencia de que
+            # o texto escalou, nao falha.
+            if ratio < expected_increase_ratio - tolerance:
                 resize_errors.append({
                     'type': 'Resize Text - insufficient increase',
                     'element': key,
@@ -254,7 +262,9 @@ def check_resize_text_by_bounds(
             h_small = small[key]['height']
             ratio = h_small / h_def if h_def else 0
 
-            if not (expected_reduction_ratio - tolerance <= ratio <= expected_reduction_ratio + tolerance):
+            # Unidirecional espelhado: falha apenas se reduziu MENOS que o
+            # esperado (razao ~1.0 = nao respondeu a escala menor).
+            if ratio > expected_reduction_ratio + reduction_tolerance:
                 resize_errors.append({
                     'type': 'Resize Text - insufficient reduction',
                     'element': key,
