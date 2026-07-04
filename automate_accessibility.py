@@ -125,27 +125,25 @@ def estimate_timeout_by_apk_and_activities(apk_path):
     print(f"[INFO] Timeout estimado: {timeout}s ({perms} permissões, {acts} activities)")
     return timeout
 
-def get_screen_files(screen_id, output_root):
+def get_screen_files(screen_id, output_root, font_type):
     """
-    Retorna os caminhos da imagem e do XML com base no screen_id, buscando em default, small_text e large_text.
+    Retorna os caminhos da imagem e do XML do screen_id NA ESCALA PEDIDA.
+    O state_str nao inclui bounds, entao a mesma tela tem o mesmo id nas
+    tres escalas; buscar em ordem fixa retornava sempre os arquivos do
+    default para qualquer escala.
     """
-    for font_type in ["default", "small_text", "large_text"]:
-        prints_dir = os.path.join(output_root, font_type, "prints")
-        xmls_dir = os.path.join(output_root, font_type, "xmls")
+    prints_dir = os.path.join(output_root, font_type, "prints")
+    xmls_dir = os.path.join(output_root, font_type, "xmls")
 
-        screenshot_name = f"screen_{font_type}_{screen_id}.png"
-        xml_name = f"ui_dump_{font_type}_{screen_id}.xml"
+    screenshot_path = os.path.join(prints_dir, f"screen_{font_type}_{screen_id}.png")
+    xml_path = os.path.join(xmls_dir, f"ui_dump_{font_type}_{screen_id}.xml")
 
-        screenshot_path = os.path.join(prints_dir, screenshot_name)
-        xml_path = os.path.join(xmls_dir, xml_name)
-
-        if os.path.exists(screenshot_path) and os.path.exists(xml_path):
-            return {
-                "font_type": font_type,
-                "screenshot": screenshot_path,
-                "xml": xml_path
-            }
-
+    if os.path.exists(screenshot_path) and os.path.exists(xml_path):
+        return {
+            "font_type": font_type,
+            "screenshot": screenshot_path,
+            "xml": xml_path
+        }
     return None
 
 def countdown_and_stop(droidbot_instance, timeout):
@@ -434,7 +432,7 @@ def run_pipeline():
 
             for font_type in font_scales:
                 screen_id = entry[font_type]
-                files = get_screen_files(screen_id, output_root)
+                files = get_screen_files(screen_id, output_root, font_type)
                 if not files:
                     print(f"[WARNING] Arquivos não encontrados para screen_id {screen_id} ({font_type})")
                     continue
