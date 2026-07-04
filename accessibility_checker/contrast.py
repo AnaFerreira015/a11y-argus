@@ -15,6 +15,22 @@ os.environ["LOKY_MAX_CPU_COUNT"] = "4"
 
 ICON_GLYPH_PATTERN = re.compile(r'^[^\w\s]+$')
 
+TEXT_WIDGET_CLASSES = (
+    "android.widget.TextView", "android.widget.Button",
+    "android.widget.EditText", "android.widget.CheckBox",
+    "android.widget.RadioButton", "android.widget.Switch",
+    "android.widget.ToggleButton", "android.widget.CheckedTextView",
+    "android.widget.AutoCompleteTextView",
+    "android.widget.MultiAutoCompleteTextView",
+)
+
+LINE_HEIGHT_FACTOR = 1.333
+
+# WCAG 1.4.3 / WCAG2ICT: large text = 18pt = 24dp. The alternative rule
+# (14pt = 18.66dp bold) is not applied because the font weight is not
+# observable in the UI hierarchy XML.
+LARGE_TEXT_DP = 24
+
 class ContrastChecker:
     def __init__(self, image_path: str):
         self.image_path = image_path
@@ -52,7 +68,9 @@ class ContrastChecker:
             if text and ICON_GLYPH_PATTERN.match(text) and not node.attrib.get('content-desc', '').strip():
                 continue  # Ignora glifos sem descrição acessível
 
-            if bounds and class_name == "android.widget.TextView" and text:
+            if bounds and class_name in TEXT_WIDGET_CLASSES and text:
+                if node.attrib.get('enabled') == 'false':
+                    continue  # WCAG 1.4.3 isenta controles inativos
                 bounds_tuple = tuple(map(int, re.findall(r'\d+', bounds)))
                 x1, y1, x2, y2 = bounds_tuple
                 x1 = max(0, min(x1, width - 1))
@@ -88,21 +106,23 @@ class ContrastChecker:
 
     def check_text_contrast_with_tolerance(self, bounds_texts, device_density, navigation_view_bounds=None, default_min_contrast=4.5):
         """
-        Verifica o contraste dos textos considerando a altura estimada (em dp)
-        para determinar se o texto é grande ou normal.
-        Se a altura (em dp) for ≥ 18dp, o mínimo exigido é 3:1; caso contrário, 4.5:1.
+        Verifica o contraste dos textos conforme WCAG 1.4.3.
+        O tamanho da fonte e estimado a partir da altura do bounding box
+        (altura / LINE_HEIGHT_FACTOR). Texto e considerado grande se o
+        tamanho estimado for >= 24dp (18pt via WCAG2ICT), exigindo 3:1;
+        caso contrario, 4.5:1.
         """
         contrast_failures = []
         for (bounds, text, text_color, bg_color) in bounds_texts:
             x1, y1, x2, y2 = bounds
             height_pixels = y2 - y1
-            height_dp = height_pixels / device_density
-            # print(f"[DEBUG] Altura: {height_dp} dp")
+            est_text_size_dp = (height_pixels / device_density) / LINE_HEIGHT_FACTOR
 
             if ICON_GLYPH_PATTERN.match(text):
                 continue  # Ignora glifos (ícones visuais)
 
-            required_contrast = 3.0 if height_dp >= 18 else default_min_contrast
+            required_contrast = 3.0 if est_text_size_dp >= LARGE_TEXT_DP \
+                else default_min_contrast
             # print(f"[DEBUG] Contraste necessário: {required_contrast}")
             contrast_ratio = self.calculate_contrast_ratio(text_color, bg_color)
             # print(f"[DEBUG] Proporção de contraste: {contrast_ratio}")
@@ -115,7 +135,9 @@ class ContrastChecker:
                     "Level Status": {"AA": "Fail", "AAA": "Fail"},
                     "Success Criterion": "1.4.3 Contrast (Minimum)",
                     "Level": "AA",
-                    "Details": f"Texto com altura estimada de {height_dp:.1f}dp (equivalente a {height_pixels}px) requer um contraste mínimo de {required_contrast}:1."
+                    "Details": f"Texto com tamanho estimado de {est_text_size_dp:.1f}dp "
+                               f"(bbox de {height_pixels}px, fator {LINE_HEIGHT_FACTOR}) "
+                               f"requer um contraste mínimo de {required_contrast}:1."
                 }
                 contrast_failures.append(failure)
         # return contrast_failures
