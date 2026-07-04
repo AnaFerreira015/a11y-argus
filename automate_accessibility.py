@@ -373,18 +373,24 @@ def run_pipeline():
                 continue
             timeout_value = estimate_timeout_by_apk_and_activities(apk_path)
 
-            for font_type, scale in font_scales.items():
-                print(f"\n===== Executando DroidBot com fonte '{font_type}' (escala {scale}) para {apk_name} =====")
-                set_font_scale(device_serial, scale)
-                time.sleep(3)
+            try:
+                for font_type, scale in font_scales.items():
+                    print(f"\n===== Executando DroidBot com fonte '{font_type}' (escala {scale}) para {apk_name} =====")
+                    set_font_scale(device_serial, scale)
+                    time.sleep(3)
 
-                if not wait_device_settled(device_serial):
-                    print(f"[WARNING] DroidBotIME nao registrou apos mudanca de escala; "
-                          f"tentando mesmo assim para '{font_type}'")
+                    if not wait_device_settled(device_serial):
+                        print(f"[WARNING] DroidBotIME nao registrou apos mudanca de escala; "
+                              f"tentando mesmo assim para '{font_type}'")
 
-                output_dir = os.path.join(output_root, font_type)
-                clean_output_dir(output_dir)
-                run_droidbot(apk_path, device_serial, output_dir, font_type, timeout_value, package_name)
+                    output_dir = os.path.join(output_root, font_type)
+                    clean_output_dir(output_dir)
+                    run_droidbot(apk_path, device_serial, output_dir, font_type, timeout_value, package_name)
+            except Exception as e:
+                print(f"[ERRO] Falha na captura de {apk_name}: {e}")
+                with open("apks_falhas.csv", "a", encoding="utf-8") as f:
+                    f.write(f"{apk_path},{e}\n")
+                continue
         else:
             print(f"[INFO] Pasta {output_root} já existe. Pulando execução do DroidBot.")
 
