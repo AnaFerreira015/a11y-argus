@@ -171,6 +171,19 @@ def get_screen_id_from_state_json(state_json_path):
         data = json.load(f)
     return data.get("state_str")
 
+def state_belongs_to_app(state_json_path, package_name):
+    """Le o foreground_activity do state JSON (funciona tanto para os
+    arquivos do core quanto para os do ScreenCapturePlugin, ambos gravam
+    o campo)."""
+    if not package_name:
+        return True
+    try:
+        with open(state_json_path, encoding="utf-8") as f:
+            fg = json.load(f).get("foreground_activity") or ""
+        return package_name in fg
+    except Exception:
+        return False
+
 def is_app_screen(state_json_path, expected_package):
     if not os.path.exists(state_json_path):
         return False
@@ -245,16 +258,21 @@ def extract_foreground_activity(path):
         data = json.load(f)
     return data.get("foreground_activity")
 
-def build_state_map_by_index(output_root):
+def build_state_map_by_index(output_root, package_name=None):
     """
     Gera um state_map confiável, com base na ordem dos arquivos capturados por fonte.
     Garante que os screen_ids (state_str) não se repitam para evitar associações incorretas.
+    Estados fora do app alvo são excluídos ANTES do pareamento por índice,
+    senão uma captura de launcher presente em só uma das escalas desloca
+    os índices e desalinha o pareamento dali em diante.
     """
+
     state_dirs = {k: os.path.join(output_root, k, "states") for k in font_scales}
     state_files = {
         k: sorted([
             f for f in os.listdir(state_dirs[k])
             if f.endswith(".json")
+            and state_belongs_to_app(os.path.join(state_dirs[k], f), package_name)
         ]) for k in font_scales
     }
 
@@ -402,15 +420,12 @@ def run_pipeline():
         prints_dirs = {k: os.path.join(output_root, k, "prints") for k in font_scales}
         xmls_dirs = {k: os.path.join(output_root, k, "xmls") for k in font_scales}
         states_dir = os.path.join(output_root, "default", "states")
-        sorted_state_files = get_sorted_states(states_dir)
 
         if not os.path.exists(prints_dirs["default"]):
             print(f"[WARNING] Diretório de prints não encontrado: {prints_dirs['default']}")
             continue
 
-        captured_files = sorted(os.listdir(prints_dirs["default"]))
-
-        state_map = build_state_map_by_index(output_root)
+        state_map = build_state_map_by_index(output_root, package_name)
 
         has_results = False
 
