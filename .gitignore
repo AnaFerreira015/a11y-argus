@@ -38,15 +38,17 @@ logs/
 
 /atualizar_lista_apks.py
 /verify_dir.py
+/count_output_dirs.py
 
 distribuicao_wcag.csv
 falhas_por_tela.csv
 frequencia_falhas.csv
 frequencia_falhas_pivotada.csv
-apks.csv
+apks.local.csv
 ranking_falhas.csv
 tabela_cobertura.csv
 execution_times.csv
+apks_falhas.csv
 
 apps
 
