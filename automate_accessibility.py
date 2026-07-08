@@ -146,8 +146,10 @@ def get_screen_files(screen_id, output_root, font_type):
         }
     return None
 
-def countdown_and_stop(droidbot_instance, timeout):
+def countdown_and_stop(droidbot_instance, timeout, finished_event=None):
     for remaining in range(timeout, 0, -1):
+        if finished_event is not None and finished_event.is_set():
+            return  # droidbot terminou antes do teto; timer se encerra
         mins, secs = divmod(remaining, 60)
         color = Fore.GREEN if remaining > 180 else Fore.YELLOW if remaining > 60 else Fore.RED
         print(f"{color}Tempo restante: {mins:02d} min {secs:02d} seg{Style.RESET_ALL}")
@@ -232,10 +234,13 @@ def run_droidbot(apk_path, device_serial, output_dir, font_type, timeout_value, 
         event_count=100,
         plugins=[ScreenCapturePlugin(output_dir, font_type, target_package=package_name)]
     )
-    timer_thread = threading.Thread(target=countdown_and_stop, args=(droidbot, timeout_value))
+    finished = threading.Event()
+    timer_thread = threading.Thread(target=countdown_and_stop,
+                                    args=(droidbot, timeout_value, finished))
     timer_thread.daemon = True
     timer_thread.start()
     droidbot.start()
+    finished.set()
 
 
 def get_connected_device_serial():

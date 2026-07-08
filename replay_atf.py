@@ -204,11 +204,13 @@ def replay_apk(apk_path, device_serial):
         event_count=event_count,
         plugins=[AtfScanPlugin(output_root, target_package=package_name)],
     )
+    finished = threading.Event()
     timer_thread = threading.Thread(target=countdown_and_stop,
-                                    args=(droidbot, timeout_value))
+                                    args=(droidbot, timeout_value, finished))
     timer_thread.daemon = True
     timer_thread.start()
     droidbot.start()
+    finished.set()  # sinaliza o timer: terminou antes do teto
 
     generate_state_map(output_root, package_name)
 
