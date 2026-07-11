@@ -47,30 +47,6 @@ class OcrInfo:
         """Verifica se os bounds são semelhantes dentro de uma tolerância."""
         return all(abs(b1 - b2) <= tolerance for b1, b2 in zip(bounds1, bounds2))
 
-    def check_no_increase(self, other: 'OcrInfo') -> dict | bool:
-        for ocr_text_1, ocr_text_2 in zip(self.data, other.data):
-            if ocr_text_2.width <= ocr_text_1.width and ocr_text_2.height <= ocr_text_1.height:
-                return {
-                    'type': 'Unresponsive View - no increase',
-                    'phrase': self.phrase,
-                    'bounds': self.bounds,
-                    'Success Criterion': '1.4.4 Resize Text',
-                    'Level': 'AA'
-                }
-        return False
-
-    def check_no_reduction(self, other: 'OcrInfo') -> dict | bool:
-        for ocr_text_1, ocr_text_2 in zip(self.data, other.data):
-            if ocr_text_2.width == ocr_text_1.width and ocr_text_2.height == ocr_text_1.height:
-                return {
-                    'type': 'Unresponsive View - without reduction',
-                    'phrase': self.phrase,
-                    'bounds': self.bounds,
-                    'Success Criterion': '1.4.4 Resize Text',
-                    'Level': 'AA'
-                }
-        return False
-
     def compare_processed_data(self, other: 'OcrInfo') -> bool:
         if self.phrase != other.phrase:
             return True

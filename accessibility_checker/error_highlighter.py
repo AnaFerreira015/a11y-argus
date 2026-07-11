@@ -17,8 +17,6 @@ class ErrorHighlighter:
         self.original_image = cv2.imread(image_path)
         self.image_copies = {}
         self.error_colors = {
-            'Unresponsive View - no increase': (0, 255, 0),
-            'Unresponsive View - without reduction': (0, 255, 0),
             'Contrast Failure': (255, 0, 0),
             'Missing Content Description': (0, 0, 255),
             'Non-essential Content Description': (255, 0, 255),
@@ -27,8 +25,6 @@ class ErrorHighlighter:
             'Missing State Information': (255, 165, 0),
             'Missing Error Description': (0, 0, 255),
             'Missing Label or Instruction': (0, 0, 255),
-            'Empty Label': (0, 0, 128),
-            'Empty Hint': (0, 0, 128),
             'Focus Order Failure': (0, 0, 255),
             'Target Size Failure': (255, 0, 0),
             'Target Size Failure (Minimum)': (255, 0, 0),

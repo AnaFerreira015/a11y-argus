@@ -18,7 +18,6 @@ from accessibility_checker.ui_element import CONTAINER_CLASSES
 
 TYPES_WITHOUT_FILTER_MENU = {
     "Focus Order Failure",
-    "Focus Order Exceeds Visual Elements",
     "Link Purpose Failure",
 }
 

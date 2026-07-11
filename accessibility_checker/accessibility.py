@@ -322,10 +322,7 @@ class AccessibilityChecker:
             resource_id = component.get('resource-id', '')
             clickable = component.get('clickable', False)
             checkable = component.get('checkable', False)
-            checked = component.get('checked', None)
-            enabled = component.get('enabled', None)
             focusable = component.get('focusable', False)
-            selected = component.get('selected', None)
             bounds_tuple = tuple(map(int, re.findall(r'\d+', bounds)))
             is_interactive = clickable or focusable or checkable
             if is_interactive:
@@ -343,41 +340,6 @@ class AccessibilityChecker:
                         "Level": "A",
                         "Details": "Elemento interativo sem nome acessível."
                     })
-                if checkable:
-                    if not isinstance(checked, bool):
-                        failures.append({
-                            "type": "Missing or Invalid State Information",
-                            "class": node_class,
-                            "resource_id": resource_id,
-                            "bounds": list(bounds_tuple),
-                            "Success Criterion": "4.1.2 Name, Role, Value",
-                            "Level": "A",
-                            "Details": "Elemento checkable sem estado 'checked' corretamente definido."
-                        })
-                if not isinstance(enabled, bool):
-                    failures.append({
-                        "type": "Missing Enabled State",
-                        "class": node_class,
-                        "resource_id": resource_id,
-                        "bounds": list(bounds_tuple),
-                        "Success Criterion": "4.1.2 Name, Role, Value",
-                        "Level": "A",
-                        "Details": "Elemento interativo sem estado 'enabled' definido corretamente."
-                    })
-                if 'selected' in component and not isinstance(selected, bool):
-                    failures.append({
-                        "type": "Invalid Selected State",
-                        "class": node_class,
-                        "resource_id": resource_id,
-                        "bounds": list(bounds_tuple),
-                        "Success Criterion": "4.1.2 Name, Role, Value",
-                        "Level": "A",
-                        "Details": "Elemento interativo com estado 'selected' inválido."
-                    })
-        # self.failures.extend([
-        #     f for f in failures
-        #     if self._is_outside_navigation_view(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))))
-        # ])
         self.failures.extend([
             f for f in failures
             if is_relevant_error_scope(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))),
@@ -444,29 +406,6 @@ class AccessibilityChecker:
                     "Success Criterion": "3.3.2 Labels or Instructions",
                     "Level": "A"
                 })
-            else:
-                if label and not label.strip():
-                    failures.append({
-                        "type": "Empty Label",
-                        "class": node_class,
-                        "resource_id": resource_id,
-                        "bounds": list(bounds_tuple),
-                        "Success Criterion": "3.3.2 Labels or Instructions",
-                        "Level": "A"
-                    })
-                if hint and not hint.strip():
-                    failures.append({
-                        "type": "Empty Hint",
-                        "class": node_class,
-                        "resource_id": resource_id,
-                        "bounds": list(bounds_tuple),
-                        "Success Criterion": "3.3.2 Labels or Instructions",
-                        "Level": "A"
-                    })
-        # self.failures.extend([
-        #     f for f in failures
-        #     if self._is_outside_navigation_view(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))))
-        # ])
         self.failures.extend([
             f for f in failures
             if is_relevant_error_scope(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))),
