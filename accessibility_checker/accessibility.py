@@ -353,34 +353,28 @@ class AccessibilityChecker:
             node_class = field['class']
             resource_id = field['resource_id']
             bounds = field['bounds']
-            error_message = field.get('error_message')
             bounds_tuple = tuple(map(int, re.findall(r'\d+', bounds)))
-            if error_message is None:
+
+            # 3.3.1 so se aplica a campos em estado de erro. O extractor
+            # marca in_error_state por sinais estruturais/de id (sem depender
+            # de idioma nem do errorText do AccessibilityNodeInfo, ausente no
+            # dump), entao a cobertura e parcial e declarada como tal.
+            if not field.get('in_error_state', False):
                 continue
-            else:
-                if not error_message.strip():
-                    failures.append({
-                        "type": "Missing Error Description",
-                        "class": node_class,
-                        "resource_id": resource_id,
-                        "bounds": list(bounds_tuple),
-                        "Success Criterion": "3.3.1 Error Identification",
-                        "Level": "A"
-                    })
-                else:
-                    failures.append({
-                        "type": "Error Message Detected",
-                        "class": node_class,
-                        "resource_id": resource_id,
-                        "bounds": list(bounds_tuple),
-                        "error_message": error_message,
-                        "Success Criterion": "3.3.1 Error Identification",
-                        "Level": "A"
-                    })
-        # self.failures.extend([
-        #     f for f in failures
-        #     if self._is_outside_navigation_view(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))))
-        # ])
+
+            error_message = field.get('error_message')
+            # Falha 3.3.1: erro sinalizado sem descricao textual.
+            # Erro COM descricao = conforme; nao gera achado.
+            if not error_message or not error_message.strip():
+                failures.append({
+                    "type": "Missing Error Description",
+                    "class": node_class,
+                    "resource_id": resource_id,
+                    "bounds": list(bounds_tuple),
+                    "Success Criterion": "3.3.1 Error Identification",
+                    "Level": "A",
+                    "Details": "Campo em estado de erro sem descricao textual do erro."
+                })
         self.failures.extend([
             f for f in failures
             if is_relevant_error_scope(cast(Tuple[int, int, int, int], tuple(f.get("bounds", []))),

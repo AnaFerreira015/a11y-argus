@@ -20,6 +20,26 @@ ADAPTER_VIEW_CLASSES = {
     "android.widget.AdapterViewAnimator",
 }
 
+# Sinais de erro independentes de idioma: ids que devs usam para o TextView
+# de mensagem de erro.
+ERROR_ID_HINTS = ("error", "erro", "invalid", "til_error", "textinput_error")
+
+def _has_error_id(resource_id):
+    rid = (resource_id or "").lower()
+    return any(h in rid for h in ERROR_ID_HINTS)
+
+
+def _is_directly_below(field_bounds, candidate_bounds, max_gap_px=120):
+    if not field_bounds or not candidate_bounds:
+        return False
+    fb = list(map(int, re.findall(r'\d+', field_bounds)))
+    cb = list(map(int, re.findall(r'\d+', candidate_bounds)))
+    if len(fb) != 4 or len(cb) != 4:
+        return False
+    field_bottom, cand_top = fb[3], cb[1]
+    horizontally_aligned = cb[0] < fb[2] and cb[2] > fb[0]
+    return horizontally_aligned and 0 <= (cand_top - field_bottom) <= max_gap_px
+
 def has_adapter_view_ancestor(node):
     parent = node.getparent()
     while parent is not None:
@@ -277,15 +297,22 @@ class XmlNodeBoundsExtractor:
                     "bounds": bounds,
                     "focused": focused,
                     "enabled": enabled,
-                    "error_message": None
+                    "error_message": None,
+                    "in_error_state": False
                 }
                 if idx + 1 < len(nodes):
                     next_node = nodes[idx + 1]
                     next_class = next_node.get("class")
                     next_text = next_node.get("text", "").strip()
                     if next_class == "android.widget.TextView" and next_text:
-                        field["error_message"] = next_text
-                        field["error_bounds"] = next_node.get("bounds")
+                        next_rid = next_node.get("resource-id", "").strip()
+                        # 3.3.1: so trata como mensagem de erro se o id do
+                        # proprio texto indica erro E ele esta colado abaixo do campo
+                        if _has_error_id(next_rid) and \
+                                _is_directly_below(bounds, next_node.get("bounds")):
+                            field["error_message"] = next_text
+                            field["error_bounds"] = next_node.get("bounds")
+                            field["in_error_state"] = True
                 input_fields.append(field)
         return input_fields
 
