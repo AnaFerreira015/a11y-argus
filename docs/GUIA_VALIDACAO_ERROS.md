@@ -17,8 +17,7 @@ uma tela específica, congelada nos arquivos:
 - `output_dir_<apk>/large_text/` e `small_text/` (mesma tela em outras escalas)
 
 Se você reabrir o app no emulador, a tela pode estar diferente (conteúdo
-dinâmico, datas, estados de sessão), e você estaria validando outra coisa.
-Use o emulador apenas nos passos marcados como **[opcional, comportamental]**.
+dinâmico, datas, estados de sessão), e você estaria validando outra coisa. Use o emulador apenas nos passos marcados como **[opcional, comportamental]**.
 
 ## Ferramentas (instalar uma vez)
 
@@ -107,7 +106,7 @@ tecnicamente clicável que não funciona como alvo (ex.: um layout de fundo).
 confira se são mesmo interativos pro usuário ou só um container com
 `clickable` herdado.
 
-## 3. Missing Content Description / Missing Accessible Name (WCAG 1.1.1 / 4.1.2)
+## 3. Missing Content Description (WCAG 1.1.1)
 
 **O que o critério exige:** todo elemento **funcional** não-textual (ícone,
 imagem clicável, botão só com imagem) precisa de um nome acessível, que o
@@ -122,12 +121,9 @@ leitor de tela anuncia.
 **É FP se:** o elemento é puramente decorativo (enfeite, divisor, imagem
 ilustrativa não clicável), ou o nome existe em outro atributo visível no XML.
 
-**[Opcional, comportamental]:** ative o TalkBack no emulador
-(`adb shell settings put secure enabled_accessibility_services
-com.google.android.marvin.talkback/com.google.android.marvin.talkback.TalkBackService`),
-navegue até o elemento e ouça o que é anunciado. Use apenas em casos de
-dúvida; desative depois
-(`adb shell settings put secure enabled_accessibility_services ""`).
+**Relacionado:** o tipo **Missing Accessible Name** (seção 10) cobre a mesma
+ideia para controles em geral; valide os dois pelo mesmo raciocínio, usando
+sempre o `type` exato do achado.
 
 ## 4. Missing Label or Instruction (WCAG 3.3.2)
 
@@ -187,7 +183,7 @@ sobrepor a ponto de prejudicar a leitura ou a compreensão do conteúdo. Na
 prática a maioria dos casos envolve textos, mas um ícone invadindo um texto
 (ou vice-versa) também conta.
 
-**Como verificar (30s):** olhe a região marcada no print com zoom. Algum
+**Como verificar:** olhe a região marcada no print com zoom. Algum
 conteúdo fica ilegível, cortado ou encoberto pela sobreposição?
 
 **É TP se:** a sobreposição prejudica visivelmente a leitura ou o uso de
@@ -217,10 +213,10 @@ corretamente fica ~1.3x mais alto. Como ler a razão:
 | Razão | Significado | O que fazer |
 |---|---|---|
 | ~1.0 (ex.: 51/51) | O texto **ignorou** o aumento de fonte | Provável **TP**; confirme no visual (passo abaixo) |
-| ~1.3 ou maior | O texto **escalou** (ou quebrou em mais linhas) | Isso **não deveria estar no report**; marque como FP e adicione comentário "razão X.XX, possível bug da ferramenta" |
-| Entre ~1.0 e ~1.3 | Zona cinzenta (escalou só em parte) | Confirme no visual e descreva no comentário |
+| ~1.3 ou maior | O texto **escalou** (ou quebrou em mais linhas) | Isso **não deveria estar no report**; marque como FP |
+| Entre ~1.0 e ~1.3 | Zona cinzenta (escalou só em parte) | Confirme no visual |
 
-**Confirmação visual:** abra lado a lado o print da tela em
+**Confirmação visual (1 min):** abra lado a lado o print da tela em
 `default/prints/` e o da **mesma tela** em `large_text/prints/` (mesmo
 screen_id no nome, prefixo da pasta diferente) e olhe o texto apontado.
 O que a conta disse deve bater com o que você vê.
@@ -240,13 +236,119 @@ Mesma lógica do item 8, no sentido contrário: a captura pequena usa escala
 0.85, então texto que responde corretamente fica ~0.85x da altura (ou seja,
 **menor**). Divida `new_height / original_height`:
 
-| Razão | Significado | O que fazer |
-|---|---|---|
-| ~1.0 | O texto **ignorou** a redução de fonte | Provável **TP**; confirme comparando `default/prints/` com `small_text/prints/` |
-| ~0.85 ou menor | O texto **reduziu** corretamente | Não deveria estar no report; **FP** com comentário "razão X.XX, possível bug da ferramenta" |
+| Razão | Significado | O que fazer                                                                                            |
+|---|---|--------------------------------------------------------------------------------------------------------|
+| ~1.0 | O texto **ignorou** a redução de fonte | Provável **TP**; confirme comparando `default/prints/` com `small_text/prints/`                        |
+| ~0.85 ou menor | O texto **reduziu** corretamente | Não deveria estar no report; marque com **FP** |
 
 Lembrete: este tipo **não é exigência da WCAG** (o achado já vem marcado
 como Advisory); avalie normalmente e registre, a distinção já está nos dados.
+
+## 10. Missing Accessible Name (WCAG 4.1.2)
+
+**O que o critério exige:** todo componente de interface (botão, campo,
+controle) precisa de um nome acessível que identifique sua função para
+tecnologias assistivas. É parecido com o item 3, mas aqui o foco é em
+**controles interativos** (não só imagens/ícones): um botão sem texto nem
+descrição, um campo sem rótulo programático.
+
+**Como verificar:**
+1. Localize o elemento no print: é um controle com função (botão, campo,
+   switch, aba)?
+2. No XML, confirme que não há `text` nem `content-desc`, e que nenhum
+   rótulo programático o nomeia.
+
+**É TP se:** o controle é interativo e não tem nome acessível nenhum.
+**É FP se:** o nome existe em algum atributo (text, content-desc), ou o
+elemento não é um controle que precise ser anunciado.
+
+**Diferença para o item 3 (Missing Content Description):** na prática os dois
+se sobrepõem; use o `type` exato do achado no `errors.json` para saber qual
+foi reportado, e valide pelo mesmo raciocínio (o elemento é funcional e está
+sem nome?).
+
+## 11. Non-essential Content Description Should Be Empty (WCAG 1.1.1)
+
+**O que o critério exige:** o **inverso** do item 3. Elementos puramente
+**decorativos** (que não fazem nada e não transmitem informação) devem ter
+descrição **vazia**, para que o leitor de tela os pule. Descrição em um
+enfeite vira ruído: o usuário de leitor de tela ouve algo que não importa.
+
+**Como verificar:**
+1. Localize o elemento no print: ele é decorativo? (divisor, fundo, ícone
+   ilustrativo que não faz nada ao tocar, imagem de enfeite)
+2. No XML, confirme que ele **tem** `content-desc` preenchido apesar de ser
+   decorativo.
+
+**É TP se:** o elemento é decorativo e carrega uma descrição desnecessária.
+**É FP se:** o elemento na verdade tem função (é clicável) ou transmite
+informação real (então a descrição é correta e necessária).
+
+## 12. Focus Order Failure (WCAG 2.4.3)
+
+**O que o critério exige:** a ordem em que o foco percorre os elementos deve
+preservar o sentido, tipicamente seguindo a ordem visual de leitura (de cima
+para baixo, da esquerda para a direita).
+
+**Como verificar:** o achado aponta um elemento cuja posição na ordem de foco
+diverge da posição visual esperada. No print, avalie: se o foco chegasse
+nesse elemento naquele ponto da sequência, o fluxo ficaria confuso (ex.: o
+foco salta do topo direto para o rodapé e depois volta para o meio)?
+
+**É TP se:** a divergência quebra o fluxo lógico de navegação.
+**É FP se:** a ordem diferente da visual ainda faz sentido de uso (ex.:
+agrupamentos legítimos, como percorrer todos os campos de um formulário antes
+dos botões fixos no topo).
+
+**[Opcional, comportamental]:** com a tela aberta no emulador, percorra com
+`adb shell input keyevent KEYCODE_TAB` (ou KEYCODE_DPAD_DOWN) e observe a
+sequência real do foco. É a confirmação mais forte para este tipo.
+
+**Atenção:** este é um dos tipos com maior tendência a falso positivo (a
+ordem "correta" muitas vezes é questão de julgamento). Na dúvida, marque com
+comentário em vez de forçar TP/FP, e discuta os casos em conjunto.
+
+## 13. Link Purpose Failure (WCAG 2.4.4)
+
+**O que o critério exige:** o propósito de cada link ou ação deve ser
+compreensível pelo próprio rótulo ou pelo contexto imediato. Rótulos
+genéricos como "clique aqui", "saiba mais", "ver mais", sozinhos, não dizem
+para onde levam.
+
+**Como verificar:** olhe o elemento no print. Lendo **apenas o rótulo
+dele**, dá para saber o que acontece ao tocar? Se não, existe texto
+imediatamente ao lado que complete o sentido?
+
+**É TP se:** o rótulo é genérico e o contexto próximo não resolve (ex.: três
+botões "Saiba mais" na mesma tela, cada um levando a um destino diferente).
+**É FP se:** o contexto imediato torna o destino inequívoco (ex.: um card com
+título "Plano Premium" e, dentro dele, o botão "Saiba mais").
+
+## 14. Missing Error Description (WCAG 3.3.1)
+
+**O que o critério exige:** quando um campo entra em estado de erro, o erro
+deve ser identificado e descrito em texto para o usuário.
+
+**Como este check funciona (contexto importante):** o argus detecta o estado
+de erro por sinais estruturais e de `resource-id` (um texto colado abaixo do
+campo cujo id indica erro, como `til_error`), de forma independente de idioma.
+Ele **não** usa o `errorText` do sistema (que não aparece no dump XML), então
+a cobertura deste critério é parcial e conservadora: ele só dispara quando há
+sinalização estrutural clara de erro.
+
+**Como verificar:** localize o campo apontado no print. Há um indício visual
+de erro (borda vermelha, ícone de alerta) mas **sem** texto explicando o
+problema ao lado/abaixo?
+
+**É TP se:** o campo está claramente em estado de erro e não há descrição
+textual do erro.
+**É FP se:** existe uma mensagem de erro em texto que o argus não associou ao
+campo, ou o campo não está de fato em estado de erro (a sinalização que
+disparou o achado era outra coisa).
+
+**Observação:** por ser um check conservador, este tipo tende a ser raro nos
+resultados. Casos de campos em erro sem descrição que o argus **não** pegou
+devem entrar como FN na varredura.
 
 ---
 
@@ -257,19 +359,22 @@ encontrar e que **não** está no `errors.json` vira uma linha de FN:
 
 1. Algum texto visivelmente difícil de ler? (candidato a Contrast Failure)
 2. Algum botão/ícone clicável minúsculo e apertado entre outros? (Target Size)
-3. Algum ícone funcional que parece sem nome? Confira no XML. (Missing
-   Content Description)
+3. Algum ícone/controle funcional que parece sem nome? Confira no XML.
+   (Missing Content Description / Missing Accessible Name)
 4. Algum campo de entrada sem rótulo nem hint? (Missing Label)
 5. Compare rapidamente com o print large_text: algum texto claramente
    congelado? (Resize Text)
+6. Algum link/botão com rótulo genérico ("saiba mais", "clique aqui") sem
+   contexto que esclareça? (Link Purpose)
+7. Algum campo claramente em erro (borda vermelha, alerta) sem texto
+   explicando o problema? (Missing Error Description)
 
-A varredura é o que dá validade à métrica de
+A varredura leva 2-3 minutos por tela e é o que dá validade à métrica de
 recall; não pule.
 
 ## Quando parar
 
+- Meta: **5 a 10 minutos por tela** (validação dos achados + varredura).
 - Se um achado individual passar de 5 minutos sem conclusão, não force:
   marque a célula com comentário descrevendo a dúvida e siga. Casos ambíguos
   discutidos em conjunto valem mais que chutes consistentes.
-- Registre no comentário qualquer medição que você fez (razão de contraste,
-  dp calculado): isso transforma tua avaliação em evidência auditável.
