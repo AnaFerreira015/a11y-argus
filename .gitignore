@@ -57,3 +57,5 @@ frida-server-*.xz
 *.pyc
 output_dir_*/
 test_output/
+
+comparison/comparacao_batch/

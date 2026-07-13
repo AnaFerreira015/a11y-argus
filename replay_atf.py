@@ -26,7 +26,7 @@ import threading
 import time
 
 from droidbot.droidbot import DroidBot
-from plugins.atf_scan_plugin import AtfScanPlugin, HARNESS_PKG
+from droidbot.plugins.atf_scan_plugin import AtfScanPlugin, HARNESS_PKG
 
 # Reaproveita os helpers do pipeline existente
 from automate_accessibility import (
