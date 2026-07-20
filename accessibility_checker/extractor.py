@@ -175,11 +175,12 @@ class XmlNodeBoundsExtractor:
             content_desc = node.get("content-desc", "").strip()
             bounds = node.get("bounds")
             clickable = node.get("clickable", "false") == "true"
-            focusable = node.get("focusable", "false") == "true"
+            long_clickable = node.get("long-clickable", "false") == "true"
             text = node.get("text", "").strip()
 
-            if clickable or focusable:
-                # Obter as coordenadas do bounds
+            if clickable or long_clickable:
+                if not bounds:
+                    continue
                 bounds_tuple = tuple(map(int, re.findall(r'\d+', bounds)))
                 x1, y1, x2, y2 = bounds_tuple
                 width = x2 - x1
@@ -194,7 +195,7 @@ class XmlNodeBoundsExtractor:
                     "width": width,
                     "height": height,
                     "clickable": clickable,
-                    "focusable": focusable,
+                    "long_clickable": long_clickable,
                     "text": text
                 })
 

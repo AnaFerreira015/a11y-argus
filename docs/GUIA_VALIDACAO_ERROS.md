@@ -17,7 +17,8 @@ uma tela específica, congelada nos arquivos:
 - `output_dir_<apk>/large_text/` e `small_text/` (mesma tela em outras escalas)
 
 Se você reabrir o app no emulador, a tela pode estar diferente (conteúdo
-dinâmico, datas, estados de sessão), e você estaria validando outra coisa. Use o emulador apenas nos passos marcados como **[opcional, comportamental]**.
+dinâmico, datas, estados de sessão), e você estaria validando outra coisa.
+Use o emulador apenas nos passos marcados como **[opcional, comportamental]**.
 
 ## Ferramentas (instalar uma vez)
 
@@ -87,20 +88,32 @@ argus), ou a marcação não está sobre texto de verdade (área vazia, imagem).
 **O que os critérios exigem:** alvos de toque de pelo menos **44x44dp**
 (2.5.5, nível AAA) ou **24x24dp** (2.5.8, nível AA). O 2.5.8 tem exceção:
 alvo menor **passa** se estiver isolado (sem outros alvos encostados).
+"Alvo" aqui significa **alvo de toque**: algo que responde ao toque
+(`clickable="true"` ou `long-clickable="true"`). Um elemento apenas
+`focusable="true"` (alcançável pelo leitor de tela, mas não tocável) **não
+é** um alvo de toque e não deveria ser avaliado por este critério.
 
 **Como verificar:**
 1. Calcule as dimensões: `(dir-esq)/2.625` e `(baixo-topo)/2.625`.
-2. Confirme no XML que o elemento é interativo (`clickable="true"`).
+2. Confirme no XML que o elemento é um **alvo de toque**: `clickable="true"`
+   ou `long-clickable="true"`. Se ele for só `focusable="true"` com
+   `clickable="false"`, é um rótulo/elemento focável, não um alvo: **FP**.
 3. Olhe o print: o elemento aparece **inteiro** ou está cortado pela borda
    da tela/rolagem?
 4. Para o (Minimum): há outros elementos clicáveis encostados nele, ou ele
    está isolado (ex.: ícone sozinho numa barra espaçada)?
+5. Verifique o **alvo real**: se o elemento medido é um ícone/label pequeno
+   **dentro** de um pai clicável maior (um item de lista, um card), quem
+   recebe o toque é o pai. Meça o pai; se ele for grande o suficiente, é
+   **FP** (o alvo de toque efetivo passa).
 
 **É TP se:** a menor dimensão fica abaixo do limite, o elemento é um alvo de
-toque real e, no caso do Minimum, há vizinhos próximos.
-**É FP se:** o elemento está visivelmente **cortado** no print (o tamanho
-real é maior; o argus mediu só a parte visível), ou é um container decorativo
-tecnicamente clicável que não funciona como alvo (ex.: um layout de fundo).
+toque real (não apenas focável) e, no caso do Minimum, há vizinhos próximos.
+**É FP se:** o elemento é apenas focável e não clicável (não é alvo de
+toque); ou está visivelmente **cortado** no print (o tamanho real é maior; o
+argus mediu só a parte visível); ou é um container decorativo tecnicamente
+clicável que não funciona como alvo (ex.: um layout de fundo); ou o alvo de
+toque real é um ancestral maior que passa.
 
 **Armadilha:** elementos de largura total e baixinhos (barras) no rodapé:
 confira se são mesmo interativos pro usuário ou só um container com
@@ -199,7 +212,7 @@ prejuízo (ex.: badge de notificação sobre o canto de um ícone).
 de fonte do usuário. A falha típica é texto que **fica do mesmo tamanho**
 quando o usuário aumenta a fonte (tamanho fixo em dp em vez de sp).
 
-**A conta que resolve quase tudo (30s):** o próprio achado já traz as duas
+**A conta que resolve quase tudo:** o próprio achado já traz as duas
 medidas. No `errors.json`, pegue `original_height` (altura na tela normal) e
 `new_height` (altura na tela com fonte grande) e divida:
 
@@ -216,7 +229,7 @@ corretamente fica ~1.3x mais alto. Como ler a razão:
 | ~1.3 ou maior | O texto **escalou** (ou quebrou em mais linhas) | Isso **não deveria estar no report**; marque como FP |
 | Entre ~1.0 e ~1.3 | Zona cinzenta (escalou só em parte) | Confirme no visual |
 
-**Confirmação visual (1 min):** abra lado a lado o print da tela em
+**Confirmação visual:** abra lado a lado o print da tela em
 `default/prints/` e o da **mesma tela** em `large_text/prints/` (mesmo
 screen_id no nome, prefixo da pasta diferente) e olhe o texto apontado.
 O que a conta disse deve bater com o que você vê.
@@ -236,10 +249,10 @@ Mesma lógica do item 8, no sentido contrário: a captura pequena usa escala
 0.85, então texto que responde corretamente fica ~0.85x da altura (ou seja,
 **menor**). Divida `new_height / original_height`:
 
-| Razão | Significado | O que fazer                                                                                            |
-|---|---|--------------------------------------------------------------------------------------------------------|
-| ~1.0 | O texto **ignorou** a redução de fonte | Provável **TP**; confirme comparando `default/prints/` com `small_text/prints/`                        |
-| ~0.85 ou menor | O texto **reduziu** corretamente | Não deveria estar no report; marque com **FP** |
+| Razão | Significado | O que fazer |
+|---|---|---|
+| ~1.0 | O texto **ignorou** a redução de fonte | Provável **TP**; confirme comparando `default/prints/` com `small_text/prints/` |
+| ~0.85 ou menor | O texto **reduziu** corretamente | Não deveria estar no report; **FP** |
 
 Lembrete: este tipo **não é exigência da WCAG** (o achado já vem marcado
 como Advisory); avalie normalmente e registre, a distinção já está nos dados.

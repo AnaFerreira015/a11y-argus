@@ -523,7 +523,7 @@ class AccessibilityChecker:
         min_size_px = min_size_dp * self.device_density
         interactive_elements = self.extractor.extract_interactive_elements_with_dimensions()
         for element in interactive_elements:
-            if not (element.get('clickable', False) or element.get('focusable', False)):
+            if not (element.get('clickable', False) or element.get('long_clickable', False)):
                 continue
             width_px = element['width']
             height_px = element['height']
@@ -597,7 +597,7 @@ class AccessibilityChecker:
         min_size_px = min_size_dp * self.device_density
         interactive_elements = self.extractor.extract_interactive_elements_with_dimensions()
         for element in interactive_elements:
-            if not element.get('clickable', False):
+            if not (element.get('clickable', False) or element.get('long_clickable', False)):
                 continue
             width_px = element['width']
             height_px = element['height']
