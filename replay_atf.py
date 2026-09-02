@@ -173,9 +173,8 @@ def replay_apk(apk_path, device_serial):
               f"(apague {atf_dir} para reexecutar)")
         generate_state_map(output_root, package_name)
         return
-    timeout_value = int(
-        estimate_timeout_by_apk_and_activities(apk_path)
-        * REPLAY_TIMEOUT_FACTOR)
+    est_timeout, fw = estimate_timeout_by_apk_and_activities(apk_path)
+    timeout_value = int(est_timeout * REPLAY_TIMEOUT_FACTOR)
 
     # Replay executa no maximo os eventos gravados; margem pequena para
     # eventos de setup que a policy injeta.

@@ -22,6 +22,8 @@ font_scales = {
     "large_text": "1.3"
 }
 
+MIN_STATES = 3
+
 DROIDBOT_IME = "io.github.ylimit.droidbotapp/.DroidBotIME"
 
 def get_device_locale(device_serial):
@@ -114,16 +116,29 @@ def count_activities_in_apk(apk_path):
         print(f"[WARNING] Falha ao contar activities: {e}")
         return 1
 
+def detect_framework(apk_path):
+    out = subprocess.run(["aapt", "list", apk_path],
+                         capture_output=True, text=True).stdout
+    if "libflutter.so" in out:
+        return "flutter"
+    if "libreactnativejni.so" in out or "libhermes.so" in out:
+        return "react_native"
+    if "libunity.so" in out:
+        return "unity"
+    return "native"
+
 def estimate_timeout_by_apk_and_activities(apk_path):
     perms = get_number_of_permissions(apk_path)
     acts = count_activities_in_apk(apk_path)
+    fw = detect_framework(apk_path)
 
-    base_timeout = 60
-    # base_timeout = 300
+    base_timeout = 180
     timeout = base_timeout + (perms * 5) + (acts * 10)
     timeout = min(timeout, 600)
-    print(f"[INFO] Timeout estimado: {timeout}s ({perms} permissões, {acts} activities)")
-    return timeout
+
+    print(f"[INFO] Timeout estimado: {timeout}s "
+          f"({perms} permissões, {acts} activities, framework={fw})")
+    return timeout, fw
 
 def get_screen_files(screen_id, output_root, font_type):
     """
@@ -146,7 +161,10 @@ def get_screen_files(screen_id, output_root, font_type):
         }
     return None
 
-def countdown_and_stop(droidbot_instance, timeout, finished_event=None):
+def countdown_and_stop(droidbot_instance, timeout, finished_event=None,
+                       ready_event=None):
+    if ready_event is not None:
+        ready_event.wait(timeout=120)
     for remaining in range(timeout, 0, -1):
         if finished_event is not None and finished_event.is_set():
             return  # droidbot terminou antes do teto; timer se encerra
@@ -222,6 +240,7 @@ def run_argus_analysis(image_paths, xml_paths, state_json_path, result_dir):
     print(f"[INFO] Argus-a11y finalizado para {result_dir}")
 
 def run_droidbot(apk_path, device_serial, output_dir, font_type, timeout_value, package_name):
+    ready = threading.Event()
     droidbot = DroidBot(
         app_path=apk_path,
         device_serial=device_serial,
@@ -232,11 +251,13 @@ def run_droidbot(apk_path, device_serial, output_dir, font_type, timeout_value, 
         grant_perm=True,
         event_interval=1,
         event_count=100,
-        plugins=[ScreenCapturePlugin(output_dir, font_type, target_package=package_name)]
+        plugins=[ScreenCapturePlugin(output_dir, font_type,
+                                     target_package=package_name,
+                                     ready_event=ready)]
     )
     finished = threading.Event()
     timer_thread = threading.Thread(target=countdown_and_stop,
-                                    args=(droidbot, timeout_value, finished))
+                                    args=(droidbot, timeout_value, finished, ready))
     timer_thread.daemon = True
     timer_thread.start()
     droidbot.start()
@@ -350,7 +371,8 @@ def has_valid_droidbot_output(output_root):
         if not all(os.path.exists(d) for d in [states_dir, prints_dir, xmls_dir]):
             return False
 
-        has_json = any(f.endswith(".json") for f in os.listdir(states_dir)) if os.path.exists(states_dir) else False
+        has_json = len([f for f in os.listdir(states_dir)
+                        if f.endswith(".json")]) >= MIN_STATES
         has_png = any(f.endswith(".png") for f in os.listdir(prints_dir)) if os.path.exists(prints_dir) else False
         has_xml = any(f.endswith(".xml") for f in os.listdir(xmls_dir)) if os.path.exists(xmls_dir) else False
 
@@ -392,7 +414,7 @@ def run_pipeline():
             if not ensure_device_language(device_serial, "en-US"):
                 print("[FATAL] Nao foi possivel garantir o locale en-US. Abortando este APK.")
                 continue
-            timeout_value = estimate_timeout_by_apk_and_activities(apk_path)
+            timeout_value, fw = estimate_timeout_by_apk_and_activities(apk_path)
 
             try:
                 for font_type, scale in font_scales.items():
@@ -412,6 +434,13 @@ def run_pipeline():
                 with open("apks_falhas.csv", "a", encoding="utf-8") as f:
                     f.write(f"{apk_path},{e}\n")
                 continue
+
+            if not os.path.exists("apks_metadata.csv"):
+                with open("apks_metadata.csv", "w", encoding="utf-8", newline="") as f:
+                    csv.writer(f).writerow(["apk_name", "package", "framework", "timeout"])
+
+            with open("apks_metadata.csv", "a", encoding="utf-8", newline="") as f:
+                csv.writer(f).writerow([apk_name, package_name, fw, timeout_value])
         else:
             print(f"[INFO] Pasta {output_root} já existe. Pulando execução do DroidBot.")
 
